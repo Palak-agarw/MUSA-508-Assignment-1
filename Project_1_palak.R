@@ -12,7 +12,11 @@ options(tigris_class = "sf")
 #data import - bart lines and crime data 
 
 sfo <- read.csv('C:/Users/agarw/Documents/MUSA508/MUSA-508-Assignment-1/Data/final_sfo_lines.csv')
-#crime <- fromJSON('crimeOSFO.json')
+crime1 <- fromJSON(file = 'Data/ala_crime.json')
+crime2 <- fromJSON(file = 'Data/cc_crime.json')
+crime3 <- fromJSON(file = 'Data/sc_crime.json')
+crime4 <- fromJSON(file = 'Data/sfo_crime.json')
+crime5 <- fromJSON(file = 'Data/sm_crime.json')
 
 # ---- Load Styling options -----
 
@@ -71,7 +75,7 @@ q5 <- function(variable) {as.factor(ntile(variable, 5))}
 
 # Load hexadecimal color palette
 
-palette5 <- c("#CABC8D", "#E5CD7F", "#CBA477", "#C38061", "#BA6D56", "#A9574A", "#9F4F47", "#964843", "#84383D", "#54263E")
+palette5 <- c("#f0f9e8","#bae4bc","#7bccc4","#43a2ca","#0868ac")
 
 #-------- CENSUS DATA-------
 
@@ -137,7 +141,7 @@ tracts09 <-
          FemaleMarried = B12001_013
          )
 
-tracts2009 <- 
+tracts209 <- 
   tracts09 %>%
   mutate(pctWorking = ifelse(TotalPop > 0, ((WorkingClassM1517 + WorkingClassM1819 + WorkingClassM20 
                                              + WorkingClassM21 + WorkingClassM2224 + WorkingClassM2529 
@@ -146,11 +150,12 @@ tracts2009 <-
                                              + WorkingClassF1819 + WorkingClassF20 + WorkingClassF21 
                                              + WorkingClassF2224 + WorkingClassF2529 + WorkingClassF3034 
                                              + WorkingClassF3539 + WorkingClassF4044 + WorkingClassF4549 
-                                             + WorkingClassF5054)/TotalPop), 0),
-         pctMarried = ifelse(TotalPop > 0, ((FemaleMarried + MaleMarried) / TotalPop), 0),
-         pctWhite = ifelse(TotalPop > 0, Whites / TotalPop, 0),
+                                             + WorkingClassF5054)/TotalPop * 100), 0),
+         pctMarried = ifelse(TotalPop > 0, ((FemaleMarried + MaleMarried) / TotalPop * 100), 0),
+         pctWhite = ifelse(TotalPop > 0, Whites / TotalPop * 100, 0),
          pctOtherRace = ifelse(TotalPop > 0, ((Blacks + AmInd +Asian
-                                               + Hawaiian + Hispanic) / TotalPop), 0),
+                                               + Hawaiian + Hispanic) / TotalPop * 100), 0),
+         
          year = "2009") %>%
   dplyr::select(-Whites,-FemaleMarried,-MaleMarried,-Blacks,-AmInd,-Asian,-Hawaiian,-Hispanic,
                 -WorkingClassM1517,-WorkingClassM1819,-WorkingClassM20,-WorkingClassM21,-WorkingClassM2224,-WorkingClassM2529, 
@@ -158,7 +163,16 @@ tracts2009 <-
                 -WorkingClassF1819,-WorkingClassF20,-WorkingClassF21,-WorkingClassF2224,-WorkingClassF2529,-WorkingClassF3034,
                 -WorkingClassF3539,-WorkingClassF4044,-WorkingClassF4549,-WorkingClassF5054)
 
-tracts2017 <-  
+maxtotpop_2009 <- max(tracts209$TotalPop)
+maxrent_2009 <- max(tracts209$MedRent , na.rm = T)
+
+tracts2009 <- 
+  tracts209 %>%
+  mutate( normpop = TotalPop/maxtotpop_2009,
+          normrent = MedRent/maxrent_2009)
+
+
+tracts217 <-  
   get_acs(geography = "tract", variables = c("B25026_001E","B02001_002E","B19013_001E",
                                              "B25058_001E","B01001_006E","B01001_007E",
                                              "B01001_008E","B01001_009E","B01001_010E",
@@ -216,17 +230,25 @@ tracts2017 <-
                                              + WorkingClassF1819 + WorkingClassF20 + WorkingClassF21 
                                              + WorkingClassF2224 + WorkingClassF2529 + WorkingClassF3034 
                                              + WorkingClassF3539 + WorkingClassF4044 + WorkingClassF4549 
-                                             + WorkingClassF5054)/TotalPop), 0),
-         pctMarried = ifelse(TotalPop > 0, ((FemaleMarried + MaleMarried) / TotalPop), 0),
-         pctWhite = ifelse(TotalPop > 0, Whites / TotalPop, 0),
+                                             + WorkingClassF5054)/TotalPop * 100), 0),
+         pctMarried = ifelse(TotalPop > 0, ((FemaleMarried + MaleMarried) / TotalPop * 100), 0),
+         pctWhite = ifelse(TotalPop > 0, Whites / TotalPop *100, 0),
          pctOtherRace = ifelse(TotalPop > 0, ((Blacks + AmInd +Asian
-                                               + Hawaiian + Hispanic) / TotalPop), 0),
+                                               + Hawaiian + Hispanic) / TotalPop * 100), 0),
          year = "2017") %>%
   dplyr::select(-Whites,-FemaleMarried,-MaleMarried,-Blacks,-AmInd,-Asian,-Hawaiian,-Hispanic,
                 -WorkingClassM1517,-WorkingClassM1819,-WorkingClassM20,-WorkingClassM21,-WorkingClassM2224,-WorkingClassM2529, 
                 -WorkingClassM3034,-WorkingClassM3539,-WorkingClassM4044,-WorkingClassM4549,-WorkingClassM5054,-WorkingClassF1517, 
                 -WorkingClassF1819,-WorkingClassF20,-WorkingClassF21,-WorkingClassF2224,-WorkingClassF2529,-WorkingClassF3034,
                 -WorkingClassF3539,-WorkingClassF4044,-WorkingClassF4549,-WorkingClassF5054)
+
+maxtotpop_2017 <- max(tracts217$TotalPop)
+maxrent_2017 <- max(tracts217$MedRent , na.rm = T)
+
+tracts2017 <- 
+  tracts217 %>%
+  mutate( normpop = TotalPop/maxtotpop_2017,
+          normrent = MedRent/maxrent_2017)
 
 # --- Combining 09 and 17 data ----
 
@@ -260,7 +282,7 @@ ggplot() +
   geom_sf(data=st_union(tracts2009)) +
   geom_sf(data=sfo_spatial, 
           aes(colour = Line_colour), 
-          show.legend = "point", size= 1) +
+          show.legend = "point", size= 2) +
   labs(title="Bart Stops", 
        subtitle="Bay Area, CA", 
        caption="Figure 1.0") +
@@ -350,33 +372,10 @@ finalTract.group <-
       left_join(finalTract) %>%
       st_sf() %>%
       mutate(TOD = "Non-TOD")) %>%
-  mutate(MedRent.inf = ifelse(year == "2009", MedRent * 1.14, MedRent)) 
+  mutate(MedRent.inf = ifelse(year == "2009", MedRent * 1.14, MedRent))
 
-#----- Now that we have our data lets maps them --------
-
-myData  <- rbind(selectCentroids, clip) %>%
-  rbind(., selection)
-
-ggplot(myData)+
-  geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = q5(TotalPop))) +
-  scale_fill_manual(values = palette5,
-                    labels = qBr(myData, "TotalPop"),
-                    name = "Popluation\n(Quintile Breaks)") +
-  labs(title = "Total Population", subtitle = "Bay Area; 2009") +
-  facet_wrap(~Selection_Type)+
-  mapTheme() + 
-  theme(plot.title = element_text(size=22))
-
-ggplot(finalTract.group)+
-  geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = TOD)) +
-  labs(title = "Time/Space Groups") +
-  facet_wrap(~year)+
-  mapTheme() + 
-  theme(plot.title = element_text(size=22))
-
-allTracts.Summary <- 
+#table 
+finalTract.Summary <- 
   st_drop_geometry(finalTract.group) %>%
   group_by(year, TOD) %>%
   summarize(Rent = mean(MedRent, na.rm = T),
@@ -386,7 +385,33 @@ allTracts.Summary <-
             Percent_Married = mean(pctMarried, na.rm = T),
             Percent_MedIn = mean(MedHHInc, na.rm = T))
 
+kable(finalTract.Summary) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 2.2")
 
+#plot
+finalTract.Summary %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=2) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space") +
+  plotTheme() + theme(legend.position="bottom")
+
+#----- Now that we have our data lets maps them --------
+
+myData  <- rbind(selectCentroids, clip) %>%
+  rbind(., selection)
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = TOD)) +
+  labs(title = "Time/Space Groups") +
+  facet_wrap(~year)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
@@ -396,51 +421,216 @@ ggplot(finalTract.group)+
                     labels = qBr(finalTract.group, "MedRent.inf"),
                     name = "Rent\n(Quintile Breaks)") +
   labs(title = "Median Rent 2009-2017", subtitle = "Real Dollars") +
-  facet_wrap(~year)+
+  facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
 
-st_drop_geometry(finalTract.group) %>%
-  group_by(year, TOD) %>%
-  summarize(Rent = mean(MedRent, na.rm = T),
-            Population = mean(TotalPop, na.rm = T),
-            Percent_White = mean(pctWhite, na.rm = T),
-            Percent_Working = mean(pctWorking, na.rm = T),
-            Percent_Married = mean(pctMarried, na.rm = T),
-            Percent_MedIn = mean(MedHHInc, na.rm = T)) %>%
-  gather(Variable, Value, -year, -TOD) %>%
-  ggplot(aes(year, Value, fill = TOD)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  facet_wrap(~Variable, scales = "free", ncol=5) +
-  scale_fill_manual(values = palette5)+
-  labs(title = "Indicator differences across submarkets") +
-  mapTheme() + 
-  theme(plot.title = element_text(size=22))
-
-final_new1 <- 
-  finalTract.group %>%
-  dplyr::select (-pctWorking, -pctMarried, -pctWhite, -pctOtherRace, -GEOID, -MedHHInc, -TotalPop, -MedRent, -geometry)
-
-finalgarther <- final_new1 %>%
-  as_data_frame()%>%
-  gather(Variable, Value, -year, -TOD)
-
-ggplot(finalgarther)+
+ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = q5(MedRent.inf))) +
+  geom_sf(aes(fill = q5(pctMarried))) +
   geom_sf(data = buffer, fill = "transparent", color = "red")+
   scale_fill_manual(values = palette5,
-                    labels = qBr(finalTract.group, "MedRent.inf"),
-                    name = "Rent\n(Quintile Breaks)") +
-  labs(title = "Median Rent 2009-2017", subtitle = "Real Dollars") +
-  facet_wrap(~year)+
+                    labels = qBr(finalTract.group, "pctMarried"),
+                    name = "Married \n(Quintile Breaks)") +
+  labs(title = "Married 2009-2017", subtitle = "Bay area") +
+  facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
 
-ggplot(aes(year, Value, fill = TOD)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  facet_wrap(~Variable, scales = "free", ncol=5) +
-  scale_fill_manual(values = palette5)+
-  labs(title = "Indicator differences across submarkets") +
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctWhite))) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctWhite"),
+                    name = "Racial Composition \n(Quintile Breaks)") +
+  labs(title = "Race 2009-2017", subtitle = "Bay area") +
+  facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctWorking))) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctWorking"),
+                    name = "Working class \n(Quintile Breaks)") +
+  labs(title = "Working 2009-2017", subtitle = "Bay area") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+
+#------- Graduated symbol map------
+
+# Create an sf object with ONLY the buffers
+buffers <- filter(bartBuffers, Legend=="Buffer")
+buffer_spatial <- buffers %>% st_transform(st_crs(tracts2009))
+
+x <- vector(mode='list', length = 105)
+y <- vector(mode='list', length = 105)
+
+for( val in c(1:105))
+{
+  #print(buffer_spatial[[val,2]])
+  clip1 <- 
+    st_intersection(buffer_spatial[val,1], tracts2009) %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Clip")
+  selection1 <- 
+    tracts2009[buffer_spatial[val,1],] %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Spatial Selection")
+  selectCentroids1 <-
+    st_centroid(tracts2009)[buffer_spatial[val,1],] %>%
+    st_drop_geometry() %>%
+    left_join(dplyr::select(tracts2009, GEOID)) %>%
+    st_sf() %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Select by Centroids")
+  sum_sb <- max(selectCentroids1$normpop)
+  sum_sc <- max(selectCentroids1$normrent)
+  x <- append(x, sum_sb)
+  y <- append(y, sum_sc)
+}
+
+
+pograd <- sfo_spatial %>%
+  mutate(Sum_Popnor = as.numeric(x[106:210]),
+         Sum_Rentnor = as.numeric(y[106:210]))
+
+popgrad <- pograd %>%
+  mutate(Sum_Popnorm = Sum_Popnor * 100,
+         Sum_Rentnorm = Sum_Rentnor * 100)
+
+
+ggplot()+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(data=popgrad, 
+          aes(size = Sum_Popnorm), 
+          color = "red")+
+  scale_size_area(name="", max_size = 3.5) + 
+  guides(size=guide_legend("Total Venues")) +
+  labs(
+    title = "2B. Creative Footprint Venues, New York City, 2017",
+    subtitle = "Total Venues Per Neighborhood Tabulation Area - n= 495",
+    caption = "Data: CFP, US Census Bureau, City of New York"
+  )+
+  mapTheme()
+
+ggplot()+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(data=popgrad, 
+          aes(size = Sum_Rentnorm), 
+          color = "red")+
+  scale_size_area(name="", max_size = 3.5) + 
+  guides(size=guide_legend("Total Venues")) +
+  labs(
+    title = "2B. Creative Footprint Venues, New York City, 2017",
+    subtitle = "Total Venues Per Neighborhood Tabulation Area - n= 495",
+    caption = "Data: CFP, US Census Bureau, City of New York"
+  )+
+  mapTheme()
+
+#------- GEOM LINE---------
+
+
+multipleRingBuffer <- function(inputPolygon, maxDistance, interval) 
+{
+  #create a list of distances that we'll iterate through to create each ring
+  distances <- seq(0, maxDistance, interval)
+  #we'll start with the second value in that list - the first is '0'
+  distancesCounter <- 2
+  #total number of rings we're going to create
+  numberOfRings <- floor(maxDistance / interval)
+  #a counter of number of rings
+  numberOfRingsCounter <- 1
+  #initialize an otuput data frame (that is not an sf)
+  allRings <- data.frame()
+  
+  #while number of rings  counteris less than the specified nubmer of rings
+  while (numberOfRingsCounter <= numberOfRings) 
+  {
+    #if we're interested in a negative buffer and this is the first buffer
+    #(ie. not distance = '0' in the distances list)
+    if(distances[distancesCounter] < 0 & distancesCounter == 2)
+    {
+      #buffer the input by the first distance
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #different that buffer from the input polygon to get the first ring
+      buffer1_ <- st_difference(inputPolygon, buffer1)
+      #cast this sf as a polygon geometry type
+      thisRing <- st_cast(buffer1_, "POLYGON")
+      #take the last column which is 'geometry'
+      thisRing <- as.data.frame(thisRing[,ncol(thisRing)])
+      #add a new field, 'distance' so we know how far the distance is for a give ring
+      thisRing$distance <- distances[distancesCounter]
+    }
+    
+    
+    #otherwise, if this is the second or more ring (and a negative buffer)
+    else if(distances[distancesCounter] < 0 & distancesCounter > 2) 
+    {
+      #buffer by a specific distance
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #create the next smallest buffer
+      buffer2 <- st_buffer(inputPolygon, distances[distancesCounter-1])
+      #This can then be used to difference out a buffer running from 660 to 1320
+      #This works because differencing 1320ft by 660ft = a buffer between 660 & 1320.
+      #bc the area after 660ft in buffer2 = NA.
+      thisRing <- st_difference(buffer2,buffer1)
+      #cast as apolygon
+      thisRing <- st_cast(thisRing, "POLYGON")
+      #get the last field
+      thisRing <- as.data.frame(thisRing$geometry)
+      #create the distance field
+      thisRing$distance <- distances[distancesCounter]
+    }
+    
+    #Otherwise, if its a positive buffer
+    else 
+    {
+      #Create a positive buffer
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #create a positive buffer that is one distance smaller. So if its the first buffer
+      #distance, buffer1_ will = 0. 
+      buffer1_ <- st_buffer(inputPolygon, distances[distancesCounter-1])
+      #difference the two buffers
+      thisRing <- st_difference(buffer1,buffer1_)
+      #cast as a polygon
+      thisRing <- st_cast(thisRing, "POLYGON")
+      #geometry column as a data frame
+      thisRing <- as.data.frame(thisRing[,ncol(thisRing)])
+      #add teh distance
+      thisRing$distance <- distances[distancesCounter]
+    }  
+    
+    #rbind this ring to the rest of the rings
+    allRings <- rbind(allRings, thisRing)
+    #iterate the distance counter
+    distancesCounter <- distancesCounter + 1
+    #iterate the number of rings counter
+    numberOfRingsCounter <- numberOfRingsCounter + 1
+  }
+  
+  #convert the allRings data frame to an sf data frame
+  allRings <- st_as_sf(allRings)
+}
+
+
+finalTracts.rings <-
+  st_join(st_centroid(dplyr::select(finalTract, GEOID, year)), 
+          multipleRingBuffer(st_union(sfo_spatial), 47520, 2640)) %>%
+  st_drop_geometry() %>%
+  left_join(dplyr::select(finalTract, GEOID, MedRent, year), 
+            by=c("GEOID"="GEOID", "year"="year")) %>%
+  st_sf() %>%
+  mutate(distance = distance / 5280) #convert to miles
+
+ggplot(data=finalTracts.rings,
+       aes(x = distance, y = MedRent, colour = year)) +
+  geom_point()
+
+
+
+#-------------Crime data-----------
