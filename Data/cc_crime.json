@@ -1,0 +1,549 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "zzzz-zzzz",
+      "name" : "FBI UCR V3",
+      "assetType" : "filter",
+      "averageRating" : 0,
+      "createdAt" : 1474327305,
+      "displayType" : "table",
+      "downloadCount" : 0,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1516323527,
+      "newBackend" : true,
+      "numberOfComments" : 0,
+      "oid" : 0,
+      "provenance" : "community",
+      "publicationAppendEnabled" : true,
+      "publicationGroup" : 13172847,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1579039741,
+      "rowsUpdatedBy" : "rndq-s2m8",
+      "searchString" : "san pablo",
+      "tableId" : 14727467,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewType" : "tabular",
+      "approvals" : [ {
+        "state" : "submittable",
+        "submissionObject" : "public_audience_request",
+        "submissionOutcome" : "change_audience",
+        "workflowId" : 921,
+        "submissionDetails" : {
+          "permissionType" : "READ"
+        }
+      } ],
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 335870077,
+        "name" : "key",
+        "dataTypeName" : "text",
+        "fieldName" : "key",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436444,
+        "width" : 136,
+        "format" : { }
+      }, {
+        "id" : 335870078,
+        "name" : "id",
+        "dataTypeName" : "text",
+        "fieldName" : "id",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436445,
+        "width" : 124,
+        "format" : { }
+      }, {
+        "id" : 335870079,
+        "name" : "name",
+        "dataTypeName" : "text",
+        "fieldName" : "name",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436446,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870080,
+        "name" : "type",
+        "dataTypeName" : "text",
+        "fieldName" : "type",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436447,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870081,
+        "name" : "variable",
+        "dataTypeName" : "text",
+        "fieldName" : "variable",
+        "position" : 5,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436448,
+        "width" : 196,
+        "format" : { }
+      }, {
+        "id" : 335870082,
+        "name" : "value",
+        "dataTypeName" : "number",
+        "fieldName" : "value",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436449,
+        "width" : 160,
+        "format" : { }
+      }, {
+        "id" : 335870083,
+        "name" : "year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436450,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870084,
+        "name" : "crime_type",
+        "dataTypeName" : "text",
+        "fieldName" : "crime_type",
+        "position" : 8,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436451,
+        "width" : 220,
+        "format" : { }
+      }, {
+        "id" : 335870085,
+        "name" : "place_name",
+        "dataTypeName" : "text",
+        "fieldName" : "place_name",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436452,
+        "width" : 220,
+        "format" : { }
+      } ],
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "rowLabel" : "Row",
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        },
+        "inDatasetSearch" : true
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : false,
+          "expression" : {
+            "columnId" : 335870083,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "i7d8-sc4w",
+        "displayName" : "Chris Metcalf",
+        "profileImageUrlLarge" : "/api/users/i7d8-sc4w/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/i7d8-sc4w/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/i7d8-sc4w/profile_images/TINY",
+        "screenName" : "Chris Metcalf",
+        "type" : "interactive",
+        "userSegment" : "community_user"
+      },
+      "flags" : [ "restorable", "restorePossibleForType", "unsaved" ]
+    }
+  },
+  "data" : [ [ "row-xeif~9dw4.qc6w", "00000000-0000-0000-0765-32C7AF7CFE28", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "241", "2010", "Violent crime", "San Pablo, CA" ]
+, [ "row-umkz.7kec~eada", "00000000-0000-0000-9A3A-946ACB710209", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2010", "Forcible rape", "San Pablo, CA" ]
+, [ "row-vchh~p7zm.zgtj", "00000000-0000-0000-6E57-AD0873658A10", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1050.8849557522124", "2008", "Violent crime", "San Pablo, CA" ]
+, [ "row-mau6.8bd5.kzrz", "00000000-0000-0000-4A40-62100D0D03F9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "6.4263222157959", "2010", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-897a.uu4b_b668", "00000000-0000-0000-F5B9-5DFE1F7ACFA7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "397", "2006", "Violent crime", "San Pablo, CA" ]
+, [ "row-z6bb.qmak.2xkj", "00000000-0000-0000-2308-CB87C1509F72", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "448.2993860247539", "2009", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-vhdh~yqpt~h7bm", "00000000-0000-0000-1897-46F33C84DF57", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "4284.832537439496", "2009", "Property crime", "San Pablo, CA" ]
+, [ "row-49nk_pjm9_u7a5", "00000000-0000-0000-8A07-25BE1C56580A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "167", "2007", "Robbery", "San Pablo, CA" ]
+, [ "row-twrq-kt3e~y7zm", "00000000-0000-0000-E0D5-B708B2C8E4E2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "708", "2007", "Larceny", "San Pablo, CA" ]
+, [ "row-izrx-jyrj-rma7", "00000000-0000-0000-847A-3AE10A125853", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "435.3052009225871", "2009", "Robbery", "San Pablo, CA" ]
+, [ "row-pgzp.xy6e-qsi7", "00000000-0000-0000-A940-B8023FCC1513", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "14528.657737429274", "2006", "All Crimes", "San Pablo, CA" ]
+, [ "row-6s4a~uvdg~3zbn", "00000000-0000-0000-22B7-1C7A5A9C957F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "16.05497222489805", "2007", "Forcible rape", "San Pablo, CA" ]
+, [ "row-epc2_z7e9.3xfx", "00000000-0000-0000-1342-B67767FF02E7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1459", "2012", "Property crime", "San Pablo, CA" ]
+, [ "row-3qmx.raqm~8dcy", "00000000-0000-0000-1376-B66FD7C16453", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "17", "2006", "Forcible rape", "San Pablo, CA" ]
+, [ "row-fvc6_rq4v_yenr", "00000000-0000-0000-EC55-5B4814746869", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "22.774596564289432", "2008", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-6brd-jwv3.8px8", "00000000-0000-0000-7105-3E90FC738CDF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "9429.787804632766", "2014", "All Crimes", "San Pablo, CA" ]
+, [ "row-4bny_a4zp-k5es", "00000000-0000-0000-91AC-165815B637EF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "395.21881627144785", "2010", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-e2xb~gh8z_nu5p", "00000000-0000-0000-6912-A99F6C91A7F2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "512", "2013", "Larceny", "San Pablo, CA" ]
+, [ "row-yakq.pw3s.43zp", "00000000-0000-0000-FD4B-9E71C5177758", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1415.2785007808434", "2008", "Burglary", "San Pablo, CA" ]
+, [ "row-wsqb.b6rq.jpyd", "00000000-0000-0000-2DAD-19E0258DE51E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "3", "2011", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-ecsb.jbh2_rqfq", "00000000-0000-0000-FC27-E598FB4B5EF1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1712.7755661860638", "2013", "Larceny", "San Pablo, CA" ]
+, [ "row-5ja3-eve9-xydd", "00000000-0000-0000-EFA9-BA65D924789F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "410.4199172376365", "2011", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-w8et_7nd8~pw8r", "00000000-0000-0000-23EE-0F5EF6522348", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "693.667487133587", "2006", "Robbery", "San Pablo, CA" ]
+, [ "row-v2su~k7xr-jwaj", "00000000-0000-0000-1554-3874F8C5EE58", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "96", "2013", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-h2at~7apz-92ia", "00000000-0000-0000-48B9-49437440EBF3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "436.695244517227", "2007", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-z5bg_2e2q~hrdg", "00000000-0000-0000-C543-18E74162888E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "5", "2007", "Arson", "San Pablo, CA" ]
+, [ "row-rntt_8x3y~4wd6", "00000000-0000-0000-5548-412FD1842F62", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "3991", "2008", "All Crimes", "San Pablo, CA" ]
+, [ "row-tbeb~tvjh~8mgs", "00000000-0000-0000-ECFE-9C6C494A0A43", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "20.351400854758836", "2011", "Forcible rape", "San Pablo, CA" ]
+, [ "row-nycm-9963.a73q", "00000000-0000-0000-88A5-3A0A72877868", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1703.2525766296346", "2012", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-sg7m~nynp-ws46", "00000000-0000-0000-85B3-0C8374559DCD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "10486.307377448593", "2009", "All Crimes", "San Pablo, CA" ]
+, [ "row-rqsx-rm36~ftq6", "00000000-0000-0000-D44B-A2C4F4104BD5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Rape (legacy definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "6.690529555414312", "2013", "Rape (legacy definition)", "San Pablo, CA" ]
+, [ "row-pwmk_dcb3-twas", "00000000-0000-0000-2358-EEBB5B7D3665", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1188.9679368482605", "2009", "Burglary", "San Pablo, CA" ]
+, [ "row-z4dq-ujx9~2fpz", "00000000-0000-0000-0901-10F05A69EFE4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "156", "2006", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-gn3a.cnww_tt7e", "00000000-0000-0000-503E-8FEB1F2DCAF0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "0", "2013", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-2gcu~86kx~hhch", "00000000-0000-0000-7633-B5CDD30A6FA3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "217", "2006", "Robbery", "San Pablo, CA" ]
+, [ "row-fjtm~299u.d4g9", "00000000-0000-0000-37D5-42020FB3789F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "305.0517917602494", "2014", "Robbery", "San Pablo, CA" ]
+, [ "row-zwkb-9qpw~wyph", "00000000-0000-0000-3DC1-A213C435AA26", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "353", "2013", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-dvjw~u78v.qi72", "00000000-0000-0000-627A-D5F1CA27590F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1870", "2006", "Property crime", "San Pablo, CA" ]
+, [ "row-vz98.r8uu_rmhy", "00000000-0000-0000-3DB3-EF87FE438012", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1693", "2007", "Property crime", "San Pablo, CA" ]
+, [ "row-2sps-rgmn_fpbx", "00000000-0000-0000-A6CB-A1130EEA5857", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1435.8574537894292", "2009", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-swtr_yxcf-qcmu", "00000000-0000-0000-C171-F2E85A6ADB79", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "5", "2007", "Forcible rape", "San Pablo, CA" ]
+, [ "row-r5p2_f46n~2um4", "00000000-0000-0000-BB4D-1F4A0A497EB6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "126", "2011", "Robbery", "San Pablo, CA" ]
+, [ "row-mqy9-3jei~cdkt", "00000000-0000-0000-71C2-0FC9D6E05C35", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "511", "2009", "Larceny", "San Pablo, CA" ]
+, [ "row-bwb3_gy5h_zdkn", "00000000-0000-0000-8A80-08CC5214356D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "656", "2006", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-qncu.t7ir.29fc", "00000000-0000-0000-7632-C980FE3D210F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "2813", "2014", "All Crimes", "San Pablo, CA" ]
+, [ "row-s8z9.p5b5_xq3g", "00000000-0000-0000-1C7D-97756CDC57EB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "11", "2006", "Arson", "San Pablo, CA" ]
+, [ "row-skm5~mmwz.b5ag", "00000000-0000-0000-7FFF-A07DF1FFBAB7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "23.423905768973363", "2012", "Forcible rape", "San Pablo, CA" ]
+, [ "row-whey.gdi8_v5v3", "00000000-0000-0000-DEC3-3F1FD69895FB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "375", "2012", "Burglary", "San Pablo, CA" ]
+, [ "row-zwim~w3qu_xatx", "00000000-0000-0000-F8CC-9FAD67D57BDC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "23.46552244309611", "2014", "Arson", "San Pablo, CA" ]
+, [ "row-nyy7.87q5-gaqt", "00000000-0000-0000-A957-8385234422A9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1342", "2011", "Property crime", "San Pablo, CA" ]
+, [ "row-32ws.8wwj~47b7", "00000000-0000-0000-EC64-F7FC5711F5FB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "4882.211216704592", "2012", "Property crime", "San Pablo, CA" ]
+, [ "row-2bcb_qx5y.di7a", "00000000-0000-0000-B29D-FF3B4CD00D7C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "296", "2010", "Burglary", "San Pablo, CA" ]
+, [ "row-6vph~jcnr_dmu5", "00000000-0000-0000-3EDF-E5A303953EDC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1347.5914317320908", "2014", "Burglary", "San Pablo, CA" ]
+, [ "row-7jhk_yyuz_nk7f", "00000000-0000-0000-2E24-8E9E4C53F794", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "371", "2006", "Burglary", "San Pablo, CA" ]
+, [ "row-civ9-9d3r~kh3i", "00000000-0000-0000-ED5D-6889B0CB355D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1994.4039562727746", "2008", "Larceny", "San Pablo, CA" ]
+, [ "row-4xcc_yzni~vbxc", "00000000-0000-0000-1B88-74FCC98B4285", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "241", "2014", "Violent crime", "San Pablo, CA" ]
+, [ "row-6d3i.xvvh_3yd2", "00000000-0000-0000-15E7-E4414B66AA02", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "530.3227485684539", "2008", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-ey22.9zx6~v4rr", "00000000-0000-0000-4C6A-127BA935956C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "12984.773555439873", "2008", "All Crimes", "San Pablo, CA" ]
+, [ "row-mb34_wird.i2fr", "00000000-0000-0000-78BE-B558B6E80F37", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "10.175700427379418", "2011", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-32ws-5sy8-8ww6", "00000000-0000-0000-DF25-3E58AA360329", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "3475", "2012", "All Crimes", "San Pablo, CA" ]
+, [ "row-p28n.bnnp~rbpt", "00000000-0000-0000-A432-0922931F9016", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1020.3057572006824", "2013", "Burglary", "San Pablo, CA" ]
+, [ "row-cxy2.w8aq.cqgg", "00000000-0000-0000-95FC-1403528D247C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "575", "2012", "Larceny", "San Pablo, CA" ]
+, [ "row-9r6a~f4tf.km5u", "00000000-0000-0000-D922-083152895B02", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "554", "2011", "Larceny", "San Pablo, CA" ]
+, [ "row-3dif-rdbf~wp7v", "00000000-0000-0000-EBBB-8492208651F5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "452.5493614025678", "2014", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-bawb~b64i.zjpv", "00000000-0000-0000-ED5D-C1D71699BE6C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "4", "2013", "Arson", "San Pablo, CA" ]
+, [ "row-b4zw_7523.j8xi", "00000000-0000-0000-F3CC-E1B2E93B6CCE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "2694.754339417575", "2006", "Larceny", "San Pablo, CA" ]
+, [ "row-7me2.krtc-7rh5", "00000000-0000-0000-C418-99F72876429E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "5436.21359535048", "2007", "Property crime", "San Pablo, CA" ]
+, [ "row-r56q~s2vk.9j7c", "00000000-0000-0000-8140-5D83CEAE2371", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1269.0598727743504", "2006", "Violent crime", "San Pablo, CA" ]
+, [ "row-pkuc-35ax_923s", "00000000-0000-0000-A60F-063AE72A2D49", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "16.267568974492452", "2008", "Arson", "San Pablo, CA" ]
+, [ "row-24k2_s2qe_rud9", "00000000-0000-0000-0A32-CE60AFD6F65D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "926.9174140008031", "2012", "Violent crime", "San Pablo, CA" ]
+, [ "row-gjvr.mjcc-iajk", "00000000-0000-0000-3C4B-01D98B665553", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "498.6734008886616", "2006", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-2h2g~nxzz.64iz", "00000000-0000-0000-B2BD-5EFCE8C4463E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "135", "2014", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-5hxj_a3xp-2ggn", "00000000-0000-0000-FACF-BC5BECCBB956", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "2", "2010", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-gcug~cadv_p9t5", "00000000-0000-0000-AC61-5A2AE9FE9DF7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "843", "2006", "Larceny", "San Pablo, CA" ]
+, [ "row-d2fd_hphy-sp9u", "00000000-0000-0000-BEB6-F21FD2370ECC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1176.9893494335527", "2011", "Burglary", "San Pablo, CA" ]
+, [ "row-4trj_fr8q-ea33", "00000000-0000-0000-DAD7-E20BD4B9DEB3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "136", "2007", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-stu7-sbwf-b6tp", "00000000-0000-0000-5A6A-7C533BBC7030", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "145", "2012", "Robbery", "San Pablo, CA" ]
+, [ "row-qdyh.emwk-npzs", "00000000-0000-0000-32DA-384E10418925", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2012", "Forcible rape", "San Pablo, CA" ]
+, [ "row-ta6i-bya4_2k2e", "00000000-0000-0000-823A-8340F135DD0A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2011", "Forcible rape", "San Pablo, CA" ]
+, [ "row-yurx.24ht-pnj3", "00000000-0000-0000-5AD7-10F3BA81DB0E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "16", "2009", "Arson", "San Pablo, CA" ]
+, [ "row-2jny_bsjy.cnaq", "00000000-0000-0000-865F-2564C222FBF4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "435", "2008", "Burglary", "San Pablo, CA" ]
+, [ "row-anrx_h4j3_efiw", "00000000-0000-0000-784F-7B82F8E4BCE7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1924.1065453085262", "2012", "Larceny", "San Pablo, CA" ]
+, [ "row-mq8d_xyvk~7r2y", "00000000-0000-0000-585B-004CC3C17374", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "109", "2010", "Robbery", "San Pablo, CA" ]
+, [ "row-4u5g.6nqx~77ge", "00000000-0000-0000-DE79-272694E7780E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "4019", "2007", "All Crimes", "San Pablo, CA" ]
+, [ "row-jbzr-kd9j_pwc4", "00000000-0000-0000-C3FD-64B8707621F9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "323", "2008", "Violent crime", "San Pablo, CA" ]
+, [ "row-4bgz_33yr-9zx2", "00000000-0000-0000-351C-323EE43672A5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1170", "2013", "Property crime", "San Pablo, CA" ]
+, [ "row-85ty_zkk3_eda8", "00000000-0000-0000-2D2D-51578ACF4AC9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "138", "2009", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-anir~gid6_3d5a", "00000000-0000-0000-8632-B4F6EB40A76F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "4551.929991181059", "2011", "Property crime", "San Pablo, CA" ]
+, [ "row-zsen-gid4_ivfs", "00000000-0000-0000-8BF6-BFE57E3DF7C6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "394.8601258198367", "2012", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-ie67~fg5z.n9v6", "00000000-0000-0000-7348-5F2BC11C8CDC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "669.0529555414311", "2013", "Violent crime", "San Pablo, CA" ]
+, [ "row-zyxu_g3sx-zw2m", "00000000-0000-0000-6F74-09A81A6FFE9A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "51.97674040866712", "2009", "Arson", "San Pablo, CA" ]
+, [ "row-6jw3-b4n4-xub2", "00000000-0000-0000-059C-15D0723FB8D3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "3895.276725553954", "2014", "Property crime", "San Pablo, CA" ]
+, [ "row-hxk7-8xhq-9jhb", "00000000-0000-0000-E440-E37ABAF0511C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "35.162868011379985", "2006", "Arson", "San Pablo, CA" ]
+, [ "row-f2at.6gh7.p7a9", "00000000-0000-0000-A653-82EB6BE56713", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "2096.9855832241155", "2006", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-tci7.3cii-mxqe", "00000000-0000-0000-2E9D-4898233D5FF9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "2744", "2013", "All Crimes", "San Pablo, CA" ]
+, [ "row-wett_jx8g-55eh", "00000000-0000-0000-770C-5CEA853EC6DA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "200", "2013", "Violent crime", "San Pablo, CA" ]
+, [ "row-dyfv-nxit-ac7j", "00000000-0000-0000-8A95-D14CAD0DD1EF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "134", "2009", "Robbery", "San Pablo, CA" ]
+, [ "row-pq54~xde2~hpi2", "00000000-0000-0000-0893-D4DCEE81F394", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "807.8844155408802", "2014", "Violent crime", "San Pablo, CA" ]
+, [ "row-7pje-t99e.8jbi", "00000000-0000-0000-FA11-E474249BD7FE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "0", "2013", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-h4bi-4cbz-ipnq", "00000000-0000-0000-E698-28799B456BF5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "4545", "2006", "All Crimes", "San Pablo, CA" ]
+, [ "row-b656_vzq9-hh43", "00000000-0000-0000-DF27-A4B38F323B52", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1254.8520947664301", "2012", "Burglary", "San Pablo, CA" ]
+, [ "row-y638~f5u8.9y7m", "00000000-0000-0000-A2D3-5098F357C383", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "622", "2008", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-n4qf-8b5h.ahab", "00000000-0000-0000-5FC3-2F9DE9ACEBC7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "22.37637055269635", "2006", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-7csa-9x9z.kevq", "00000000-0000-0000-66FC-D39BDC89A8C1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "3228", "2009", "All Crimes", "San Pablo, CA" ]
+, [ "row-azgc-gcun~jxy9", "00000000-0000-0000-8E16-7B2FBBEFA96B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "16.05497222489805", "2007", "Arson", "San Pablo, CA" ]
+, [ "row-5p9e.f4ai-d7u2", "00000000-0000-0000-FB62-83FDEC8CE874", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "19.2789666473877", "2010", "Arson", "San Pablo, CA" ]
+, [ "row-t22t~w6ju_cup7", "00000000-0000-0000-F203-732FBFD6C48F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1185.9476392929066", "2006", "Burglary", "San Pablo, CA" ]
+, [ "row-yx7z~665f-pz3j", "00000000-0000-0000-30E5-D4079B995FDC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1117.4260668529043", "2007", "Burglary", "San Pablo, CA" ]
+, [ "row-kchp_rn36-qb3v", "00000000-0000-0000-F2C7-32A13B4CB425", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "0", "2013", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-r67k-sg56-va3w", "00000000-0000-0000-F618-B0165E27B302", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "121", "2011", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-wrzu-fjkh_bh96", "00000000-0000-0000-25F6-4F2F156DFB4F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "140", "2008", "Robbery", "San Pablo, CA" ]
+, [ "row-psbf~55u2.5f5c", "00000000-0000-0000-6481-22826A15253F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "91", "2014", "Robbery", "San Pablo, CA" ]
+, [ "row-4z7v_2zc7-6p7g", "00000000-0000-0000-5784-520838E26908", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "347", "2011", "Burglary", "San Pablo, CA" ]
+, [ "row-ksy6_u2fv.w25r", "00000000-0000-0000-6675-3E48C20FFE71", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1670", "2008", "Property crime", "San Pablo, CA" ]
+, [ "row-d7vg~cbuv_kaiy", "00000000-0000-0000-04D8-9AF0BE5A17FB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "441", "2011", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-ficd_a9k7_rq3a", "00000000-0000-0000-7704-5BFB106754E6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "5977.687561934597", "2006", "Property crime", "San Pablo, CA" ]
+, [ "row-qa75~s23a-taqb", "00000000-0000-0000-8254-1FF54D2EF581", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "13", "2008", "Forcible rape", "San Pablo, CA" ]
+, [ "row-mdji-v82r~hbqc", "00000000-0000-0000-4D2F-597D00EF93E8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "637", "2007", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-esvz.7x9f_8dmw", "00000000-0000-0000-ECCC-07AED52A3008", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "23.423905768973363", "2012", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-f9kz~tyxx-yika", "00000000-0000-0000-E9CC-3BBBE7EF370F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "10365.657734078786", "2010", "All Crimes", "San Pablo, CA" ]
+, [ "row-tw6d_r5r3.ffvk", "00000000-0000-0000-8EA9-4B293E19D129", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "341.2170073261299", "2013", "Robbery", "San Pablo, CA" ]
+, [ "row-diuu~gci3-h8bf", "00000000-0000-0000-F0B7-CC32FBFE3844", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "20.351400854758836", "2011", "Arson", "San Pablo, CA" ]
+, [ "row-tp4t-ra84-x4n9", "00000000-0000-0000-D112-507AEBFE0151", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "9179.406550028434", "2013", "All Crimes", "San Pablo, CA" ]
+, [ "row-zqix-99nf.i4ss", "00000000-0000-0000-2560-D8213FD5B5CD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "932.3327810804666", "2009", "Violent crime", "San Pablo, CA" ]
+, [ "row-y9pm-yhkz-awkz", "00000000-0000-0000-355C-2F07EAA906B4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "277", "2012", "Violent crime", "San Pablo, CA" ]
+, [ "row-ainz-9nih.ev57", "00000000-0000-0000-AE02-5BC3F30B1AD8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "22.739823928791864", "2009", "Forcible rape", "San Pablo, CA" ]
+, [ "row-2ceb-a7zf-fhv7", "00000000-0000-0000-0DA8-D21C16E96DFB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2011", "Arson", "San Pablo, CA" ]
+, [ "row-zfjx.nyu3.r3mx", "00000000-0000-0000-6B46-37AEBF573C37", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1162", "2014", "Property crime", "San Pablo, CA" ]
+, [ "row-c8pn~pmfp-tb9r", "00000000-0000-0000-268F-7AE5EAA291D9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "118", "2012", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-2x55-mkmn_hqmm", "00000000-0000-0000-F98D-8286B24E61B2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "509", "2012", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-tnus.ndd2_7n5j", "00000000-0000-0000-1DBD-D73E39A9A719", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "304", "2014", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-pb6q.k3a8~9un9", "00000000-0000-0000-FEE7-D04735C828B6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "287", "2009", "Violent crime", "San Pablo, CA" ]
+, [ "row-56yc-yzus.9c2k", "00000000-0000-0000-2B13-2CBFD11C9C16", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "2045.403461452012", "2007", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-8ucd-icn7~jzgn", "00000000-0000-0000-E406-5351F68AC4DE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "3226", "2010", "All Crimes", "San Pablo, CA" ]
+, [ "row-f4zw.wqrd~5vbx", "00000000-0000-0000-6980-4B8B64AE196F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "321.14541865988696", "2013", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-9bh4-85pa~xkf5", "00000000-0000-0000-0D09-373D5D97C868", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "42.295679333680376", "2008", "Forcible rape", "San Pablo, CA" ]
+, [ "row-civq.7ccb.scnb", "00000000-0000-0000-FF36-00AB919A59DE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "19.265966669877663", "2007", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-a6ms_znav-r5sa", "00000000-0000-0000-AEC8-F784CE145D70", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "12904.986674373053", "2007", "All Crimes", "San Pablo, CA" ]
+, [ "row-h3ca.8fxs~nmrh", "00000000-0000-0000-B886-396C1FFD3F38", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "256", "2011", "Violent crime", "San Pablo, CA" ]
+, [ "row-qd7d_9fs8~mdav", "00000000-0000-0000-3729-16F2C0706E2D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "163", "2008", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-2uyf_wpq9.yrw7", "00000000-0000-0000-216E-8CE5D4F718C8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "402", "2014", "Burglary", "San Pablo, CA" ]
+, [ "row-ijkt-pjs7_ewg4", "00000000-0000-0000-50CD-8CABC7BE52AB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "10860.864256156297", "2011", "All Crimes", "San Pablo, CA" ]
+, [ "row-vwym.rq4c~sj9u", "00000000-0000-0000-6128-15C9B0A0728A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "485.2094766430197", "2012", "Robbery", "San Pablo, CA" ]
+, [ "row-qh9i-ck2j~p52n", "00000000-0000-0000-CD5E-7CD465CBD140", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "8", "2009", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-r3s3.nhie_9yub", "00000000-0000-0000-248D-A5E91422AF7B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "455.49193128578867", "2008", "Robbery", "San Pablo, CA" ]
+, [ "row-p3us.3bsv-45k3", "00000000-0000-0000-92F3-90C3F8B1C8EC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "22.49212775528565", "2010", "Forcible rape", "San Pablo, CA" ]
+, [ "row-e4p5_iiy9.4ce6", "00000000-0000-0000-1F4B-48A7BBA5F53F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "314", "2007", "Violent crime", "San Pablo, CA" ]
+, [ "row-cgiz-bc7h.9hkk", "00000000-0000-0000-6BC0-5A0A6E166539", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "123", "2010", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-nmu4.v5td-ckps", "00000000-0000-0000-9613-EF7B111F6A1A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "5", "2008", "Arson", "San Pablo, CA" ]
+, [ "row-ydhp-7uxe.rf78", "00000000-0000-0000-C637-100C124ECC13", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "348", "2007", "Burglary", "San Pablo, CA" ]
+, [ "row-gs7k-mvqu~t6w6", "00000000-0000-0000-8824-CC006F82C476", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2010", "Arson", "San Pablo, CA" ]
+, [ "row-9zjv_4em8.7edd", "00000000-0000-0000-740E-204C192A8025", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2012", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-hvbc_r5j3~8gh4", "00000000-0000-0000-A8B1-B318DD7015A9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1019.0741175287453", "2014", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-ufar.7cyp-arif", "00000000-0000-0000-BAC3-7A0417D65E7C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "513", "2010", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-wpf4~imek.6iza", "00000000-0000-0000-A172-FA406EE478E5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "5", "2014", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-9axt_bdwd.hw4w", "00000000-0000-0000-9EAD-C033DDAF8E1D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "3913.959789917372", "2013", "Property crime", "San Pablo, CA" ]
+, [ "row-ix5a_j8sj.vr7k", "00000000-0000-0000-1AB5-B28350C52BC8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Forcible rape--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "54.342614199405425", "2006", "Forcible rape", "San Pablo, CA" ]
+, [ "row-xtky-4ysx~xexi", "00000000-0000-0000-1317-0C201FCEA206", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "11628.29607816892", "2012", "All Crimes", "San Pablo, CA" ]
+, [ "row-vq65~qhqp_ujen", "00000000-0000-0000-0F83-8C2D17418164", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2014", "Arson", "San Pablo, CA" ]
+, [ "row-2592_dzxz-2rfy", "00000000-0000-0000-21A1-66B368A75EA3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1319", "2009", "Property crime", "San Pablo, CA" ]
+, [ "row-wqx3_99me.5bv6", "00000000-0000-0000-4D34-A549B7F2F6A3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "3202", "2011", "All Crimes", "San Pablo, CA" ]
+, [ "row-vn32_b9dv-piyk", "00000000-0000-0000-EFF2-354B80CB4FE9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "536.236072311595", "2007", "Robbery", "San Pablo, CA" ]
+, [ "row-n9tw.d2ty-gcn9", "00000000-0000-0000-D6E6-8775C64FFD40", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "774.371827003406", "2010", "Violent crime", "San Pablo, CA" ]
+, [ "row-ixh4-vn3r_jznp", "00000000-0000-0000-7DFC-77647D93C238", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "33.52217491870873", "2014", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-nkgi_9md9-9q2s", "00000000-0000-0000-C338-0772B282BF9C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "427.37941794993554", "2011", "Robbery", "San Pablo, CA" ]
+, [ "row-tuve-hrv4_pru9", "00000000-0000-0000-82BF-29BC5E2A3ECF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "10", "2014", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-pysw_7pq4_henr", "00000000-0000-0000-9B8D-2F5E8B3A19DE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1660.0071468018064", "2009", "Larceny", "San Pablo, CA" ]
+, [ "row-tbwd~h8kn-eqzr", "00000000-0000-0000-F7A5-33FCBE9ADE50", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1648.3516483516485", "2010", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-nuk8~78kq.zm5u", "00000000-0000-0000-EBCF-AAB788D74CC4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "456", "2014", "Larceny", "San Pablo, CA" ]
+, [ "row-nmpk-hddg_99th", "00000000-0000-0000-C0DD-3FEC44ADEAB5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1369", "2010", "Property crime", "San Pablo, CA" ]
+, [ "row-6gq2-33wh~rvgp", "00000000-0000-0000-98A1-625CE7DBD206", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "868.3264364697104", "2011", "Violent crime", "San Pablo, CA" ]
+, [ "row-dnu5-pgan-j8w3", "00000000-0000-0000-AAFF-583DC5D2B8AD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1008.2522557235976", "2007", "Violent crime", "San Pablo, CA" ]
+, [ "row-2tm2.6ezx.awc6", "00000000-0000-0000-2FB3-E6907F62A5FE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "350.23456076087655", "2010", "Robbery", "San Pablo, CA" ]
+, [ "row-anpe.eq8j-h36z", "00000000-0000-0000-096F-D5E534267D3D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "613", "2008", "Larceny", "San Pablo, CA" ]
+, [ "row-uxvg.9sdd_qmdn", "00000000-0000-0000-CF8C-FD6AE68E13DB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1799.370220422852", "2010", "Larceny", "San Pablo, CA" ]
+, [ "row-pp2m_pakk-krph", "00000000-0000-0000-60B8-43CE9FD3193C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "13.381059110828623", "2013", "Arson", "San Pablo, CA" ]
+, [ "row-h4qm_sv6v~eq5h", "00000000-0000-0000-B741-FA06BF42F2C1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2008", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-ahc2.9xfb-zehv", "00000000-0000-0000-070B-702E0C8408B6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "5433.368037480479", "2008", "Property crime", "San Pablo, CA" ]
+, [ "row-ykf5_qtq2~rre7", "00000000-0000-0000-70AF-4DE559488346", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "16.761087459354364", "2014", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-4wpw-6xnq_atkw", "00000000-0000-0000-915F-57B4DFDF3E9F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "102", "2013", "Robbery", "San Pablo, CA" ]
+, [ "row-mdhs_iide~xbxe", "00000000-0000-0000-3552-5C4462EA2FE1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "442", "2009", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-evgs_kt87.wzt6", "00000000-0000-0000-80D4-EA926F1ABF80", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "951.0956879377933", "2010", "Burglary", "San Pablo, CA" ]
+, [ "row-zade.h3ib~qr2d", "00000000-0000-0000-6976-26CCCE92EF1F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2014--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1528.611176293118", "2014", "Larceny", "San Pablo, CA" ]
+, [ "row-kbwh-rmis~ni2p", "00000000-0000-0000-D3C2-C11B59FCA437", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2006--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2006", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-2uyr_snq9~4w5r", "00000000-0000-0000-2BE9-D3DD8CB49B57", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Forcible rape--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2009", "Forcible rape", "San Pablo, CA" ]
+, [ "row-4qs2~hc4e-25xq", "00000000-0000-0000-56AC-A527013A68A3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "3", "2012", "Arson", "San Pablo, CA" ]
+, [ "row-7msb-iytw~i3v7", "00000000-0000-0000-AB67-6CE7E91CF879", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1495.8279628247744", "2011", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-9evj_h5s2~nkd7", "00000000-0000-0000-A496-2F4AA5723E99", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1180.878466530626", "2013", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-qa6h~ihan.njcw", "00000000-0000-0000-917A-8EB5BE505F02", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "2273.3840670455643", "2007", "Larceny", "San Pablo, CA" ]
+, [ "row-rp9i~yic3_4ke7", "00000000-0000-0000-D765-BF061698778D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Rape (legacy definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "2", "2013", "Rape (legacy definition)", "San Pablo, CA" ]
+, [ "row-umaz~95x2.qh45", "00000000-0000-0000-0629-2DD366CD14AF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2011--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1879.1126789227324", "2011", "Larceny", "San Pablo, CA" ]
+, [ "row-u8j6-jyhy_694m", "00000000-0000-0000-37CB-3AFEBDB7F695", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", null, "2013", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-8wuf-p4ke-32ph", "00000000-0000-0000-7264-AAF1770A98F0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "25.98837020433356", "2009", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-t6uf~rj86-k33m", "00000000-0000-0000-2A8F-2BDDD4D09841", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2013--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "305", "2013", "Burglary", "San Pablo, CA" ]
+, [ "row-n668-27sb_hbvp", "00000000-0000-0000-3D0E-3049E7817A7D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "560", "2010", "Larceny", "San Pablo, CA" ]
+, [ "row-82tf_ns3t~fdmy", "00000000-0000-0000-E286-CC790E9425A8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2009--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "366", "2009", "Burglary", "San Pablo, CA" ]
+, [ "row-k5a3.wh3m.hg5v", "00000000-0000-0000-CE08-A94D40A057BB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2007--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2007", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-8sqy-r4v7_p52a", "00000000-0000-0000-0029-186364307C2C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2012--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "10.038816758131441", "2012", "Arson", "San Pablo, CA" ]
+, [ "row-p4c9-cmtw-qhee", "00000000-0000-0000-4B43-E594C724466F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2008--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "2023.6855804268612", "2008", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-gpjf_n6k6-8mw2", "00000000-0000-0000-83A3-17D28108C2D9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668294--2010--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "4398.8175567122935", "2010", "Property crime", "San Pablo, CA" ]
+, [ "row-sgnz_4mk8~edne", "00000000-0000-0000-0E3A-B566C51D0015", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "19.808517662594916", "2015", "Arson", "San Pablo, CA" ]
+, [ "row-i8tf-7qfd~k45d", "00000000-0000-0000-A345-480057DBDEEF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "19.808517662594916", "2015", "Arson", "San Pablo, CA" ]
+, [ "row-dvet_f3yi~fx28", "00000000-0000-0000-18C5-9674BBA759BA", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1505.4473423572135", "2015", "Larceny", "San Pablo, CA" ]
+, [ "row-y3kv_6t5g_sdz4", "00000000-0000-0000-B88F-4B64145FCEBE", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1505.4473423572135", "2015", "Larceny", "San Pablo, CA" ]
+, [ "row-9h6w-hr2k-kxk8", "00000000-0000-0000-D855-0E27CF7A213F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1214", "2016", "Property crime", "San Pablo, CA" ]
+, [ "row-sn82~chnj_mrjf", "00000000-0000-0000-DE36-FC295A696CE8", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "2865", "2016", "All Crimes", "San Pablo, CA" ]
+, [ "row-pb9h-m6ki_6xpk", "00000000-0000-0000-B1BB-3ABCE181DB3D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1877.8118276064417", "2016", "Larceny", "San Pablo, CA" ]
+, [ "row-yyzh.cz6t_rha8", "00000000-0000-0000-D58F-B1F4FAAAB628", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "230", "2015", "Violent crime", "San Pablo, CA" ]
+, [ "row-6qbv~5qpi_vxi4", "00000000-0000-0000-BEC5-C5B80E43986B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "230", "2015", "Violent crime", "San Pablo, CA" ]
+, [ "row-pimf~3fmg-c5j9", "00000000-0000-0000-9533-7ECE0983D20B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "4176.295807197094", "2015", "Property crime", "San Pablo, CA" ]
+, [ "row-pxdp~ipve~rk3m", "00000000-0000-0000-D1DF-447497EC02E7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "4176.295807197094", "2015", "Property crime", "San Pablo, CA" ]
+, [ "row-ad28-986i-vh3e", "00000000-0000-0000-9C08-98230155C373", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "35.86098976331747", "2016", "Arson", "San Pablo, CA" ]
+, [ "row-7k3y~ebd4_x8a3", "00000000-0000-0000-3D57-BB33ABBA0FB3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "2996", "2015", "All Crimes", "San Pablo, CA" ]
+, [ "row-zdrf-bn9r-2bie", "00000000-0000-0000-3C9F-5828943FB4B6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "2996", "2015", "All Crimes", "San Pablo, CA" ]
+, [ "row-mrzk-zxr8-54sg", "00000000-0000-0000-BFAF-F7A276EF1B97", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1304.060746120832", "2015", "Burglary", "San Pablo, CA" ]
+, [ "row-tdch_j8yw.yp3b", "00000000-0000-0000-6545-5CC8116E3D55", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1304.060746120832", "2015", "Burglary", "San Pablo, CA" ]
+, [ "row-x3h5_jmk2_x9xd", "00000000-0000-0000-17ED-46DED437A914", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "8", "2015", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-cirf_g7z8-tw4w", "00000000-0000-0000-669E-869C6153C994", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "8", "2015", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-y9kr_y4sq~97ax", "00000000-0000-0000-2E93-65B94AFA0FBB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2015", "Arson", "San Pablo, CA" ]
+, [ "row-55aj_5pcm~7b2h", "00000000-0000-0000-EA5F-C7EE614BA637", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2015", "Arson", "San Pablo, CA" ]
+, [ "row-kpx7.cjxc_8vsv", "00000000-0000-0000-5E83-0CA464C4B1E2", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "113", "2015", "Robbery", "San Pablo, CA" ]
+, [ "row-e5rb-39a4-hsij", "00000000-0000-0000-B810-7E16192BB282", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "113", "2015", "Robbery", "San Pablo, CA" ]
+, [ "row-pj4n-hiq5~q679", "00000000-0000-0000-CC70-46394E360108", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "2", "2016", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-d947~izye-7tji", "00000000-0000-0000-3329-359D1FA8E4DF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "213", "2016", "Violent crime", "San Pablo, CA" ]
+, [ "row-ww98_93ah-k9kj", "00000000-0000-0000-A204-37207B54221F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "3957.749233878855", "2016", "Property crime", "San Pablo, CA" ]
+, [ "row-k6ui~f4in~w3ha", "00000000-0000-0000-D233-66FADDD33A36", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "456", "2015", "Larceny", "San Pablo, CA" ]
+, [ "row-pwqn~a7mv-22va", "00000000-0000-0000-C8BD-2FCA5EF69C41", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "456", "2015", "Larceny", "San Pablo, CA" ]
+, [ "row-i8n5.m5d2_rncv", "00000000-0000-0000-D5D4-C92BC3217A7A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "213", "2016", "Burglary", "San Pablo, CA" ]
+, [ "row-athc.jbgx~gfgc", "00000000-0000-0000-87B3-45A1162F7D82", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "694.3991654169655", "2016", "Violent crime", "San Pablo, CA" ]
+, [ "row-uccy~w45y-zjfm", "00000000-0000-0000-438D-A21ED8EC774E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "6.602839220864973", "2015", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-qrvv-t5hi~d6ri", "00000000-0000-0000-F898-9DFDE9D8876C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "6.602839220864973", "2015", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-3r3v.23j9.4kzz", "00000000-0000-0000-7295-FE9AAD7F17FD", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1265", "2015", "Property crime", "San Pablo, CA" ]
+, [ "row-8cs7-8mf9.h9wg", "00000000-0000-0000-EFCC-FD76D4D7E2E6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1265", "2015", "Property crime", "San Pablo, CA" ]
+, [ "row-4za2_swqm_3zgm", "00000000-0000-0000-02F1-3D1313A40A05", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "395", "2015", "Burglary", "San Pablo, CA" ]
+, [ "row-tarf.dvms_rv3s", "00000000-0000-0000-69C6-9495272440FF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "395", "2015", "Burglary", "San Pablo, CA" ]
+, [ "row-jcja_qcjw~j4j4", "00000000-0000-0000-5314-1233DC8C00B5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "22", "2016", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-x48c~x8f2.dm9i", "00000000-0000-0000-FC50-99C96B81F1B4", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "11", "2016", "Arson", "San Pablo, CA" ]
+, [ "row-qtue~2gey-9am9", "00000000-0000-0000-C32F-D7A2C81D3679", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "322.7489078698572", "2016", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-ywg6-2jq9~2riq", "00000000-0000-0000-4127-44DA8C444CCF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "26.41135688345989", "2015", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-bpjt_pikn_6iwk", "00000000-0000-0000-F25B-35F9F82FA7D0", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "26.41135688345989", "2015", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-7jkc-ssw6-dwdx", "00000000-0000-0000-B95F-5A76F16E8BDB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "99", "2016", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-3ggh-8zsd-b3cj", "00000000-0000-0000-2BD2-7B1726FC74F3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "107", "2015", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-9g8v~a66f.kwtr", "00000000-0000-0000-F954-641D22C55292", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "107", "2015", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-2c8x.wvz7_5dfk", "00000000-0000-0000-2747-74501C50E433", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "576", "2016", "Larceny", "San Pablo, CA" ]
+, [ "row-38eu.8hmd~jg69", "00000000-0000-0000-D34F-FD1110C1E22D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "293.40809806350654", "2016", "Robbery", "San Pablo, CA" ]
+, [ "row-upgq-7m8c.3wwx", "00000000-0000-0000-B378-57431DC56593", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "9340.157788354958", "2016", "All Crimes", "San Pablo, CA" ]
+, [ "row-93vc~rs5m.2v58", "00000000-0000-0000-2FF5-28E46B0606A5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1366.7877187190493", "2015", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-ux8e~dmuv-mpr8", "00000000-0000-0000-205D-C482BFAB5408", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1366.7877187190493", "2015", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-wxgh-xfpt~ic6m", "00000000-0000-0000-AA40-99D7DDBD52A6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "414", "2015", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-qccv_zv6d_z5pk", "00000000-0000-0000-4EDE-CAAC3F3CA895", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "414", "2015", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-g9yg~9tff~ebyg", "00000000-0000-0000-A51E-CCEAF4BD1E99", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1385.5382408554476", "2016", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-j9ai-rq89_fjnf", "00000000-0000-0000-148A-066A3B7AE773", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "6.520179956966812", "2016", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-nxmf_6qea~ha2r", "00000000-0000-0000-C8F1-29F0AA7AD238", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-cbad~566z~8bcm", "00000000-0000-0000-D8C9-730C0346F1B5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "San Pablo, CA" ]
+, [ "row-ub4s.eaqq~vz7z", "00000000-0000-0000-2D59-862DCDB1E140", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "9891.053152855728", "2015", "All Crimes", "San Pablo, CA" ]
+, [ "row-84mx~am7x~ch7i", "00000000-0000-0000-072F-ABFB37128317", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "9891.053152855728", "2015", "All Crimes", "San Pablo, CA" ]
+, [ "row-9h4v.tw4f~8vad", "00000000-0000-0000-4084-0CD148BE52CF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "353.251898316276", "2015", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-h6e4_va99.ncyq", "00000000-0000-0000-CDF6-8AA9A3FA3E8C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "353.251898316276", "2015", "Aggravated assault", "San Pablo, CA" ]
+, [ "row-6get.jcze_yx97", "00000000-0000-0000-2F5B-06DD39AB1C85", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "71.72197952663494", "2016", "Rape (revised definition)", "San Pablo, CA" ]
+, [ "row-dend_5xxq-5dmk", "00000000-0000-0000-9B03-85E551BA65B2", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "759.3265103994718", "2015", "Violent crime", "San Pablo, CA" ]
+, [ "row-ijq3~62ih-p5gn", "00000000-0000-0000-140C-8C0C58DFF1FC", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "759.3265103994718", "2015", "Violent crime", "San Pablo, CA" ]
+, [ "row-xa92_gzp3_7xw4", "00000000-0000-0000-565E-B853E6EAF472", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "373.0604159788709", "2015", "Robbery", "San Pablo, CA" ]
+, [ "row-iqw7~xb6f~ugwg", "00000000-0000-0000-8A45-A6F558F49068", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2015--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "373.0604159788709", "2015", "Robbery", "San Pablo, CA" ]
+, [ "row-285n_7i95_2uvy", "00000000-0000-0000-7465-B47C16C77610", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "425", "2016", "Motor vehicle theft", "San Pablo, CA" ]
+, [ "row-z5s4.mbvy~awsi", "00000000-0000-0000-157F-47468C2F09D3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "694.3991654169655", "2016", "Burglary", "San Pablo, CA" ]
+, [ "row-xq3j_guqn.sypx", "00000000-0000-0000-161B-48A574F3E761", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668294--2016--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "90", "2016", "Robbery", "San Pablo, CA" ]
+, [ "row-3nth~twag_w2xu", "00000000-0000-0000-4DEB-7902AACB6A74", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "547", "2017", "Larceny", null ]
+, [ "row-kxk8-826y~3urn", "00000000-0000-0000-B4B4-89B166A94065", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "107939.96296416622", "2017", "All Crimes", null ]
+, [ "row-ciau~hru6-4c7h", "00000000-0000-0000-BD75-DEF8D9C569F4", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "33225", "2017", "All Crimes", null ]
+, [ "row-4yvj~v6rp_feb7", "00000000-0000-0000-6A51-17766DE4AF44", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1182.547675514116", "2017", "Motor vehicle theft", null ]
+, [ "row-57ff_6a2w-sest", "00000000-0000-0000-D953-0CA5A46B3688", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "22.741301452194534", "2017", "Rape (revised definition)", null ]
+, [ "row-rc4m-m6mj-igcp", "00000000-0000-0000-8A8B-E1CA8CC062F0", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1777.0702706214875", "2017", "Larceny", null ]
+, [ "row-at2k-snaw-hs2x", "00000000-0000-0000-3542-272FB547F832", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "8", "2017", "Arson", null ]
+, [ "row-jxq6.g89x-cgz3", "00000000-0000-0000-815A-E9DC154AC930", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "129", "2017", "Burglary", null ]
+, [ "row-s4aw-kym9_ysq9", "00000000-0000-0000-5DB6-5DB5A0691E7F", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "1040", "2017", "Property crime", null ]
+, [ "row-dbz6_whh9-4nu2", "00000000-0000-0000-AB15-64CF5384F97B", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "178", "2017", "Violent crime", null ]
+, [ "row-n287_i4cd.ajm7", "00000000-0000-0000-BD3C-2060E18DF542", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "25.99005880250804", "2017", "Arson", null ]
+, [ "row-u2q5~sfj6-sji2", "00000000-0000-0000-3B68-EE6F413C66E4", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "66", "2017", "Aggravated assault", null ]
+, [ "row-8mtf~9i2z~27ye", "00000000-0000-0000-104C-EAA9204CD1D3", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "578.2788083558039", "2017", "Violent crime", null ]
+, [ "row-kiaj_r7cf.xvk2", "00000000-0000-0000-DAC7-A2B209D43781", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "419.08969819044216", "2017", "Burglary", null ]
+, [ "row-k9rw-62v3.v4qq", "00000000-0000-0000-0203-EB488CE37A41", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "364", "2017", "Motor vehicle theft", null ]
+, [ "row-t7gh_avaf-8di6", "00000000-0000-0000-2E7F-466DB7B95F07", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "7", "2017", "Rape (revised definition)", null ]
+, [ "row-jee8-zsuj_upwm", "00000000-0000-0000-5B85-28B6C38632B3", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "3378.7076443260457", "2017", "Property crime", null ]
+, [ "row-pqsx-x58g~quxf", "00000000-0000-0000-8B89-AA59197FC309", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "6.49751470062701", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-grw7_j6xi.wkuq", "00000000-0000-0000-0371-F6EA341BF027", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "103", "2017", "Robbery", null ]
+, [ "row-s5xz~uxa2.kxgq", "00000000-0000-0000-82EB-50D5B25E2CFE", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "2", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-immg.wi76~cuve", "00000000-0000-0000-D9CA-78EE32CC7738", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "334.622007082291", "2017", "Robbery", null ]
+, [ "row-vwcy.7mfp-2bcd", "00000000-0000-0000-FC22-9F8DE4C6B8EC", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668294--2017--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "214.41798512069136", "2017", "Aggravated assault", null ]
+, [ "row-hhtb~dd9a-md47", "00000000-0000-0000-BDC7-69F098A95247", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Violent crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "180", "2018", "Violent crime", null ]
+, [ "row-py6v~7mcx_uhjf", "00000000-0000-0000-307B-A3E6078E5FB5", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Violent crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "573.1936439193707", "2018", "Violent crime", null ]
+, [ "row-rciz~ts2d~3qte", "00000000-0000-0000-B759-56D9EDE6E569", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Murder and nonnegligent manslaughter--count", "1600000US0668294", "San Pablo, California", "place", "count", "0", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-s5yf-r8f3_6ia9", "00000000-0000-0000-E8F5-87218FD24479", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Murder and nonnegligent manslaughter--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "0", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-kdqc~nz94_rjpt", "00000000-0000-0000-4846-5982AC18E1A7", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Motor vehicle theft--count", "1600000US0668294", "San Pablo, California", "place", "count", "334", "2018", "Motor vehicle theft", null ]
+, [ "row-mudz.nufy_uprs", "00000000-0000-0000-6421-8D6E661AFA51", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Motor vehicle theft--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1063.5926503837213", "2018", "Motor vehicle theft", null ]
+, [ "row-izdg.dp6f~afwq", "00000000-0000-0000-05EF-8BAAB44CDFDE", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Rape (revised definition)--count", "1600000US0668294", "San Pablo, California", "place", "count", "14", "2018", "Rape (revised definition)", null ]
+, [ "row-rc9s-zk7f-wm37", "00000000-0000-0000-A6E4-858160294791", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Rape (revised definition)--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "44.5817278603955", "2018", "Rape (revised definition)", null ]
+, [ "row-cxzd-fyue~tvvp", "00000000-0000-0000-0B58-F20538422614", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Robbery--count", "1600000US0668294", "San Pablo, California", "place", "count", "99", "2018", "Robbery", null ]
+, [ "row-vmz6~pdam-xqep", "00000000-0000-0000-F52E-72705C7AA0FF", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Robbery--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "315.2565041556539", "2018", "Robbery", null ]
+, [ "row-2yu6.mc5v-7k9m", "00000000-0000-0000-39AA-69002E4D0251", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Larceny--count", "1600000US0668294", "San Pablo, California", "place", "count", "531", "2018", "Larceny", null ]
+, [ "row-xwxj-vg8x_5qt4", "00000000-0000-0000-EF98-C1276BFCC7D4", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Larceny--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "1690.9212495621437", "2018", "Larceny", null ]
+, [ "row-syhw.8tw9.pkjr", "00000000-0000-0000-A192-D8C0608ECBE9", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Arson--count", "1600000US0668294", "San Pablo, California", "place", "count", "6", "2018", "Arson", null ]
+, [ "row-5krh_efuu-86nn", "00000000-0000-0000-5D8A-71DB3ADDCA51", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Arson--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "19.10645479731236", "2018", "Arson", null ]
+, [ "row-qvfe.pjhb~g8r5", "00000000-0000-0000-10E5-D147F6C98F8B", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Burglary--count", "1600000US0668294", "San Pablo, California", "place", "count", "114", "2018", "Burglary", null ]
+, [ "row-bdha-q582.rwz3", "00000000-0000-0000-E491-F438AADE812B", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Burglary--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "363.0226411489348", "2018", "Burglary", null ]
+, [ "row-bd25_25bz.atn8", "00000000-0000-0000-E984-FF1516F6DFE3", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Property crime--count", "1600000US0668294", "San Pablo, California", "place", "count", "979", "2018", "Property crime", null ]
+, [ "row-ymbs~a63h~3edk", "00000000-0000-0000-0D45-FAAE422386AE", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Property crime--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "3117.5365410947998", "2018", "Property crime", null ]
+, [ "row-9hh4~hyg5-zfwy", "00000000-0000-0000-0C76-58E80A024ECA", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Aggravated assault--count", "1600000US0668294", "San Pablo, California", "place", "count", "67", "2018", "Aggravated assault", null ]
+, [ "row-hig7_x5n7-br9t", "00000000-0000-0000-FB6A-14F106A53005", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--Aggravated assault--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "213.35541190332137", "2018", "Aggravated assault", null ]
+, [ "row-8pn8.3gpp~7f3z", "00000000-0000-0000-4202-9250D3B38E7E", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--All Crimes--count", "1600000US0668294", "San Pablo, California", "place", "count", "33727", "2018", "All Crimes", null ]
+, [ "row-sgqd_jh48_gddv", "00000000-0000-0000-E82B-6DD61ADB6D3D", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668294--2018--All Crimes--rate", "1600000US0668294", "San Pablo, California", "place", "rate", "107400.56682482566", "2018", "All Crimes", null ]
+ ]
+}

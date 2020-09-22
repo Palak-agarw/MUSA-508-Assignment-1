@@ -1,0 +1,549 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "zzzz-zzzz",
+      "name" : "FBI UCR V3",
+      "assetType" : "filter",
+      "averageRating" : 0,
+      "createdAt" : 1474327305,
+      "displayType" : "table",
+      "downloadCount" : 0,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1516323527,
+      "newBackend" : true,
+      "numberOfComments" : 0,
+      "oid" : 0,
+      "provenance" : "community",
+      "publicationAppendEnabled" : true,
+      "publicationGroup" : 13172847,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1579039741,
+      "rowsUpdatedBy" : "rndq-s2m8",
+      "searchString" : "San Mateo",
+      "tableId" : 14727467,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewType" : "tabular",
+      "approvals" : [ {
+        "state" : "submittable",
+        "submissionObject" : "public_audience_request",
+        "submissionOutcome" : "change_audience",
+        "workflowId" : 921,
+        "submissionDetails" : {
+          "permissionType" : "READ"
+        }
+      } ],
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 335870077,
+        "name" : "key",
+        "dataTypeName" : "text",
+        "fieldName" : "key",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436444,
+        "width" : 136,
+        "format" : { }
+      }, {
+        "id" : 335870078,
+        "name" : "id",
+        "dataTypeName" : "text",
+        "fieldName" : "id",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436445,
+        "width" : 124,
+        "format" : { }
+      }, {
+        "id" : 335870079,
+        "name" : "name",
+        "dataTypeName" : "text",
+        "fieldName" : "name",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436446,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870080,
+        "name" : "type",
+        "dataTypeName" : "text",
+        "fieldName" : "type",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436447,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870081,
+        "name" : "variable",
+        "dataTypeName" : "text",
+        "fieldName" : "variable",
+        "position" : 5,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436448,
+        "width" : 196,
+        "format" : { }
+      }, {
+        "id" : 335870082,
+        "name" : "value",
+        "dataTypeName" : "number",
+        "fieldName" : "value",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436449,
+        "width" : 160,
+        "format" : { }
+      }, {
+        "id" : 335870083,
+        "name" : "year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436450,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870084,
+        "name" : "crime_type",
+        "dataTypeName" : "text",
+        "fieldName" : "crime_type",
+        "position" : 8,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436451,
+        "width" : 220,
+        "format" : { }
+      }, {
+        "id" : 335870085,
+        "name" : "place_name",
+        "dataTypeName" : "text",
+        "fieldName" : "place_name",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436452,
+        "width" : 220,
+        "format" : { }
+      } ],
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "rowLabel" : "Row",
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        },
+        "inDatasetSearch" : true
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : false,
+          "expression" : {
+            "columnId" : 335870083,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "i7d8-sc4w",
+        "displayName" : "Chris Metcalf",
+        "profileImageUrlLarge" : "/api/users/i7d8-sc4w/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/i7d8-sc4w/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/i7d8-sc4w/profile_images/TINY",
+        "screenName" : "Chris Metcalf",
+        "type" : "interactive",
+        "userSegment" : "community_user"
+      },
+      "flags" : [ "restorable", "restorePossibleForType", "unsaved" ]
+    }
+  },
+  "data" : [ [ "row-d2hy~4dmp-8a6e", "00000000-0000-0000-9F5E-D6057F57C0CA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "158.61718352821558", "2011", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-7ujf-ye6a.hwpg", "00000000-0000-0000-0D10-77C5F6FBADFD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "69", "2011", "Robbery", "San Mateo, CA" ]
+, [ "row-wfz7-7696_ewjj", "00000000-0000-0000-4957-0801DDC17A51", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1760.6981550945418", "2007", "Larceny", "San Mateo, CA" ]
+, [ "row-dymr_mai3_jn3t", "00000000-0000-0000-640C-DCDA3505FB73", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "0", "2012", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-stvf.gzpx-p9k6", "00000000-0000-0000-478C-E04B5FF5FA0B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Rape (revised definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2013", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-ej8w~23ir~8a82", "00000000-0000-0000-5714-C253118F41E0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "144.00370582963254", "2012", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-vtjw~n9nr.fd4a", "00000000-0000-0000-B47E-E9F7618482E3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "72.49074273623165", "2014", "Robbery", "San Mateo, CA" ]
+, [ "row-3qmv-hiq4-xfnj", "00000000-0000-0000-C0C0-332466CD2FC6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "155", "2013", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-9yq2_w2yy-7zjc", "00000000-0000-0000-67AA-FDEC823A7D71", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2707.2610744170356", "2006", "Property crime", "San Mateo, CA" ]
+, [ "row-mqan-6qsx_ercd", "00000000-0000-0000-6AA3-D25CAAB3C2EF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "213", "2008", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-shhf_cgmp-h9f6", "00000000-0000-0000-36F8-35157B068562", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "325", "2006", "Violent crime", "San Mateo, CA" ]
+, [ "row-m886_rf2t-25ak", "00000000-0000-0000-0A24-D343047B1414", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1904.351403773437", "2014", "Property crime", "San Mateo, CA" ]
+, [ "row-jx5f_xf2e_b5pu", "00000000-0000-0000-2216-E19D809006C4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "140.31520081342146", "2011", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-dyki.ux8k_e5is", "00000000-0000-0000-0EF5-26D3B429EDC2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "1", "2008", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-ikb5.kt2q~j9rf", "00000000-0000-0000-6EBC-FAA95DB99D53", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "262.8319386121265", "2012", "Violent crime", "San Mateo, CA" ]
+, [ "row-fi4p_3ngg-qajb", "00000000-0000-0000-B930-D3183098975A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2007", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-5hkj-z9ge_wpei", "00000000-0000-0000-545B-A45489918DF0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "20", "2007", "Arson", "San Mateo, CA" ]
+, [ "row-tzw4-rnj8-e33c", "00000000-0000-0000-96A0-12CAB8F26E38", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "309", "2013", "Burglary", "San Mateo, CA" ]
+, [ "row-sk7e_2yxu.4sgt", "00000000-0000-0000-936F-0E345285FAC0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1448", "2012", "Larceny", "San Mateo, CA" ]
+, [ "row-y4s6-bym8~npjx", "00000000-0000-0000-BEC4-6DCEF99F0DF5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "11.947431302270012", "2013", "Arson", "San Mateo, CA" ]
+, [ "row-4j4s-zpju_7ryh", "00000000-0000-0000-0F37-80C141DBD57C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "1876", "2012", "Property crime", "San Mateo, CA" ]
+, [ "row-wmcu_et24~34vh", "00000000-0000-0000-FD07-A0DEAA99407C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "242.77949716210455", "2007", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-jn39.pmzm.pjn6", "00000000-0000-0000-180A-DC11308CD79A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "124.45240939864595", "2013", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-avfk.8xsf_ifi6", "00000000-0000-0000-52C0-8B1292542061", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2013", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-wetp-8use~mbd6", "00000000-0000-0000-C0E9-01EA5006CCC7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4620", "2013", "All Crimes", "San Mateo, CA" ]
+, [ "row-ib3i_wfvm~swts", "00000000-0000-0000-0EAF-F10265D6429C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4026.4361972547026", "2011", "All Crimes", "San Mateo, CA" ]
+, [ "row-zn8t.xp9n~amsq", "00000000-0000-0000-CE92-96814C2189F0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "392.79869067103107", "2008", "Violent crime", "San Mateo, CA" ]
+, [ "row-t49q-k3dh.gvdc", "00000000-0000-0000-3CA4-7C1A18120E44", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1338", "2014", "Larceny", "San Mateo, CA" ]
+, [ "row-e8qf-x6eb~x42r", "00000000-0000-0000-4B02-C20A5119660F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "90.31457764333359", "2006", "Robbery", "San Mateo, CA" ]
+, [ "row-m38t_ad54_ycb5", "00000000-0000-0000-3E37-8693BB6358AB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "2", "2009", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-3biz~pmh5_ddx4", "00000000-0000-0000-BD2C-44D9EF2BE154", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1926.8957992362248", "2008", "Larceny", "San Mateo, CA" ]
+, [ "row-ftxk~xnqs-t5vp", "00000000-0000-0000-89A7-45DE2E4B3CC8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "334.6420096018197", "2007", "Violent crime", "San Mateo, CA" ]
+, [ "row-agv5.bysp-zdpk", "00000000-0000-0000-6D61-FD2AE1C1F027", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1766", "2008", "Larceny", "San Mateo, CA" ]
+, [ "row-sak4.s9mq.tja5", "00000000-0000-0000-2F0A-FB35A748205C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "260.98960355463527", "2010", "Burglary", "San Mateo, CA" ]
+, [ "row-zmxv.v22f.ghaj", "00000000-0000-0000-4E23-2D5D96F1071D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "1905", "2010", "Property crime", "San Mateo, CA" ]
+, [ "row-yxjf-7ccy~7a9x", "00000000-0000-0000-6070-9A68A5958C0D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "20.77842543279273", "2007", "Forcible rape", "San Mateo, CA" ]
+, [ "row-ure7_f2yu_p6ku", "00000000-0000-0000-D13B-8DDC44E54ED2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2488", "2006", "Property crime", "San Mateo, CA" ]
+, [ "row-spaz.i98r~ajse", "00000000-0000-0000-AB57-418F6BCC7E72", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "199", "2014", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-ffnd~3hgz~5b56", "00000000-0000-0000-A6C2-C6FB43E03893", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "3960", "2011", "All Crimes", "San Mateo, CA" ]
+, [ "row-8n6x_n2tu-nhmb", "00000000-0000-0000-C1B1-F1FBE0D631F9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1601", "2013", "Larceny", "San Mateo, CA" ]
+, [ "row-np46-xj5j~cjn3", "00000000-0000-0000-676D-9E2D7ABD858D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "210", "2009", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-wju6~hzds-5syv", "00000000-0000-0000-2782-98441C56190C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "230", "2014", "Violent crime", "San Mateo, CA" ]
+, [ "row-k7tf.3kgf~ciym", "00000000-0000-0000-3A24-4803CAD6AD9B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2089.204687653018", "2006", "Larceny", "San Mateo, CA" ]
+, [ "row-cxqi_ndpj-6pr6", "00000000-0000-0000-AB1F-BEAC295C5C5A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4310.040985670121", "2012", "All Crimes", "San Mateo, CA" ]
+, [ "row-pt6d.9e9a-zxnr", "00000000-0000-0000-050E-7C20B94440AA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "5313", "2008", "All Crimes", "San Mateo, CA" ]
+, [ "row-8z8j_yt3u_cyry", "00000000-0000-0000-064D-E9987E5CCF06", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Rape (revised definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", null, "2013", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-d532_n54m~e37v", "00000000-0000-0000-4E29-7A23B02DF1EB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "407", "2014", "Burglary", "San Mateo, CA" ]
+, [ "row-n5yj-pzy3~bhzy", "00000000-0000-0000-427D-F2BF9637BDB0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "5225.227195678087", "2007", "All Crimes", "San Mateo, CA" ]
+, [ "row-ax3i-p7y6-ksjz", "00000000-0000-0000-28EF-6416036832BD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "30.551009274413527", "2008", "Forcible rape", "San Mateo, CA" ]
+, [ "row-xesj-jpvr_pcsf", "00000000-0000-0000-C8CD-DC8D7B703582", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "306", "2007", "Violent crime", "San Mateo, CA" ]
+, [ "row-xwb6~qqbd_934m", "00000000-0000-0000-C12F-1724765DB879", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "20.60558736769044", "2009", "Arson", "San Mateo, CA" ]
+, [ "row-6ama.2xvk-dz7k", "00000000-0000-0000-DB0C-2CE38825CAE2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2172", "2009", "Property crime", "San Mateo, CA" ]
+, [ "row-5vw3-ak7n.3kvm", "00000000-0000-0000-A130-DD4575F3DC48", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "0", "2013", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-sntz_nuzg-7tqm", "00000000-0000-0000-B11D-DD43532B5571", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "16", "2009", "Forcible rape", "San Mateo, CA" ]
+, [ "row-uwn4.wbn5~fyjd", "00000000-0000-0000-D026-25B2F27F2BDF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "21.762548829718938", "2006", "Arson", "San Mateo, CA" ]
+, [ "row-f3ba.ctu4-59i5", "00000000-0000-0000-4C5B-9FE8549449DE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1310.710997041594", "2014", "Larceny", "San Mateo, CA" ]
+, [ "row-vrpr.fs4i.46ak", "00000000-0000-0000-7712-6B88863C0683", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "366.5625542252299", "2009", "Violent crime", "San Mateo, CA" ]
+, [ "row-6b94_hpzd.rbw9", "00000000-0000-0000-C92F-769F6D8C17FE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "187", "2007", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-sub4-yseq.gpgn", "00000000-0000-0000-2066-E26676CCDE2A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "261", "2012", "Violent crime", "San Mateo, CA" ]
+, [ "row-4ueh.35vq~rxyr", "00000000-0000-0000-044A-84F5D8CED6C9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "143", "2012", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-8e2k.8cg6-dxm3", "00000000-0000-0000-D065-F1F05A729A0D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "13.09124598451205", "2012", "Forcible rape", "San Mateo, CA" ]
+, [ "row-vy9g.r3cs.pck7", "00000000-0000-0000-AE5B-22F9FA3F6202", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1458.1633988902652", "2012", "Larceny", "San Mateo, CA" ]
+, [ "row-mnby-mqmu_qujx", "00000000-0000-0000-EB81-29D7AD66EB23", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "0", "2007", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-rv95.x7a6.xwq3", "00000000-0000-0000-7237-EA5E2A0D7D9F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "110", "2009", "Robbery", "San Mateo, CA" ]
+, [ "row-7qbt~zad2~3ti4", "00000000-0000-0000-4747-6EBE73A63912", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2267.0355748515435", "2007", "Property crime", "San Mateo, CA" ]
+, [ "row-wn46_d2u9.gj4p", "00000000-0000-0000-5122-90B7A32CCE1D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "1", "2011", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-guje_isiy_kpf9", "00000000-0000-0000-B153-32AEB891C94C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "125", "2013", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-snqn_fj38_yyj2", "00000000-0000-0000-B3E8-E30BB7AB876E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "83", "2006", "Robbery", "San Mateo, CA" ]
+, [ "row-eu92.84bd~ev4n", "00000000-0000-0000-7106-BC6B8401DC3E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "246", "2011", "Violent crime", "San Mateo, CA" ]
+, [ "row-heqr_jtxu-cm8c", "00000000-0000-0000-674D-E80D405B1A21", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2014", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-c52c~2j9y.upyb", "00000000-0000-0000-2862-08173578CA44", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "1732", "2011", "Property crime", "San Mateo, CA" ]
+, [ "row-wwrj.p9dw.krk9", "00000000-0000-0000-F9F7-66864DCF2D11", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "109.36013385680384", "2007", "Robbery", "San Mateo, CA" ]
+, [ "row-tav5~zt6j_mi5a", "00000000-0000-0000-10DA-6AEEB63FF2C1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "314.23895253682485", "2008", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-qm2q.j4ve~cum8", "00000000-0000-0000-B26C-166CE2D3B142", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "9", "2014", "Arson", "San Mateo, CA" ]
+, [ "row-nva3-u2fp_qcti", "00000000-0000-0000-3591-C4068CABBE1C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "18.548827059465356", "2008", "Arson", "San Mateo, CA" ]
+, [ "row-thn3.wy6h-gvri", "00000000-0000-0000-FF91-ED3135A517B4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1720", "2009", "Larceny", "San Mateo, CA" ]
+, [ "row-unsr.wwnu-2k4e", "00000000-0000-0000-2B79-8C212976F183", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4599.761051373955", "2013", "All Crimes", "San Mateo, CA" ]
+, [ "row-cn7e~wkfp.yaym", "00000000-0000-0000-7767-DF982C4888C9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2073", "2007", "Property crime", "San Mateo, CA" ]
+, [ "row-ddns-z4xh~sunn", "00000000-0000-0000-1350-8DC34517049A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "138", "2011", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-tzag~8dqb~y58h", "00000000-0000-0000-A134-056F0A75693F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Rape (legacy definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "29", "2013", "Rape (legacy definition)", "San Mateo, CA" ]
+, [ "row-4zu2.x4s7~imai", "00000000-0000-0000-4689-4D371B3FCCD2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "255.3191489361702", "2008", "Burglary", "San Mateo, CA" ]
+, [ "row-pyth_7z2v~xmgn", "00000000-0000-0000-1BCE-04710EE106EE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2355.543987506507", "2009", "Property crime", "San Mateo, CA" ]
+, [ "row-xxy6.xy66-hgtj", "00000000-0000-0000-E815-0B78FBC0BF17", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1920", "2006", "Larceny", "San Mateo, CA" ]
+, [ "row-9g8z_4a69_5rxj", "00000000-0000-0000-EF8F-AEBC1B46AAAC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "185", "2010", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-gi6k_e9n9_nn6c", "00000000-0000-0000-84C0-6A02551F0B93", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "0", "2014", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-vdbg~ke9q~na6j", "00000000-0000-0000-D08C-79676E1CD970", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2.176254882971894", "2006", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-ivps_2sf4.7jmb", "00000000-0000-0000-961D-7ADC0618B6B9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "20.490919287347396", "2010", "Arson", "San Mateo, CA" ]
+, [ "row-ac3e.r29e-ttkh", "00000000-0000-0000-DB24-950E5772148D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2054.4842759156204", "2010", "Property crime", "San Mateo, CA" ]
+, [ "row-yuyw_q4er-faus", "00000000-0000-0000-A0FF-415DC23613E0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "242", "2010", "Burglary", "San Mateo, CA" ]
+, [ "row-eipx.6au6_m9vi", "00000000-0000-0000-E2BE-FBEF0B45672D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "118", "2008", "Robbery", "San Mateo, CA" ]
+, [ "row-pqha.xnn8.y4v2", "00000000-0000-0000-CA0E-274405F658D1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1593.9864595778574", "2013", "Larceny", "San Mateo, CA" ]
+, [ "row-uvcg-kdvt-wued", "00000000-0000-0000-3CD6-7E0DE443D979", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "24", "2010", "Forcible rape", "San Mateo, CA" ]
+, [ "row-32kt-p2e7~8n2s", "00000000-0000-0000-6708-07BCB2FE2DF3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1761.057447890188", "2011", "Property crime", "San Mateo, CA" ]
+, [ "row-uyzt.swvk.8qu8", "00000000-0000-0000-17AE-03B816C9018C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "297.1542599340621", "2009", "Burglary", "San Mateo, CA" ]
+, [ "row-tkpn.3fjh.iwpy", "00000000-0000-0000-ECCF-0DE325156AEA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Rape (legacy definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "28.872958980485866", "2013", "Rape (legacy definition)", "San Mateo, CA" ]
+, [ "row-ba6s.qbqn~pwc8", "00000000-0000-0000-1FD9-D6875B4A65FE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "222", "2006", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-3cs7.7ced~bfms", "00000000-0000-0000-AEFB-53968ED4F74A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "194.9413216825689", "2014", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-8jre_4n65_nagk", "00000000-0000-0000-E3E0-235E2EC43C1E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "232.40589198036008", "2008", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-2vsx_bazy-uf3k", "00000000-0000-0000-85B7-9AEBA38B65A5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "193.04181849731043", "2009", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-2536_mja7-ets7", "00000000-0000-0000-F12B-8017CFECEBE1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "74", "2014", "Robbery", "San Mateo, CA" ]
+, [ "row-cqwg.hwb2_9wxw", "00000000-0000-0000-8E76-2722265AA45E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "81", "2012", "Robbery", "San Mateo, CA" ]
+, [ "row-8bwe.88uc.g3ev", "00000000-0000-0000-E0B4-9E2C8337DF53", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "5039", "2009", "All Crimes", "San Mateo, CA" ]
+, [ "row-shk2.3gbe~7fjj", "00000000-0000-0000-3929-BF7BCAAB353C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "241.56429200988018", "2006", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-jm4g-cktr~gy2p", "00000000-0000-0000-3437-C208AFE38C4D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "70.15760040671073", "2011", "Robbery", "San Mateo, CA" ]
+, [ "row-9vz3.mfky~j6am", "00000000-0000-0000-4F91-939D38589A9C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "88.43449376644666", "2010", "Robbery", "San Mateo, CA" ]
+, [ "row-p2w2~dde4_hxhm", "00000000-0000-0000-6A78-1526B31A44E6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2055.9538032656314", "2013", "Property crime", "San Mateo, CA" ]
+, [ "row-6sxj_wbpv-z7z5", "00000000-0000-0000-DAEA-6D671EF05749", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "21.87202677136077", "2007", "Arson", "San Mateo, CA" ]
+, [ "row-7gyv.q3ng-ebfz", "00000000-0000-0000-5B96-38E50A10DA5C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4268.137379753532", "2014", "All Crimes", "San Mateo, CA" ]
+, [ "row-crt4_u539~h4i6", "00000000-0000-0000-D0EB-F8EE0C539F35", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "8.816441684136283", "2014", "Arson", "San Mateo, CA" ]
+, [ "row-zs6w_mqcy.kbih", "00000000-0000-0000-F2B0-B238FD42B65E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "5797.054009819967", "2008", "All Crimes", "San Mateo, CA" ]
+, [ "row-4hcf_54ik.wtw3", "00000000-0000-0000-B5BC-9CFBA8082154", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "25.883266468228292", "2010", "Forcible rape", "San Mateo, CA" ]
+, [ "row-ywv6_hz7p-m5h4", "00000000-0000-0000-E502-AD21542C98DF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "6143.567534629656", "2006", "All Crimes", "San Mateo, CA" ]
+, [ "row-bz5f~mbzm-9nkk", "00000000-0000-0000-4C41-9680FD6122F7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "288", "2008", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-ukxg-kiiw~k4pg", "00000000-0000-0000-9489-9FAB14311AE1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "17.352073572791948", "2009", "Forcible rape", "San Mateo, CA" ]
+, [ "row-eptn_mezq-3u94", "00000000-0000-0000-0651-AB6162B8FC44", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "2", "2006", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-vy2d.d5jb.5gwp", "00000000-0000-0000-AFB9-0542B9578D69", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "250.1270971021861", "2011", "Violent crime", "San Mateo, CA" ]
+, [ "row-zmum-797x~8vm2", "00000000-0000-0000-349F-4357158BA615", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1464", "2010", "Larceny", "San Mateo, CA" ]
+, [ "row-rh9r~kfkg-tsnn", "00000000-0000-0000-F715-BC07468831D0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Rape (legacy definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "21", "2014", "Rape (legacy definition)", "San Mateo, CA" ]
+, [ "row-uhn5-keem.qd3p", "00000000-0000-0000-7D2C-F943769410BB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "167", "2012", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-sfz4~panf-26zg", "00000000-0000-0000-D72B-89B497583BEE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "398.6990850492742", "2014", "Burglary", "San Mateo, CA" ]
+, [ "row-6pu6_v4na~3iki", "00000000-0000-0000-86CE-75A082E3E970", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "294", "2006", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-jajv~aety_x76k", "00000000-0000-0000-E3BD-DB5B1973CFD8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "20", "2006", "Arson", "San Mateo, CA" ]
+, [ "row-8spw-8ny2~vwps", "00000000-0000-0000-57ED-70FB0A3AE17A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Rape (legacy definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "20.571697262984657", "2014", "Rape (legacy definition)", "San Mateo, CA" ]
+, [ "row-v4ne_zmwg_t8js", "00000000-0000-0000-754C-D883CCD2D74D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "292", "2010", "Violent crime", "San Mateo, CA" ]
+, [ "row-vej3_khhk.mzgz", "00000000-0000-0000-7B80-2C481AE2764C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "154.320987654321", "2013", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-m7h2-ydga_mthq", "00000000-0000-0000-EA7F-64D704CEA451", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "1944", "2014", "Property crime", "San Mateo, CA" ]
+, [ "row-wsnj-652v_jzxp", "00000000-0000-0000-94FE-A64C4F5CCA55", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4778", "2007", "All Crimes", "San Mateo, CA" ]
+, [ "row-j26p-pak8-jdf4", "00000000-0000-0000-D500-A85B45144D70", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "274", "2006", "Burglary", "San Mateo, CA" ]
+, [ "row-khwg.p33p_wq92", "00000000-0000-0000-808F-9A495CDABE83", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "237.9530067702111", "2013", "Violent crime", "San Mateo, CA" ]
+, [ "row-tpgn~vtzi-mkxd", "00000000-0000-0000-317D-E1ED5605CB76", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "5464.818670831164", "2009", "All Crimes", "San Mateo, CA" ]
+, [ "row-6d6z.qbiw-ra5k", "00000000-0000-0000-7C1D-4051462EB876", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "135", "2014", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-p9j7.m28v-q7r9", "00000000-0000-0000-F5A1-B33200FDCF55", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2288", "2008", "Property crime", "San Mateo, CA" ]
+, [ "row-2vdg~8up2~px4q", "00000000-0000-0000-5D86-387FE60EC04A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1578.8792545619258", "2010", "Larceny", "San Mateo, CA" ]
+, [ "row-adfk_uncs-rrvv", "00000000-0000-0000-A997-B155A421873D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "4", "2011", "Arson", "San Mateo, CA" ]
+, [ "row-ar82~its6-c95j", "00000000-0000-0000-43AE-57C191EC8383", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "20", "2011", "Forcible rape", "San Mateo, CA" ]
+, [ "row-yady_fmhd-jfhp", "00000000-0000-0000-44C4-272016ACE66E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4759.285621845477", "2010", "All Crimes", "San Mateo, CA" ]
+, [ "row-jbuf_i8vz.jqcs", "00000000-0000-0000-E06B-8211E5C8F6F7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "353.6414184829327", "2006", "Violent crime", "San Mateo, CA" ]
+, [ "row-3aqi-xp9p_2r88", "00000000-0000-0000-AAD6-75E642040909", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "20.335536349771225", "2011", "Forcible rape", "San Mateo, CA" ]
+, [ "row-57gm~dnbd_jte7", "00000000-0000-0000-075C-14C39C1E3C2A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "338", "2009", "Violent crime", "San Mateo, CA" ]
+, [ "row-w7x8_zhnv~8udp", "00000000-0000-0000-F5FF-E6299F1C246E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1288", "2011", "Larceny", "San Mateo, CA" ]
+, [ "row-92jv-ejkj-u6zq", "00000000-0000-0000-396B-F17A7E4D8A00", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4.067107269954245", "2011", "Arson", "San Mateo, CA" ]
+, [ "row-x8mp.9q8n_5e2i", "00000000-0000-0000-EBEB-117CDC86EA1A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "298.1469189671494", "2006", "Burglary", "San Mateo, CA" ]
+, [ "row-q3ur~wg2m_efkh", "00000000-0000-0000-DF83-943385D09BB1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "168.17215995488556", "2012", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-pcpb_qgzw.aszr", "00000000-0000-0000-CF9B-D511957237FA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4357", "2014", "All Crimes", "San Mateo, CA" ]
+, [ "row-zsum_fsq3-pchf", "00000000-0000-0000-057F-43BA5E67F450", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "132.24662526204423", "2014", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-qjze.kxpv~3vjx", "00000000-0000-0000-8BF4-30A5994300E7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "156", "2011", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-yrds-u2mz~kj6n", "00000000-0000-0000-487E-75C9C6F364BD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "1", "2010", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-7kny.ksz9.jaw7", "00000000-0000-0000-5753-E3E08423EA99", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2065", "2013", "Property crime", "San Mateo, CA" ]
+, [ "row-3neq~43wm_fxi5", "00000000-0000-0000-8F62-B5461139888F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4280", "2012", "All Crimes", "San Mateo, CA" ]
+, [ "row-9fq5-n8z3-p7im", "00000000-0000-0000-1877-584E3E83FD02", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "199", "2010", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-jj2r~8eh2~26u5", "00000000-0000-0000-3FCC-B16DCD311E56", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1889.1674974572775", "2012", "Property crime", "San Mateo, CA" ]
+, [ "row-uady-wea6.fgdt", "00000000-0000-0000-B394-9BDA40930728", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Forcible rape--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "19.586293946747045", "2006", "Forcible rape", "San Mateo, CA" ]
+, [ "row-93za-vb3k-ppcv", "00000000-0000-0000-44E6-2D01B4B247BA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1865.3479090751343", "2009", "Larceny", "San Mateo, CA" ]
+, [ "row-pxwj-fm2f-sajr", "00000000-0000-0000-5868-95CBD5E5A0FF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "5646", "2006", "All Crimes", "San Mateo, CA" ]
+, [ "row-sa4g.7dmd_qzmc", "00000000-0000-0000-0AD5-5DC10539F57C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4413", "2010", "All Crimes", "San Mateo, CA" ]
+, [ "row-cxm9~35r6-7eni", "00000000-0000-0000-DCA4-59F07D4F538E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "287.0003927373795", "2012", "Burglary", "San Mateo, CA" ]
+, [ "row-a8hb.ciz3.8ywu", "00000000-0000-0000-FB47-EAC4D809B68F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "128.7506819421713", "2008", "Robbery", "San Mateo, CA" ]
+, [ "row-z3nq-y8w6~knhr", "00000000-0000-0000-6049-0C6DE5ABC2C6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1309.6085409252669", "2011", "Larceny", "San Mateo, CA" ]
+, [ "row-vv56-gmj7.6r6b", "00000000-0000-0000-8D6C-B0167A064169", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "285", "2012", "Burglary", "San Mateo, CA" ]
+, [ "row-298w-a3ac~6xpj", "00000000-0000-0000-1274-6694C563FE89", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "18", "2006", "Forcible rape", "San Mateo, CA" ]
+, [ "row-8rbu~32hb~zdfz", "00000000-0000-0000-C59B-8A0A1B6FCEF7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "100", "2007", "Robbery", "San Mateo, CA" ]
+, [ "row-wkk5_mzrd_3ci2", "00000000-0000-0000-268C-40B5B46B3BC8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2014--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "225.30906526126057", "2014", "Violent crime", "San Mateo, CA" ]
+, [ "row-29yy~7u7s~r6hp", "00000000-0000-0000-681F-37002F98A0DC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "263.55792259489726", "2007", "Burglary", "San Mateo, CA" ]
+, [ "row-favj_cwte.vfz8", "00000000-0000-0000-80AC-B6EDA1387961", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "360", "2008", "Violent crime", "San Mateo, CA" ]
+, [ "row-tkv3.43zp.3eis", "00000000-0000-0000-67C5-7172E0A9BE21", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "204.50345031222315", "2007", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-rkpw-rpg3~hwyw", "00000000-0000-0000-7FB2-15501983CBB0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "81.56853267272892", "2012", "Robbery", "San Mateo, CA" ]
+, [ "row-xyak~c45u~583q", "00000000-0000-0000-077A-3D38BEE1887A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "307.64635603345283", "2013", "Burglary", "San Mateo, CA" ]
+, [ "row-95va.pbx2~8bka", "00000000-0000-0000-B7B7-E1FA7702B8ED", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2012", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-b9ke~ubv6~rkjy", "00000000-0000-0000-DD4C-F501E2233AE7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "85", "2013", "Robbery", "San Mateo, CA" ]
+, [ "row-tazg-f48p~qr9p", "00000000-0000-0000-992F-B45B77991AF7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "17", "2008", "Arson", "San Mateo, CA" ]
+, [ "row-n5r4_sdgr-zbin", "00000000-0000-0000-3C8E-C32C6DB44B88", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "19", "2009", "Arson", "San Mateo, CA" ]
+, [ "row-3h6q_v3uk_gje5", "00000000-0000-0000-167F-6DF0DE9EBEAB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2496.45390070922", "2008", "Property crime", "San Mateo, CA" ]
+, [ "row-gach.mc3s_qhx7", "00000000-0000-0000-9212-D6378D316525", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "6", "2012", "Arson", "San Mateo, CA" ]
+, [ "row-yq6n.psh8.v8fx", "00000000-0000-0000-67B5-AB5098A360C4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "306", "2011", "Burglary", "San Mateo, CA" ]
+, [ "row-hfqr-qsft_zau9", "00000000-0000-0000-879D-ED3EE6D14436", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "12", "2013", "Arson", "San Mateo, CA" ]
+, [ "row-apdj.299j~hxxs", "00000000-0000-0000-EC6F-442784DDCE8F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "28", "2008", "Forcible rape", "San Mateo, CA" ]
+, [ "row-imaf.e5h8_frez", "00000000-0000-0000-5483-A2A93A009DEC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "274", "2009", "Burglary", "San Mateo, CA" ]
+, [ "row-8n8w-89am_npva", "00000000-0000-0000-AB9E-6AF3428B6BD5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "82", "2010", "Robbery", "San Mateo, CA" ]
+, [ "row-ifte_bq65-29cg", "00000000-0000-0000-2D50-7379B762B3AE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "19", "2007", "Forcible rape", "San Mateo, CA" ]
+, [ "row-kvmr_z2ua_2gy7", "00000000-0000-0000-9A75-6841D55CA60E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "178", "2009", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-v2f4.bqud~vuii", "00000000-0000-0000-9E28-66F071C54918", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "314.9130753634442", "2010", "Violent crime", "San Mateo, CA" ]
+, [ "row-jk5z.4x9d~5ihx", "00000000-0000-0000-4C4D-4D145B4985C9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "19", "2010", "Arson", "San Mateo, CA" ]
+, [ "row-xrcr-cxzm_2ykv", "00000000-0000-0000-5C62-4FB63E19BA19", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "214.61541779905957", "2010", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-py2f_r4sp~z9yq", "00000000-0000-0000-90B9-B19CD2505581", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "241", "2007", "Burglary", "San Mateo, CA" ]
+, [ "row-ttiy-6ppf-dj7x", "00000000-0000-0000-691F-817962A5CE0D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2006--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "319.9094677968684", "2006", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-nnyh.8bpv~s2ab", "00000000-0000-0000-11E9-CF9F00AD5AB8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2011--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "311.1337061514998", "2011", "Burglary", "San Mateo, CA" ]
+, [ "row-d2x2~8khv_6jcm", "00000000-0000-0000-6E31-B57E78900D5D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2012--Forcible rape--count", "1600000US0668252", "San Mateo, California", "place", "count", "13", "2012", "Forcible rape", "San Mateo, CA" ]
+, [ "row-qrkp-3f9p-ub5v", "00000000-0000-0000-26C6-FD8E258CC0AE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "227.74596564289433", "2009", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-buf6_k5aq~4idh", "00000000-0000-0000-D41C-D70E103B6078", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2009--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "119.29550581294464", "2009", "Robbery", "San Mateo, CA" ]
+, [ "row-xwky~nujx.gjb7", "00000000-0000-0000-4FA8-A70D99C1C733", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2010--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "199.51684569259305", "2010", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-jvz6_vvs4-h84b", "00000000-0000-0000-5842-EEEAA37CD5E5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2008--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "234", "2008", "Burglary", "San Mateo, CA" ]
+, [ "row-svvb_tf2e_i9q9", "00000000-0000-0000-3937-DB3A1249FCD4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "84.62763839107926", "2013", "Robbery", "San Mateo, CA" ]
+, [ "row-k6a5~5kvh-waz3", "00000000-0000-0000-C49D-1551FDE7F16B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2013--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "239", "2013", "Violent crime", "San Mateo, CA" ]
+, [ "row-8rm4-dkck-rf2t", "00000000-0000-0000-A67E-843BBE66819F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "222", "2007", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-xcc4~ais5.j4uw", "00000000-0000-0000-259C-E0DB7FAB01B1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0668252--2007--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1610", "2007", "Larceny", "San Mateo, CA" ]
+, [ "row-5rvs~33zg.4v9d", "00000000-0000-0000-2C34-5CC8E14E4AE6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "215", "2016", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-6xas~5tcw~umtf", "00000000-0000-0000-95B0-B4A03AF93DFB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4551.439858017977", "2016", "All Crimes", "San Mateo, CA" ]
+, [ "row-3ffd-u3a6.7mqk", "00000000-0000-0000-9EBF-8B05D0AFAC87", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "59.440492397369276", "2015", "Robbery", "San Mateo, CA" ]
+, [ "row-v33q.dy4v_wc3q", "00000000-0000-0000-F8A6-13A10C687441", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "59.440492397369276", "2015", "Robbery", "San Mateo, CA" ]
+, [ "row-7dy9_dde9-khn5", "00000000-0000-0000-CC73-F5D79E9FCB72", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4438.8625774164475", "2015", "All Crimes", "San Mateo, CA" ]
+, [ "row-ngg9.8bb9~hfam", "00000000-0000-0000-54DC-9C43914E70BA", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "4438.8625774164475", "2015", "All Crimes", "San Mateo, CA" ]
+, [ "row-446h.ws7y-7833", "00000000-0000-0000-F7C1-EE107748DB65", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Rape (revised definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "11", "2015", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-tzkm_9f22_z8uh", "00000000-0000-0000-D4B3-4FAB300C636D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Rape (revised definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "11", "2015", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-7mru_r8qe.3qj8", "00000000-0000-0000-A4D6-8A9080DEA2BD", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Rape (revised definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "10.545893812436484", "2015", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-fcvy~jbfz~tynd", "00000000-0000-0000-2515-D216FB54E24C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Rape (revised definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "10.545893812436484", "2015", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-4feh~tkpu~gr4u", "00000000-0000-0000-C51E-646EF36EA81B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "732", "2016", "Burglary", "San Mateo, CA" ]
+, [ "row-gxzq-xn95.jfyv", "00000000-0000-0000-87A7-11FB3B7E08DD", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2042.8999446575447", "2016", "Property crime", "San Mateo, CA" ]
+, [ "row-jvat_9cch_fpsk", "00000000-0000-0000-6A9A-2FFDBB066DE9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "179", "2016", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-vwx6_grhx.s2aa", "00000000-0000-0000-A894-02B4739E2E21", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "7.669740954499262", "2015", "Arson", "San Mateo, CA" ]
+, [ "row-pbvz-a3ha~nhhg", "00000000-0000-0000-7DBE-AAE0FF76FBE4", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "7.669740954499262", "2015", "Arson", "San Mateo, CA" ]
+, [ "row-imgx_5rji-32q5", "00000000-0000-0000-1D5D-51F1386CFAD3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "183.11506528866988", "2015", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-4hha_8rwh~48ej", "00000000-0000-0000-ECA0-8E9DEF09D74A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "183.11506528866988", "2015", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-zr5s~2wz3~wser", "00000000-0000-0000-ADB2-F8E93E613650", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "170.79826720864108", "2016", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-bups.268m.rmv7", "00000000-0000-0000-37D7-1DE7EEBD3BCD", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Rape (revised definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "17.17524474723765", "2016", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-7y65-a47z-rex4", "00000000-0000-0000-D514-2E6A3132861C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "4", "2016", "Arson", "San Mateo, CA" ]
+, [ "row-yr8v-vbnd~fivv", "00000000-0000-0000-15F1-A9FA82144877", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "205.14875670311636", "2016", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-sj9z-y53b.bzt2", "00000000-0000-0000-72DF-18BC039BDE2C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2141", "2016", "Property crime", "San Mateo, CA" ]
+, [ "row-jc2z_bgjq-jvgq", "00000000-0000-0000-A38B-2B20E2A69694", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2045", "2015", "Property crime", "San Mateo, CA" ]
+, [ "row-kast_4vrc~utuy", "00000000-0000-0000-DEC6-6FA526E1A0FA", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2045", "2015", "Property crime", "San Mateo, CA" ]
+, [ "row-vzcc-pd6q-qi5r", "00000000-0000-0000-577B-F17622312A21", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "230.91162382397283", "2016", "Violent crime", "San Mateo, CA" ]
+, [ "row-7pbs-gzsx.iqve", "00000000-0000-0000-FE36-844EF11F92EB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "196.53711195904356", "2015", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-up2m-7gte.idsb", "00000000-0000-0000-C0E1-DB1D9F66ABF2", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "196.53711195904356", "2015", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-sf5y.2578.7gjk", "00000000-0000-0000-E079-6CA5A363A673", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1194", "2016", "Larceny", "San Mateo, CA" ]
+, [ "row-x2qb_m858_ge8p", "00000000-0000-0000-0F52-BB03EB4063D9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Rape (revised definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "18", "2016", "Rape (revised definition)", "San Mateo, CA" ]
+, [ "row-j23h-pgar~s8gm", "00000000-0000-0000-A027-6880226A4409", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1068.0114279140223", "2015", "Larceny", "San Mateo, CA" ]
+, [ "row-xk7c-99cq.fkrp", "00000000-0000-0000-F997-7790925C693F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1068.0114279140223", "2015", "Larceny", "San Mateo, CA" ]
+, [ "row-776t_zjzv-7wxr", "00000000-0000-0000-C86E-0034DE4A5DF3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1139.2912349000974", "2016", "Larceny", "San Mateo, CA" ]
+, [ "row-3jtx-cmcp_dcrp", "00000000-0000-0000-890A-341A3B32B62A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4770", "2016", "All Crimes", "San Mateo, CA" ]
+, [ "row-8wci_z4xz-yh27", "00000000-0000-0000-B33F-482F1740545F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-t84g_3gdf-8mfj", "00000000-0000-0000-9872-C962BB620083", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-d3nk.38vv_yfgd", "00000000-0000-0000-FDF8-7B0E3DC214D1", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "255.01888673710044", "2015", "Violent crime", "San Mateo, CA" ]
+, [ "row-e98z.4zi7-msay", "00000000-0000-0000-A951-6889421BDB8F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "255.01888673710044", "2015", "Violent crime", "San Mateo, CA" ]
+, [ "row-tmyn.332p_w8g8", "00000000-0000-0000-0E4B-6174886FA4D6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "44", "2016", "Robbery", "San Mateo, CA" ]
+, [ "row-z4c5.b7ru_d55w", "00000000-0000-0000-1B6F-D7EC2F8C56CC", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "1", "2016", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-tvyx-958w-vj32", "00000000-0000-0000-1B97-3F507685281E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "205", "2015", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-8fxq.mife_nck8", "00000000-0000-0000-208A-7A3E29BA91D1", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "205", "2015", "Motor vehicle theft", "San Mateo, CA" ]
+, [ "row-hxyu-uriy-s6jk", "00000000-0000-0000-12AC-DBC37FDFEE4E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "696.028991620808", "2015", "Burglary", "San Mateo, CA" ]
+, [ "row-mg9w.ts9m-xpe8", "00000000-0000-0000-4D09-44D756AB39F5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "696.028991620808", "2015", "Burglary", "San Mateo, CA" ]
+, [ "row-4zdz~h5sk-yyzw", "00000000-0000-0000-EC65-05141CC0CC7A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4630", "2015", "All Crimes", "San Mateo, CA" ]
+, [ "row-f8cj.6fuw_e5vh", "00000000-0000-0000-DBB7-5BCCAF45371F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "4630", "2015", "All Crimes", "San Mateo, CA" ]
+, [ "row-r34d-8j5s_vsz3", "00000000-0000-0000-7960-832919827951", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "242", "2016", "Violent crime", "San Mateo, CA" ]
+, [ "row-5r9n~t27z_dxfd", "00000000-0000-0000-B0FE-C67E4D9920C7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1960.5775314938737", "2015", "Property crime", "San Mateo, CA" ]
+, [ "row-sygj.kzn9-b3jk", "00000000-0000-0000-0EEC-F664AC521F74", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1960.5775314938737", "2015", "Property crime", "San Mateo, CA" ]
+, [ "row-iakp~rwh5-vw9j", "00000000-0000-0000-D32A-5467F8510238", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "41.983931604358695", "2016", "Robbery", "San Mateo, CA" ]
+, [ "row-zkmg-eagm~97t9", "00000000-0000-0000-F76B-A594D918A330", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "62", "2015", "Robbery", "San Mateo, CA" ]
+, [ "row-iqaw_w4ag.vf2f", "00000000-0000-0000-EAE2-CCB38A11EAD5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "62", "2015", "Robbery", "San Mateo, CA" ]
+, [ "row-kcn3.fwee-yijx", "00000000-0000-0000-1442-BEDE62E270BF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "191", "2015", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-6qup_5ets.g8v9", "00000000-0000-0000-8157-157B2056585F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "191", "2015", "Aggravated assault", "San Mateo, CA" ]
+, [ "row-e6sv-eicm_tp24", "00000000-0000-0000-C3FC-577A28B8F88F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2016--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "698.459953054331", "2016", "Burglary", "San Mateo, CA" ]
+, [ "row-wbry-pfjf~f2yx", "00000000-0000-0000-0D78-1A4E30549453", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "266", "2015", "Violent crime", "San Mateo, CA" ]
+, [ "row-jbj8-vxan~4nhr", "00000000-0000-0000-DAA0-1B60ECC5360C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "266", "2015", "Violent crime", "San Mateo, CA" ]
+, [ "row-b5jy.hkbc-juw2", "00000000-0000-0000-50F2-321977D2F94E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "8", "2015", "Arson", "San Mateo, CA" ]
+, [ "row-2p9g-ejw7-3mid", "00000000-0000-0000-6F55-B4ADCA4DE81C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "8", "2015", "Arson", "San Mateo, CA" ]
+, [ "row-5y76.wyy2.xh7w", "00000000-0000-0000-1618-BFBFE16DD466", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1114", "2015", "Larceny", "San Mateo, CA" ]
+, [ "row-zf5a_g4t6.9cut", "00000000-0000-0000-8D25-748E8CC51622", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1114", "2015", "Larceny", "San Mateo, CA" ]
+, [ "row-vrc9-xzjb_jkyi", "00000000-0000-0000-74A3-80E83985DBEE", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "726", "2015", "Burglary", "San Mateo, CA" ]
+, [ "row-s2iq-3we6-yxfv", "00000000-0000-0000-F059-0964101FE95F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0668252--2015--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "726", "2015", "Burglary", "San Mateo, CA" ]
+, [ "row-zfzs~mugh~75y5", "00000000-0000-0000-F10C-82C3DAFE2FDB", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2011--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1.016776817488561", "2011", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-gqc3~ftzz~5e4x", "00000000-0000-0000-B740-A7A1007C5B5C", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2016--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "3.816721054941699", "2016", "Arson", "San Mateo, CA" ]
+, [ "row-9wtb-r6ke~vszd", "00000000-0000-0000-8D7F-74E7EAA5CE2E", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2015--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1.917435238624816", "2015", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-nmix~77da.4igz", "00000000-0000-0000-2F67-2923DA61B978", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2015--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1.917435238624816", "2015", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-srbp_kknr.2xh5", "00000000-0000-0000-815B-B28D286283BD", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2016--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0.954180263735425", "2016", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-fyk7.fipa-3mct", "00000000-0000-0000-83F0-C5728E0D0C52", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2010--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1.078469436176179", "2010", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-acp9-p8p5_fh6z", "00000000-0000-0000-D680-AE9750F333C0", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2009--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2.169009196598994", "2009", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-hzdb_if67-88hq", "00000000-0000-0000-6A9E-0246CC6C4F5C", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2012--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "6.042113531313254", "2012", "Arson", "San Mateo, CA" ]
+, [ "row-amzz-7kmc~szyd", "00000000-0000-0000-68AD-DF4C1ABE3BFF", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0668252--2008--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1.091107474086198", "2008", "Murder and nonnegligent manslaughter", "San Mateo, CA" ]
+, [ "row-k6bs_w2xw.pwrg", "00000000-0000-0000-9AE3-93C0432829B0", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "268", "2017", "Violent crime", null ]
+, [ "row-jdnz-y82q~52ph", "00000000-0000-0000-32F1-7B450C00E85B", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2125", "2017", "Property crime", null ]
+, [ "row-6qgr_kuaa.jg4e", "00000000-0000-0000-9161-F8834238D129", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "64", "2017", "Robbery", null ]
+, [ "row-jirr.4bjg~k62c", "00000000-0000-0000-10F1-55746086BA93", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1231", "2017", "Larceny", null ]
+, [ "row-bmug_hbax_73x2", "00000000-0000-0000-DFF8-8EB3834C1622", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "176.03958511751833", "2017", "Aggravated assault", null ]
+, [ "row-t2k7.mekq~qnik", "00000000-0000-0000-5B40-6A08865B9245", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "188", "2017", "Motor vehicle theft", null ]
+, [ "row-2rxg~he7v_s56m", "00000000-0000-0000-0F5F-20099B9021C4", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1171.3769150252165", "2017", "Larceny", null ]
+, [ "row-n8dr~pigy.sica", "00000000-0000-0000-4E01-1888B06A955D", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Rape (revised definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "19", "2017", "Rape (revised definition)", null ]
+, [ "row-9i8p.sebc~3jik", "00000000-0000-0000-2B7F-9DBDF16E5470", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "0", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-929b_nrkm~ys9z", "00000000-0000-0000-69CA-8FAFEE49D9B4", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "7.612522599676467", "2017", "Arson", null ]
+, [ "row-8f9c_dmuc~5xib", "00000000-0000-0000-3EE6-23EDBC4161FB", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Rape (revised definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "18.07974117423161", "2017", "Rape (revised definition)", null ]
+, [ "row-wnzk~azvx.inak", "00000000-0000-0000-1B50-09ABDBCC5C41", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "706", "2017", "Burglary", null ]
+, [ "row-4fiy~isxh-m5u5", "00000000-0000-0000-591B-59C1E5974D5E", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2022.0763155390616", "2017", "Property crime", null ]
+, [ "row-2trj.x2qw~pvqg", "00000000-0000-0000-C938-B6A4FB95B7AF", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "178.894281092397", "2017", "Motor vehicle theft", null ]
+, [ "row-98ga-6dc6~hx58", "00000000-0000-0000-7CC5-6F04A5C4B440", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "671.8051194214484", "2017", "Burglary", null ]
+, [ "row-vxzy.3tme_yn2j", "00000000-0000-0000-F3A9-8DA1C3F69F99", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "8", "2017", "Arson", null ]
+, [ "row-uvmz-w98e.rbzb", "00000000-0000-0000-90A1-0BB40D0BB549", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "255.01950708916166", "2017", "Violent crime", null ]
+, [ "row-3j99-scb7~uw2s", "00000000-0000-0000-F6D7-4BB2633DE6C2", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "104561.80416785613", "2017", "All Crimes", null ]
+, [ "row-wcwe-2wvc.6a9c", "00000000-0000-0000-56F6-D4FD3ED18A00", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "185", "2017", "Aggravated assault", null ]
+, [ "row-hc5x~9yri_3ip4", "00000000-0000-0000-0156-FE2CDD404D65", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "60.900180797411736", "2017", "Robbery", null ]
+, [ "row-tsj2~phn5-k8fm", "00000000-0000-0000-CE6B-384BDBA3D0C7", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-nkgb_xpn9_p4kx", "00000000-0000-0000-CD49-179644513461", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0668252--2017--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "109884", "2017", "All Crimes", null ]
+, [ "row-dve4~ggdk_5vwh", "00000000-0000-0000-395D-F401D7F320D4", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Violent crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "285", "2018", "Violent crime", null ]
+, [ "row-tax5-yehe-zcmu", "00000000-0000-0000-596F-7CB321079568", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Violent crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "269.27692060582586", "2018", "Violent crime", null ]
+, [ "row-esxj.gkup_cn8t", "00000000-0000-0000-5806-5511E8F7C1C5", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Murder and nonnegligent manslaughter--count", "1600000US0668252", "San Mateo, California", "place", "count", "0", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-2ayq-2enh.75iu", "00000000-0000-0000-CDDC-6261105DB630", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Murder and nonnegligent manslaughter--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "0", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-bn5u_neer~f2a7", "00000000-0000-0000-9410-DFBF042ABD16", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Motor vehicle theft--count", "1600000US0668252", "San Mateo, California", "place", "count", "213", "2018", "Motor vehicle theft", null ]
+, [ "row-kk5k~kmqk_ee47", "00000000-0000-0000-ABC9-814D2595AC93", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Motor vehicle theft--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "201.24906697909088", "2018", "Motor vehicle theft", null ]
+, [ "row-wfbv.fx9j-xecm", "00000000-0000-0000-67E9-B9AC0BF38571", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Rape (revised definition)--count", "1600000US0668252", "San Mateo, California", "place", "count", "25", "2018", "Rape (revised definition)", null ]
+, [ "row-5t5a_7wgg.633y", "00000000-0000-0000-DC30-6E32E5A0E930", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Rape (revised definition)--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "23.620782509282968", "2018", "Rape (revised definition)", null ]
+, [ "row-zs7i-ghf6-gv3h", "00000000-0000-0000-FAE6-A5FCFBFF8C56", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Robbery--count", "1600000US0668252", "San Mateo, California", "place", "count", "88", "2018", "Robbery", null ]
+, [ "row-ssdm-cygu~wnxx", "00000000-0000-0000-ABD1-E3DDE08D3CB3", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Robbery--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "83.14515443267605", "2018", "Robbery", null ]
+, [ "row-yqp9~5xss~bz2y", "00000000-0000-0000-A880-C7448AD44D8E", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Larceny--count", "1600000US0668252", "San Mateo, California", "place", "count", "1360", "2018", "Larceny", null ]
+, [ "row-w5pa_smnu.2pgq", "00000000-0000-0000-1789-C218A079643D", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Larceny--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "1284.9705685049935", "2018", "Larceny", null ]
+, [ "row-6ge2_4qfs-v9x4", "00000000-0000-0000-9E6D-830ED502EA48", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Arson--count", "1600000US0668252", "San Mateo, California", "place", "count", "6", "2018", "Arson", null ]
+, [ "row-zwey-w24c_5dbp", "00000000-0000-0000-CC8F-2DC7E2B58E2C", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Arson--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "5.668987802227912", "2018", "Arson", null ]
+, [ "row-rv8f~vrg5_5d5g", "00000000-0000-0000-01E0-C49133188326", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Burglary--count", "1600000US0668252", "San Mateo, California", "place", "count", "590", "2018", "Burglary", null ]
+, [ "row-23jt-h4tq~259t", "00000000-0000-0000-FA7C-4EDC70A91088", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Burglary--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "557.4504672190781", "2018", "Burglary", null ]
+, [ "row-7wxj.bvij~6ev4", "00000000-0000-0000-94DF-06D7D9EEFAB9", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Property crime--count", "1600000US0668252", "San Mateo, California", "place", "count", "2163", "2018", "Property crime", null ]
+, [ "row-zs5e.e3kn_zn3d", "00000000-0000-0000-06AA-F0558B121332", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Property crime--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "2043.6701027031625", "2018", "Property crime", null ]
+, [ "row-5k9s.kffm.96pi", "00000000-0000-0000-388F-43B7A1C22EB6", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Aggravated assault--count", "1600000US0668252", "San Mateo, California", "place", "count", "172", "2018", "Aggravated assault", null ]
+, [ "row-aex8-2y42-xctq", "00000000-0000-0000-4807-DB1C1A287FBD", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--Aggravated assault--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "162.5109836638668", "2018", "Aggravated assault", null ]
+, [ "row-uj8q_9kvy.36ap", "00000000-0000-0000-323E-1EB009D7AD9F", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--All Crimes--count", "1600000US0668252", "San Mateo, California", "place", "count", "110741", "2018", "All Crimes", null ]
+, [ "row-2nxe.xbbg~v3q7", "00000000-0000-0000-ECE0-D394AE59BA87", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0668252--2018--All Crimes--rate", "1600000US0668252", "San Mateo, California", "place", "rate", "104631.5630344202", "2018", "All Crimes", null ]
+ ]
+}

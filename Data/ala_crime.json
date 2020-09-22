@@ -1,0 +1,549 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "zzzz-zzzz",
+      "name" : "FBI UCR V3",
+      "assetType" : "filter",
+      "averageRating" : 0,
+      "createdAt" : 1474327305,
+      "displayType" : "table",
+      "downloadCount" : 0,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1516323527,
+      "newBackend" : true,
+      "numberOfComments" : 0,
+      "oid" : 0,
+      "provenance" : "community",
+      "publicationAppendEnabled" : true,
+      "publicationGroup" : 13172847,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1579039741,
+      "rowsUpdatedBy" : "rndq-s2m8",
+      "searchString" : "Alameda",
+      "tableId" : 14727467,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewType" : "tabular",
+      "approvals" : [ {
+        "state" : "submittable",
+        "submissionObject" : "public_audience_request",
+        "submissionOutcome" : "change_audience",
+        "workflowId" : 921,
+        "submissionDetails" : {
+          "permissionType" : "READ"
+        }
+      } ],
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 335870077,
+        "name" : "key",
+        "dataTypeName" : "text",
+        "fieldName" : "key",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436444,
+        "width" : 136,
+        "format" : { }
+      }, {
+        "id" : 335870078,
+        "name" : "id",
+        "dataTypeName" : "text",
+        "fieldName" : "id",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436445,
+        "width" : 124,
+        "format" : { }
+      }, {
+        "id" : 335870079,
+        "name" : "name",
+        "dataTypeName" : "text",
+        "fieldName" : "name",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436446,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870080,
+        "name" : "type",
+        "dataTypeName" : "text",
+        "fieldName" : "type",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436447,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870081,
+        "name" : "variable",
+        "dataTypeName" : "text",
+        "fieldName" : "variable",
+        "position" : 5,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436448,
+        "width" : 196,
+        "format" : { }
+      }, {
+        "id" : 335870082,
+        "name" : "value",
+        "dataTypeName" : "number",
+        "fieldName" : "value",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436449,
+        "width" : 160,
+        "format" : { }
+      }, {
+        "id" : 335870083,
+        "name" : "year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436450,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870084,
+        "name" : "crime_type",
+        "dataTypeName" : "text",
+        "fieldName" : "crime_type",
+        "position" : 8,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436451,
+        "width" : 220,
+        "format" : { }
+      }, {
+        "id" : 335870085,
+        "name" : "place_name",
+        "dataTypeName" : "text",
+        "fieldName" : "place_name",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436452,
+        "width" : 220,
+        "format" : { }
+      } ],
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "rowLabel" : "Row",
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        },
+        "inDatasetSearch" : true
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : false,
+          "expression" : {
+            "columnId" : 335870083,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "i7d8-sc4w",
+        "displayName" : "Chris Metcalf",
+        "profileImageUrlLarge" : "/api/users/i7d8-sc4w/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/i7d8-sc4w/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/i7d8-sc4w/profile_images/TINY",
+        "screenName" : "Chris Metcalf",
+        "type" : "interactive",
+        "userSegment" : "community_user"
+      },
+      "flags" : [ "restorable", "restorePossibleForType", "unsaved" ]
+    }
+  },
+  "data" : [ [ "row-raib-r33s-cun9", "00000000-0000-0000-AF3E-D8AEE308B253", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "205", "2007", "Violent crime", "Alameda, CA" ]
+, [ "row-umix-icny.di6c", "00000000-0000-0000-FBBE-9D7328539FC5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1285", "2013", "Larceny", "Alameda, CA" ]
+, [ "row-is52_fzd3_hgvc", "00000000-0000-0000-DA8C-7917209DD634", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "87", "2009", "Robbery", "Alameda, CA" ]
+, [ "row-8niu~byyj.yx4k", "00000000-0000-0000-8ECC-E70DF244781E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "1", "2010", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-v4fm-csjf_pee5", "00000000-0000-0000-6047-8E5F4B33294F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "292", "2006", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-kv6p.pfv5.f7r3", "00000000-0000-0000-D871-77526AF5FAEA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4225", "2011", "All Crimes", "Alameda, CA" ]
+, [ "row-n5g5_2mht-5nf7", "00000000-0000-0000-2800-1FC518AA3B9A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "24.132301795727162", "2007", "Arson", "Alameda, CA" ]
+, [ "row-h4jw_w55a.wech", "00000000-0000-0000-C808-935804542E67", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1390", "2009", "Larceny", "Alameda, CA" ]
+, [ "row-whyj_j4bc.q7uy", "00000000-0000-0000-03C9-0149927408A9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "74", "2010", "Robbery", "Alameda, CA" ]
+, [ "row-ysab~y9kr_qna4", "00000000-0000-0000-B1BA-FF615E6B7507", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "388.5825309294551", "2008", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-rs8d-dc9c.svyn", "00000000-0000-0000-34B3-987E802069C6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "22.06416779150659", "2014", "Arson", "Alameda, CA" ]
+, [ "row-d56k~6g7d_tfss", "00000000-0000-0000-513A-7103FCAFA5FB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "390.89933348350934", "2012", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-hbv3_tq45.mrxt", "00000000-0000-0000-D708-34C2FF7AE4A4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Rape (legacy definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "10", "2013", "Rape (legacy definition)", "Alameda, CA" ]
+, [ "row-qknh_vg7q_fn4i", "00000000-0000-0000-533E-98CDA04CD279", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "97", "2011", "Aggravated assault", "Alameda, CA" ]
+, [ "row-dpex.tn5c-xbvu", "00000000-0000-0000-D10D-D8A413454656", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "210", "2008", "Violent crime", "Alameda, CA" ]
+, [ "row-pb6t.wwci-2ykb", "00000000-0000-0000-EC59-768C6F6C38B1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4379", "2007", "All Crimes", "Alameda, CA" ]
+, [ "row-k3xm.dvg2-s6cb", "00000000-0000-0000-963B-D14D0B0C4971", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "272", "2008", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-kmki~itxn~asim", "00000000-0000-0000-D3F1-F56942AEF9B3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "88", "2007", "Aggravated assault", "Alameda, CA" ]
+, [ "row-ciz6_ve25.kvbe", "00000000-0000-0000-FC46-B44E47904A6B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "348.1521156936261", "2011", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-uwem-jbx8_g34c", "00000000-0000-0000-E248-254409775309", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5657.471880021424", "2011", "All Crimes", "Alameda, CA" ]
+, [ "row-jzz2_92pt_75vr", "00000000-0000-0000-65FA-BDDE6526C4F3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "215", "2010", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-dbxw.aa8p-823z", "00000000-0000-0000-9485-21B72D0609D7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "15", "2011", "Forcible rape", "Alameda, CA" ]
+, [ "row-4gsw-3mpy_y5ja", "00000000-0000-0000-482B-4859BBF357FF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "6032.443393038188", "2010", "All Crimes", "Alameda, CA" ]
+, [ "row-n7nb_pnip.aqmi", "00000000-0000-0000-D90C-933D26480460", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "304", "2007", "Burglary", "Alameda, CA" ]
+, [ "row-6qpt_wzpj-3jc5", "00000000-0000-0000-C91F-7FDEF1E7C834", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "124.92015047199942", "2007", "Aggravated assault", "Alameda, CA" ]
+, [ "row-ubei~e2gd_sj9k", "00000000-0000-0000-A940-06629DB31D9B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "207", "2011", "Violent crime", "Alameda, CA" ]
+, [ "row-p5ci.ks42-atd6", "00000000-0000-0000-8C07-69EC3DC99DF4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "282.78292502699935", "2009", "Violent crime", "Alameda, CA" ]
+, [ "row-mzzd.3e3h.5qwb", "00000000-0000-0000-614D-EDA8BB635409", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "212.01319782156438", "2012", "Violent crime", "Alameda, CA" ]
+, [ "row-m79d~dje7-96vk", "00000000-0000-0000-905C-863558197AA0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "70", "2012", "Aggravated assault", "Alameda, CA" ]
+, [ "row-9nie~ug8v~tut3", "00000000-0000-0000-FB70-48943669D1D3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "9", "2008", "Forcible rape", "Alameda, CA" ]
+, [ "row-e7a6_fpw9-pp4q", "00000000-0000-0000-C44B-C4C8BDF69090", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "464.29897997085635", "2008", "Burglary", "Alameda, CA" ]
+, [ "row-vgej~xbwx-dp3h", "00000000-0000-0000-5B4A-D7897BC9E175", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Rape (revised definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "0", "2013", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-dtfa.2tg3~ynvb", "00000000-0000-0000-B74F-545AE07FC505", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2678.647961370325", "2008", "Property crime", "Alameda, CA" ]
+, [ "row-hqwq_ixia.5uj8", "00000000-0000-0000-FEB6-DC58590AA78A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1825.7664504700135", "2008", "Larceny", "Alameda, CA" ]
+, [ "row-h42h-xpu6_jf39", "00000000-0000-0000-F02F-C84B82F55F92", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1976", "2007", "Property crime", "Alameda, CA" ]
+, [ "row-umpd-tdsq.b4pj", "00000000-0000-0000-63EA-E51361D1F3D9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "62", "2014", "Robbery", "Alameda, CA" ]
+, [ "row-ruve_ffp7-9psj", "00000000-0000-0000-857B-AABC02645D93", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "547.7638841951109", "2010", "Burglary", "Alameda, CA" ]
+, [ "row-ud6u_6ycn-4r5v", "00000000-0000-0000-7852-8347BC958FA5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "410.04325113744875", "2006", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-mrtm_38xx~6p9d", "00000000-0000-0000-03B8-2AEF5CC6C062", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "325", "2008", "Burglary", "Alameda, CA" ]
+, [ "row-gpvv-56i6.kcjq", "00000000-0000-0000-1DA6-5424FD8DD5C5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2.839094328909078", "2007", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-p4qz~nxsa~e7s3", "00000000-0000-0000-7250-7D50634BBB5C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "6138.805206616268", "2009", "All Crimes", "Alameda, CA" ]
+, [ "row-89pj~rgg2-fspi", "00000000-0000-0000-09EB-C4AC8A19709E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "12.857510214577559", "2008", "Forcible rape", "Alameda, CA" ]
+, [ "row-vybk-v4tv.cz6z", "00000000-0000-0000-ADFD-941794610413", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2507.056064239999", "2012", "Property crime", "Alameda, CA" ]
+, [ "row-peua.p7cb.p4s8", "00000000-0000-0000-9F75-63A21C58D4E9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "73", "2014", "Aggravated assault", "Alameda, CA" ]
+, [ "row-ysks-zaqr-dxsg", "00000000-0000-0000-EA02-EF4BA83A7302", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "7", "2006", "Forcible rape", "Alameda, CA" ]
+, [ "row-ke3x~8jg9~cbgg", "00000000-0000-0000-D2AF-2B8D0F82CB2C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Rape (legacy definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "9", "2014", "Rape (legacy definition)", "Alameda, CA" ]
+, [ "row-zrpv-zu9v.w5s4", "00000000-0000-0000-2120-26FD8A898CC4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2236.2683002803446", "2014", "Property crime", "Alameda, CA" ]
+, [ "row-433x~enug~xdi3", "00000000-0000-0000-69CD-59CBB90D7221", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "240", "2009", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-a83a_2xb2.djt4", "00000000-0000-0000-E9A9-F5D970C28CAF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1686.218932892423", "2013", "Larceny", "Alameda, CA" ]
+, [ "row-7sn8_hji9.434z", "00000000-0000-0000-E60B-F6F36EA1EEF3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "131", "2006", "Aggravated assault", "Alameda, CA" ]
+, [ "row-hr9w.kp92_ipxy", "00000000-0000-0000-AFD9-F1C1D2C63723", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "17", "2014", "Arson", "Alameda, CA" ]
+, [ "row-7ynx-djhp-msf9", "00000000-0000-0000-5371-E92D401F0400", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "432.1981102689233", "2014", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-x94i~khg7_ymnw", "00000000-0000-0000-A30C-CFE37E01E3BA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "207.33275595097498", "2013", "Violent crime", "Alameda, CA" ]
+, [ "row-dzrq~ecjw_m34z", "00000000-0000-0000-F7B0-B0D42B41B7C7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "4870.989513030838", "2014", "All Crimes", "Alameda, CA" ]
+, [ "row-5xqc-zick.sgjd", "00000000-0000-0000-5D5C-7E2974547F2E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "15", "2011", "Arson", "Alameda, CA" ]
+, [ "row-q8fh-nfyc~zxik", "00000000-0000-0000-BD27-1A1A055EDC12", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5.684078895015063", "2009", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-fai5.3jtr_7brp", "00000000-0000-0000-3630-41DCE42C2431", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4275", "2006", "All Crimes", "Alameda, CA" ]
+, [ "row-ad4d.vhhf~p8b4", "00000000-0000-0000-50EA-E68E57ADA359", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "421.7996786288163", "2011", "Burglary", "Alameda, CA" ]
+, [ "row-2kjv.damx-23rt", "00000000-0000-0000-124E-376C86138C39", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "125.87038028923406", "2011", "Robbery", "Alameda, CA" ]
+, [ "row-i7dx~42kz.y2ch", "00000000-0000-0000-1AF0-BF452833CF77", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "92.75577404693442", "2012", "Aggravated assault", "Alameda, CA" ]
+, [ "row-v49v~u3z7-xaym", "00000000-0000-0000-0FFE-2F257E07DCDA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2541.5104445634706", "2011", "Property crime", "Alameda, CA" ]
+, [ "row-mrbj_e35x_z2b5", "00000000-0000-0000-27F2-4833E183179E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1771.5586502410285", "2011", "Larceny", "Alameda, CA" ]
+, [ "row-uhwa_zyjq~pdrd", "00000000-0000-0000-D4C8-462A11FC3F74", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1154", "2014", "Larceny", "Alameda, CA" ]
+, [ "row-e77v~wnqk.v7js", "00000000-0000-0000-84BE-769DCE3B9487", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "453.5752401280683", "2006", "Burglary", "Alameda, CA" ]
+, [ "row-5s3f~wa85-rp3p", "00000000-0000-0000-A939-E9807AF999C5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1360", "2010", "Larceny", "Alameda, CA" ]
+, [ "row-9kww~wju6-q3h9", "00000000-0000-0000-F46F-71072D572726", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1821.3222490591475", "2006", "Larceny", "Alameda, CA" ]
+, [ "row-gbkb.uppb~sedf", "00000000-0000-0000-E984-1BE0EFACED59", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "392.22441596989415", "2012", "Burglary", "Alameda, CA" ]
+, [ "row-yazq_mc8a_xr95", "00000000-0000-0000-4C48-A5F12B884E88", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "300.0085716734764", "2008", "Violent crime", "Alameda, CA" ]
+, [ "row-j6ng~wv8i~hb5g", "00000000-0000-0000-EB83-A0A42EDDD3F5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "310.3409537718362", "2006", "Violent crime", "Alameda, CA" ]
+, [ "row-wcmz.a8ya~dgy2", "00000000-0000-0000-4E18-03EE22C906D9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1912", "2006", "Property crime", "Alameda, CA" ]
+, [ "row-ku7h.magu_q7k3", "00000000-0000-0000-84C8-11E35676B7E0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "0", "2013", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-f43s_invd_2z7j", "00000000-0000-0000-21B6-4FCEB8698C1E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "80", "2012", "Robbery", "Alameda, CA" ]
+, [ "row-95qf_pg4j~rs26", "00000000-0000-0000-FA20-58060CE09968", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4179", "2008", "All Crimes", "Alameda, CA" ]
+, [ "row-q7sg~t6wa~sjgm", "00000000-0000-0000-1EAB-F67023B9D4FA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "1", "2012", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-b7rw_8pau~97w2", "00000000-0000-0000-56EA-0ECAA43653C6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1875", "2008", "Property crime", "Alameda, CA" ]
+, [ "row-pvdb_s3hd.qrij", "00000000-0000-0000-6A8F-04BFE3428D07", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "341.04473370090375", "2009", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-zdjb.3n2h-t67b", "00000000-0000-0000-97B0-24F8C4A7E1D9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "145", "2014", "Violent crime", "Alameda, CA" ]
+, [ "row-dgwj-afcj~6up9", "00000000-0000-0000-BE97-CE467FD5E127", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2684.940740324664", "2006", "Property crime", "Alameda, CA" ]
+, [ "row-6qak.nu3p_qu7g", "00000000-0000-0000-64B0-4AD9135CA633", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "277.1826459560793", "2011", "Violent crime", "Alameda, CA" ]
+, [ "row-paq8_c4cb_kupd", "00000000-0000-0000-A64B-8A8D9A6D908E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "113.74487445936077", "2006", "Robbery", "Alameda, CA" ]
+, [ "row-nucj~yudq.vhw3", "00000000-0000-0000-AC93-A6CB8EF316DE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "17", "2013", "Arson", "Alameda, CA" ]
+, [ "row-imkd_g84t.jmva", "00000000-0000-0000-CE54-3DE589E54FAF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "260", "2011", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-5m4c-e89d-iwbs", "00000000-0000-0000-DA67-2F14F4AC4104", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4284", "2010", "All Crimes", "Alameda, CA" ]
+, [ "row-42sn_38c9~y6kv", "00000000-0000-0000-D580-083AEA96AA22", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1898", "2011", "Property crime", "Alameda, CA" ]
+, [ "row-64u3-f92c~n78z", "00000000-0000-0000-B7DA-CEFDA1BDD93F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4320", "2009", "All Crimes", "Alameda, CA" ]
+, [ "row-bbv4~zytj-gmt3", "00000000-0000-0000-754E-EE06EC581400", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "134.99687375660776", "2009", "Aggravated assault", "Alameda, CA" ]
+, [ "row-frzn_kkuj-ga6v", "00000000-0000-0000-D896-DE8F3EA871BF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "9", "2007", "Forcible rape", "Alameda, CA" ]
+, [ "row-c74e.k5wa_yxuz", "00000000-0000-0000-3156-B4022B714C8F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "116.87507040666891", "2010", "Aggravated assault", "Alameda, CA" ]
+, [ "row-tb5b-e3p8_i6sw", "00000000-0000-0000-BD2F-BB3CB14A1D83", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "461.83141021997386", "2009", "Burglary", "Alameda, CA" ]
+, [ "row-kx33~5py2.6nw2", "00000000-0000-0000-7354-90C3F42D615C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2805.025196962169", "2007", "Property crime", "Alameda, CA" ]
+, [ "row-y6up~djt4.ecra", "00000000-0000-0000-55E9-5F1D41962544", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "376.61076555651783", "2013", "Burglary", "Alameda, CA" ]
+, [ "row-abpe~sjk3_yjzv", "00000000-0000-0000-E9F4-E89F7CE8B28B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5428.706401070782", "2013", "All Crimes", "Alameda, CA" ]
+, [ "row-kw7t-qbjg.a7w5", "00000000-0000-0000-8DDB-57AB9A9F0204", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2025.6938036766273", "2007", "Larceny", "Alameda, CA" ]
+, [ "row-yrut~mewp~p7y3", "00000000-0000-0000-B5A1-8AE4956630CB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "18.473256408798953", "2009", "Forcible rape", "Alameda, CA" ]
+, [ "row-qda4-s2zn.2v92", "00000000-0000-0000-CE1D-FA97F6FC9570", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "150.47199943218115", "2007", "Robbery", "Alameda, CA" ]
+, [ "row-4932_bx5v-b9n6", "00000000-0000-0000-E139-30C231940C50", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "106", "2007", "Robbery", "Alameda, CA" ]
+, [ "row-s57w-nfbg.tx9e", "00000000-0000-0000-E8C7-68A131E5BA30", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "92", "2008", "Aggravated assault", "Alameda, CA" ]
+, [ "row-ja7m.qm3d-8y8x", "00000000-0000-0000-DF86-E62FE52024E6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1.339046598821639", "2011", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-huuc~jjy9.epnc", "00000000-0000-0000-7BC3-B0A51CE94290", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "12.857510214577559", "2008", "Arson", "Alameda, CA" ]
+, [ "row-ymsz.8i86~arwu", "00000000-0000-0000-0B52-11E1640C1AFB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "325", "2009", "Burglary", "Alameda, CA" ]
+, [ "row-9eu6-tras_q7rk", "00000000-0000-0000-204B-ABCD4099C9A4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "173", "2010", "Violent crime", "Alameda, CA" ]
+, [ "row-67az_r6bu-23ri", "00000000-0000-0000-EF07-688E208D8D8E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4137", "2013", "All Crimes", "Alameda, CA" ]
+, [ "row-y7ih-fvdd.7i4y", "00000000-0000-0000-FE5C-2810A655105E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "131.43232663790394", "2008", "Aggravated assault", "Alameda, CA" ]
+, [ "row-cfjw_2v6u~vsd6", "00000000-0000-0000-8D02-BAAEB65F5311", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1301", "2012", "Larceny", "Alameda, CA" ]
+, [ "row-crhq~t6ae~bmsb", "00000000-0000-0000-FDA2-5B2DC2639DEE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4122", "2012", "All Crimes", "Alameda, CA" ]
+, [ "row-dnkq~hfyz_jej6", "00000000-0000-0000-3EB2-51232CC5572C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "296", "2012", "Burglary", "Alameda, CA" ]
+, [ "row-3svd~i48d_pk8v", "00000000-0000-0000-F0CD-64B717CC32FF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "295", "2012", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-qzbj~6q3g~cgfy", "00000000-0000-0000-36FC-386C32AAB2FD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "6003.201707577375", "2006", "All Crimes", "Alameda, CA" ]
+, [ "row-4f66~vrkj_ch67", "00000000-0000-0000-67E9-5732AF88E791", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1278", "2008", "Larceny", "Alameda, CA" ]
+, [ "row-mg2z-vkni_zm4z", "00000000-0000-0000-D7B1-0CCD0C999ABF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "123.62871596657763", "2009", "Robbery", "Alameda, CA" ]
+, [ "row-g994_u8j8-n5s9", "00000000-0000-0000-2CA2-7FC8AB5A3540", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "129.88752008569898", "2011", "Aggravated assault", "Alameda, CA" ]
+, [ "row-227m~pta2~eiyx", "00000000-0000-0000-93D1-292FD45A9B3E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "0", "2013", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-8mmi~awzi_a8ig", "00000000-0000-0000-56CA-69F779935A62", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2778.093559938612", "2009", "Property crime", "Alameda, CA" ]
+, [ "row-8r82-ghjk~akc4", "00000000-0000-0000-47EC-76798F46F85F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "287", "2013", "Burglary", "Alameda, CA" ]
+, [ "row-6hu9-dj4b.ke4t", "00000000-0000-0000-3DC5-D44D0790BE99", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "243.60707446209307", "2010", "Violent crime", "Alameda, CA" ]
+, [ "row-mae8-fu38_kwcp", "00000000-0000-0000-B58E-C84BD0147597", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "160", "2012", "Violent crime", "Alameda, CA" ]
+, [ "row-2jsc_rijd_6ukb", "00000000-0000-0000-F84F-1DD14836AA44", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "302.7486763546243", "2010", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-im2n-4nqu_9bai", "00000000-0000-0000-50C8-29AC2A2AF5C1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1955", "2009", "Property crime", "Alameda, CA" ]
+, [ "row-ykyr_vych.hczz", "00000000-0000-0000-87F7-CDB0CC2A87D0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "4", "2009", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-mnbq.th8a~xtf8", "00000000-0000-0000-7829-2F52F8F91693", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "17.052236685045187", "2009", "Arson", "Alameda, CA" ]
+, [ "row-zhm2~r2ef-qjcp", "00000000-0000-0000-02F3-2295A777CC48", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "80.46931782784758", "2014", "Robbery", "Alameda, CA" ]
+, [ "row-tk63.pww3-9gy6", "00000000-0000-0000-02B5-B5E6A631860A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "323", "2006", "Burglary", "Alameda, CA" ]
+, [ "row-u53r~62zc~h2nv", "00000000-0000-0000-18BA-3507B68F0C9F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "9", "2012", "Forcible rape", "Alameda, CA" ]
+, [ "row-auyi.nru3.yjxq", "00000000-0000-0000-C733-152EDEC7CC94", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1723.9323147865953", "2012", "Larceny", "Alameda, CA" ]
+, [ "row-9reu~m8is-gfqi", "00000000-0000-0000-299D-DEA465BC8A4D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "333", "2014", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-iuyg-vvyv-gm2q", "00000000-0000-0000-1A9B-25B5254C1AD6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "1", "2011", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-8jf8-ch5v-52d6", "00000000-0000-0000-BB7D-150ACBB3C3A4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "23.851484754925995", "2012", "Arson", "Alameda, CA" ]
+, [ "row-ubs6-xycf.4fzq", "00000000-0000-0000-53FB-6FDED8183538", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "11.925742377462997", "2012", "Forcible rape", "Alameda, CA" ]
+, [ "row-43y6_vcqy_t2zd", "00000000-0000-0000-7FB0-808345B7541A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2495.8664672073064", "2013", "Property crime", "Alameda, CA" ]
+, [ "row-bvrc.cqia-wd96", "00000000-0000-0000-ACA6-6EC28F8D2EA4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "1", "2014", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-g4eu~fgzx.tje8", "00000000-0000-0000-91B9-82D8A5F9279D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "18", "2012", "Arson", "Alameda, CA" ]
+, [ "row-hufa~ijq4.c6w8", "00000000-0000-0000-B303-FABEC71B596F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "10", "2010", "Arson", "Alameda, CA" ]
+, [ "row-vykx.sq7r-puf9", "00000000-0000-0000-9561-B188E1920BA9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1964", "2010", "Property crime", "Alameda, CA" ]
+, [ "row-kbid~99pf-5sfs", "00000000-0000-0000-92E7-928FCB042DFE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "17", "2007", "Arson", "Alameda, CA" ]
+, [ "row-vh4d.6sga~k5sx", "00000000-0000-0000-5C0E-B1B0476F77B4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Rape (revised definition)--count", "1600000US0600562", "Alameda, California", "place", "count", null, "2013", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-92f6_jdvm~ebwc", "00000000-0000-0000-DB7D-311A60C7FFF6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "330", "2013", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-4mqg~ndkg-zvrm", "00000000-0000-0000-431D-85697A784DA8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "85", "2013", "Robbery", "Alameda, CA" ]
+, [ "row-fmca-zexa-9ts5", "00000000-0000-0000-5016-C88D88A4A759", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "21.122000675904022", "2010", "Forcible rape", "Alameda, CA" ]
+, [ "row-5tnb~ibwp.dqsq", "00000000-0000-0000-CA3B-BCE706BEC20B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "20.085698982324583", "2011", "Forcible rape", "Alameda, CA" ]
+, [ "row-yyph-5q9n.aj2q", "00000000-0000-0000-1C13-DAF7770870BF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1902", "2013", "Property crime", "Alameda, CA" ]
+, [ "row-bjbi.5h4x_r2ia", "00000000-0000-0000-2D8D-E3018DD52BB6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "315", "2011", "Burglary", "Alameda, CA" ]
+, [ "row-4hws-txc5_ixfw", "00000000-0000-0000-0568-9847DFACA811", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "221", "2006", "Violent crime", "Alameda, CA" ]
+, [ "row-fium_udwy~69wd", "00000000-0000-0000-BFBC-59F6DA7FE149", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "94.74613228117536", "2014", "Aggravated assault", "Alameda, CA" ]
+, [ "row-q4fn~tvns-q3wi", "00000000-0000-0000-0C6D-04E5CA2977D8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "107", "2008", "Robbery", "Alameda, CA" ]
+, [ "row-rvdy~in6t~p9cr", "00000000-0000-0000-521A-FB420407A1C3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "12.638319384373421", "2006", "Arson", "Alameda, CA" ]
+, [ "row-x37h_c9eh~3sez", "00000000-0000-0000-3CC3-71DCBEE4A882", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "22.30795475421883", "2013", "Arson", "Alameda, CA" ]
+, [ "row-igkh-aujf-pqrp", "00000000-0000-0000-1954-87CDE1A05F6D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1297", "2006", "Larceny", "Alameda, CA" ]
+, [ "row-m9un.wnkb~ua5t", "00000000-0000-0000-94A8-2ECC9A4CEFB1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "20.085698982324583", "2011", "Arson", "Alameda, CA" ]
+, [ "row-ys6r-9im4_dij9", "00000000-0000-0000-CB74-34CD2712BC5F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "13", "2009", "Forcible rape", "Alameda, CA" ]
+, [ "row-75ih-hscv-dnzg", "00000000-0000-0000-90B0-0190F8FF902C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "433.0367687583655", "2013", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-ep4p~dccq-i876", "00000000-0000-0000-353A-C920196E5404", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1915.061394615298", "2010", "Larceny", "Alameda, CA" ]
+, [ "row-fz33~heg2.mkx2", "00000000-0000-0000-B187-A1FB26BA8851", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "95", "2009", "Aggravated assault", "Alameda, CA" ]
+, [ "row-qm36_4pxj~mim7", "00000000-0000-0000-2BC1-1E5133924D61", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "2", "2007", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-7fu9.rvgv_uu64", "00000000-0000-0000-48E8-93EFEE106205", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "291.0071687131805", "2007", "Violent crime", "Alameda, CA" ]
+, [ "row-7z99.3xpi-et2h", "00000000-0000-0000-5969-613EE42D04E4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "2", "2006", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-nc7q_zzrb_mnwm", "00000000-0000-0000-CA7C-496F2F0600D1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "2", "2008", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-ha92-rma6~vzie", "00000000-0000-0000-0601-A9699CADA494", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1975.2174160177344", "2009", "Larceny", "Alameda, CA" ]
+, [ "row-vj4t_mzz4_xzp5", "00000000-0000-0000-5096-8E3F6C7E6FF4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1497.7676253763887", "2014", "Larceny", "Alameda, CA" ]
+, [ "row-igd7-bmz2_igq8", "00000000-0000-0000-0A8E-D589FDB9B7F6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "236", "2014", "Burglary", "Alameda, CA" ]
+, [ "row-ndmt~bucu.fb58", "00000000-0000-0000-435C-E1F7575D7692", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2765.573955165033", "2010", "Property crime", "Alameda, CA" ]
+, [ "row-ezvm.755e~wtrk", "00000000-0000-0000-9A90-37B9641C425D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "389", "2010", "Burglary", "Alameda, CA" ]
+, [ "row-gwzb_zhyy~g6id", "00000000-0000-0000-1936-CD4D4DA89908", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "183.957759928102", "2006", "Aggravated assault", "Alameda, CA" ]
+, [ "row-8gk4.2ueh~wbqe", "00000000-0000-0000-CDAD-22A7A1A56E89", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1892", "2012", "Property crime", "Alameda, CA" ]
+, [ "row-babu-trnh.3cii", "00000000-0000-0000-3BDE-7BA5F548172E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "14.081333783936014", "2010", "Arson", "Alameda, CA" ]
+, [ "row-mucb~w7nd-adxp", "00000000-0000-0000-343B-FD90D3943343", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "431.54233799417983", "2007", "Burglary", "Alameda, CA" ]
+, [ "row-kn2a.it4w-8pqr", "00000000-0000-0000-DF8E-A2B94754F941", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "188.19437233932092", "2014", "Violent crime", "Alameda, CA" ]
+, [ "row-en3d~qagt.e52d", "00000000-0000-0000-55B1-7DF8E8EF8561", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Rape (legacy definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "13.122326326011075", "2013", "Rape (legacy definition)", "Alameda, CA" ]
+, [ "row-6sfh_d3fy-n6fi", "00000000-0000-0000-9A84-286D4F1A8595", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Rape (legacy definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "11.681030007268197", "2014", "Rape (legacy definition)", "Alameda, CA" ]
+, [ "row-ccqt.nf3s_yjda", "00000000-0000-0000-B42C-5349850D9986", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "9", "2008", "Arson", "Alameda, CA" ]
+, [ "row-byuh~t5w2-a7nd", "00000000-0000-0000-82AF-C4B8E0E1E0BA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1723", "2014", "Property crime", "Alameda, CA" ]
+, [ "row-kzx7.i6wy.gbfd", "00000000-0000-0000-7259-3BA7680DDB8F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "111.53977377109413", "2013", "Robbery", "Alameda, CA" ]
+, [ "row-966d_8npc-fzdx", "00000000-0000-0000-219D-11159E1D17BA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "6216.197033146426", "2007", "All Crimes", "Alameda, CA" ]
+, [ "row-5tdh-fanq_bqzk", "00000000-0000-0000-B8A6-B03D229F3EA8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2.808515418749649", "2006", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-qupp_4vs9~advr", "00000000-0000-0000-1D07-A761B9F9806C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "245", "2007", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-czns_imze-5q2n", "00000000-0000-0000-7621-7117E63B1CAD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1427", "2007", "Larceny", "Alameda, CA" ]
+, [ "row-znzq.zfzc~ef9b", "00000000-0000-0000-8FE2-ABAA6F23C3F0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Forcible rape--count", "1600000US0600562", "Alameda, California", "place", "count", "15", "2010", "Forcible rape", "Alameda, CA" ]
+, [ "row-cwua~9rb7_eg3u", "00000000-0000-0000-B216-55FE45DB5640", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "106.00659891078219", "2012", "Robbery", "Alameda, CA" ]
+, [ "row-mi8d~c3zm_bccu", "00000000-0000-0000-56B2-239CBA1568AC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "306.3025646350327", "2014", "Burglary", "Alameda, CA" ]
+, [ "row-avsg_a8zz_4xsv", "00000000-0000-0000-6456-481739A90CDC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "9", "2006", "Arson", "Alameda, CA" ]
+, [ "row-jce3-x867.husc", "00000000-0000-0000-4292-10847B24EA9E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "158", "2013", "Violent crime", "Alameda, CA" ]
+, [ "row-zfkq.3cpw~fe5g", "00000000-0000-0000-2FE5-5A79D6044DBA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "12.775924480090852", "2007", "Forcible rape", "Alameda, CA" ]
+, [ "row-kkem.wbeb-3dar", "00000000-0000-0000-E76B-3C2A9B71D320", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1323", "2011", "Larceny", "Alameda, CA" ]
+, [ "row-hrun-vxgd~mtqq", "00000000-0000-0000-8551-B48E3EB48F58", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "82.67065585386977", "2013", "Aggravated assault", "Alameda, CA" ]
+, [ "row-8i7i_cs6k_x7jx", "00000000-0000-0000-A493-C872028925D5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2007--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "347.78905529136205", "2007", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-ajhu~rugt_4vz5", "00000000-0000-0000-AC31-80FBBB6C7EE3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "152.86151032886656", "2008", "Robbery", "Alameda, CA" ]
+, [ "row-zj5q-nhge_xqe5", "00000000-0000-0000-BECC-8D02065CCAA2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2014--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "3753", "2014", "All Crimes", "Alameda, CA" ]
+, [ "row-npkc-jbxc-7rc2", "00000000-0000-0000-4B18-665702C4D6D8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Forcible rape--rate", "1600000US0600562", "Alameda, California", "place", "rate", "9.829803965623771", "2006", "Forcible rape", "Alameda, CA" ]
+, [ "row-qqdu-cch4.62j2", "00000000-0000-0000-BC8D-0485AEF99A68", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "12", "2009", "Arson", "Alameda, CA" ]
+, [ "row-9qmh_h8e3-4n6x", "00000000-0000-0000-F1D4-7A7B9F5D2E77", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2012--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5461.990008878052", "2012", "All Crimes", "Alameda, CA" ]
+, [ "row-t5bz.7664-mz3k", "00000000-0000-0000-9344-53604FA9B5D0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2009--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "199", "2009", "Violent crime", "Alameda, CA" ]
+, [ "row-9ys6_uv67_ur4b", "00000000-0000-0000-E136-4B09260A602A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "104.20187000112651", "2010", "Robbery", "Alameda, CA" ]
+, [ "row-t9q5-ehan~4ygx", "00000000-0000-0000-2CC1-BAD83A665AA2", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2006--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "81", "2006", "Robbery", "Alameda, CA" ]
+, [ "row-sans~5s79.njaa", "00000000-0000-0000-9E6E-4E211DFBEDC6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2011--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "94", "2011", "Robbery", "Alameda, CA" ]
+, [ "row-cbrt.6w6z~meqe", "00000000-0000-0000-D7B4-C330423F7888", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2008--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5970.17057630218", "2008", "All Crimes", "Alameda, CA" ]
+, [ "row-urpj~b9ve.8zpr", "00000000-0000-0000-24F9-1DC7E7041108", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2013--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "63", "2013", "Aggravated assault", "Alameda, CA" ]
+, [ "row-n43u-s4vj~x46j", "00000000-0000-0000-7894-180CDC474E0E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0600562--2010--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "83", "2010", "Aggravated assault", "Alameda, CA" ]
+, [ "row-qksr~kdat~b5mm", "00000000-0000-0000-586F-354672A762EE", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-q93d-d7ef_en5i", "00000000-0000-0000-3291-A9A19D49BE2B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-4hgs-yk5m-amde", "00000000-0000-0000-CA07-2FA6B21D10EB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "92.96832795205849", "2016", "Aggravated assault", "Alameda, CA" ]
+, [ "row-q75t.mt5d~swa5", "00000000-0000-0000-A7D6-1856EBAC95A4", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "29", "2016", "Arson", "Alameda, CA" ]
+, [ "row-mhnm.epc3~ys2w", "00000000-0000-0000-D210-43331337AD2D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "556.553638956242", "2016", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-8fch~ht7k~m2ev", "00000000-0000-0000-0CE4-190F866B0392", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "78", "2015", "Aggravated assault", "Alameda, CA" ]
+, [ "row-ht8s_2byi~sn3y", "00000000-0000-0000-1689-6B19E6C2BD20", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "78", "2015", "Aggravated assault", "Alameda, CA" ]
+, [ "row-tdm3~q237~hvrg", "00000000-0000-0000-BC7F-62CAE7FAB327", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "3952", "2015", "All Crimes", "Alameda, CA" ]
+, [ "row-ns6q_uvj8~276a", "00000000-0000-0000-D52F-1018F4EBD4F5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "3952", "2015", "All Crimes", "Alameda, CA" ]
+, [ "row-fmj9_wvtq-dvqm", "00000000-0000-0000-BC9A-DB985CED9134", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "443", "2016", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-6pyk~ysat.en5h", "00000000-0000-0000-791A-5EC1B5A92281", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Rape (revised definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "8", "2016", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-gvu7.b9je.ukc8", "00000000-0000-0000-F42F-6370DB471AE8", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "61", "2015", "Robbery", "Alameda, CA" ]
+, [ "row-6wmn~sj5v-4ah5", "00000000-0000-0000-58D1-616CA15C3030", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "61", "2015", "Robbery", "Alameda, CA" ]
+, [ "row-dci2_wtvj~mbr8", "00000000-0000-0000-855A-2DA78AE88829", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "36.43353392715806", "2016", "Arson", "Alameda, CA" ]
+, [ "row-2rru_z9mg_ixc4", "00000000-0000-0000-E98D-885B41CFDFD8", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1583.7075292890488", "2015", "Larceny", "Alameda, CA" ]
+, [ "row-43j8.pwdp~3y7s", "00000000-0000-0000-2AB2-2DB5C223C53C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1583.7075292890488", "2015", "Larceny", "Alameda, CA" ]
+, [ "row-ivg2-q7fa.bgke", "00000000-0000-0000-74ED-A87A5995FA3C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "77.59530866396143", "2015", "Robbery", "Alameda, CA" ]
+, [ "row-h42c_36j3-mw9p", "00000000-0000-0000-DCEE-17FD640F8C1E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "77.59530866396143", "2015", "Robbery", "Alameda, CA" ]
+, [ "row-hcma_vds8_wpyk", "00000000-0000-0000-FD07-1FA9A52CA1F4", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "68", "2016", "Robbery", "Alameda, CA" ]
+, [ "row-y4iw.a9fm~4kfd", "00000000-0000-0000-9E96-8FD56DEDA5D9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "189.70564217244367", "2016", "Violent crime", "Alameda, CA" ]
+, [ "row-tdvz-9egy_4ewf", "00000000-0000-0000-CDD3-0C6A0D4F11D9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "228", "2015", "Burglary", "Alameda, CA" ]
+, [ "row-h5jd.g5tj_bevu", "00000000-0000-0000-197E-F928A0C2759A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "228", "2015", "Burglary", "Alameda, CA" ]
+, [ "row-sqnn~uu5w-54mg", "00000000-0000-0000-9579-65C8CFFC216A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5027.158358032387", "2015", "All Crimes", "Alameda, CA" ]
+, [ "row-mpvp_dp9u~u8vc", "00000000-0000-0000-893D-6265309BAB09", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5027.158358032387", "2015", "All Crimes", "Alameda, CA" ]
+, [ "row-qm47-9f3f_twq7", "00000000-0000-0000-6294-81BF3595BFD7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "1", "2016", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-t7zx_gu6p_wp2b", "00000000-0000-0000-0A44-E33EA64A8A50", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1351", "2016", "Larceny", "Alameda, CA" ]
+, [ "row-t3a5_bj8e_98ne", "00000000-0000-0000-669B-AF00A821E8F8", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "283.9302988806111", "2016", "Burglary", "Alameda, CA" ]
+, [ "row-jf3j.esqd~5qh8", "00000000-0000-0000-FD50-42731E4EF43A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "440.1307671759124", "2015", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-4syw_zwa8-ygcs", "00000000-0000-0000-87D2-5A8394271387", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "440.1307671759124", "2015", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-6mgd-7e5j_mjmv", "00000000-0000-0000-9B3F-CD52B1D0A3BB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1819", "2015", "Property crime", "Alameda, CA" ]
+, [ "row-tc27~sagh_32nf", "00000000-0000-0000-7B45-E4528462E76E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "1819", "2015", "Property crime", "Alameda, CA" ]
+, [ "row-9uj5_m2rt_tqrv", "00000000-0000-0000-B74C-EBC2AA14C96B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2537.784087339975", "2016", "Property crime", "Alameda, CA" ]
+, [ "row-j2h8_uani-uj32", "00000000-0000-0000-62FB-1E77F09DD4F2", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "4371", "2016", "All Crimes", "Alameda, CA" ]
+, [ "row-g3jv-keui~9qmq", "00000000-0000-0000-74D2-6C3B51941411", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "151", "2016", "Violent crime", "Alameda, CA" ]
+, [ "row-mxwb-cct9~zpk7", "00000000-0000-0000-C3F5-24D6F01CCADC", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1245", "2015", "Larceny", "Alameda, CA" ]
+, [ "row-th3h-smzm.hs88", "00000000-0000-0000-FB6E-8961186BEE2A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1245", "2015", "Larceny", "Alameda, CA" ]
+, [ "row-8ihe-ewgb_2tz9", "00000000-0000-0000-F250-D0EC64ECA7EC", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "85.4303554154051", "2016", "Robbery", "Alameda, CA" ]
+, [ "row-6689-wqsr_s2rw", "00000000-0000-0000-B8AC-0C6263727C65", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Rape (revised definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "10.05063004887119", "2016", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-q4mr~f22p.q83z", "00000000-0000-0000-D2CE-32F137872E7D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "188.2640275781359", "2015", "Violent crime", "Alameda, CA" ]
+, [ "row-9cxf.3au2~nyhb", "00000000-0000-0000-5B39-B67ADD2E7B40", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "188.2640275781359", "2015", "Violent crime", "Alameda, CA" ]
+, [ "row-bqbc.r63y-9i3y", "00000000-0000-0000-AC58-7F59F4986B6E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1697.300149503122", "2016", "Larceny", "Alameda, CA" ]
+, [ "row-azny.zcrg-hz2m", "00000000-0000-0000-79FE-32B4A683A830", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "99.2202307506392", "2015", "Aggravated assault", "Alameda, CA" ]
+, [ "row-e9sp~8cft_q9zc", "00000000-0000-0000-DF2D-334695A1F8E9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "99.2202307506392", "2015", "Aggravated assault", "Alameda, CA" ]
+, [ "row-sw6x_mm82.9c2k", "00000000-0000-0000-2435-C21FE90A538A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "5491.412992951996", "2016", "All Crimes", "Alameda, CA" ]
+, [ "row-szq8~34p8.r72c", "00000000-0000-0000-E768-A83E75AB4BA7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "22.896976327070586", "2015", "Arson", "Alameda, CA" ]
+, [ "row-sb48~8eaq~n93k", "00000000-0000-0000-3A65-560B5856F688", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "22.896976327070586", "2015", "Arson", "Alameda, CA" ]
+, [ "row-55qy.76sv.78ck", "00000000-0000-0000-2BE6-B0A4EDE9FC7A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "18", "2015", "Arson", "Alameda, CA" ]
+, [ "row-qfjc~j4tb-ujrd", "00000000-0000-0000-F15D-D9C84F5BF113", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "18", "2015", "Arson", "Alameda, CA" ]
+, [ "row-cdva.d43s_8aqr", "00000000-0000-0000-F39C-E59225FE8D6F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2313.866663274522", "2015", "Property crime", "Alameda, CA" ]
+, [ "row-x6px-ttpa_bu9u", "00000000-0000-0000-79E1-E55A0D79AAC7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2313.866663274522", "2015", "Property crime", "Alameda, CA" ]
+, [ "row-865q.tjv5.8khi", "00000000-0000-0000-CB8E-F535CB6FE985", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "346", "2015", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-2e9i_swie-uc99", "00000000-0000-0000-EA95-FFAE51166846", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "346", "2015", "Motor vehicle theft", "Alameda, CA" ]
+, [ "row-22wr~rjnn-gfyy", "00000000-0000-0000-93F5-DDC380CCF9D9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "74", "2016", "Aggravated assault", "Alameda, CA" ]
+, [ "row-9gxz.ieqt_dt8q", "00000000-0000-0000-9C06-1CF4C5E8CD00", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "290.02836680956074", "2015", "Burglary", "Alameda, CA" ]
+, [ "row-ic6d-6sdk~xh8j", "00000000-0000-0000-D49F-22AEE54FA128", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "290.02836680956074", "2015", "Burglary", "Alameda, CA" ]
+, [ "row-dd8g_bun8_kzay", "00000000-0000-0000-9914-99478AEF16E4", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Rape (revised definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "7", "2015", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-q9pb_ih7m~dz9h", "00000000-0000-0000-04F7-069041CFF944", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Rape (revised definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "7", "2015", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-3j96-ierv.vmgn", "00000000-0000-0000-12F6-9B7873E0CA66", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Rape (revised definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "8.904379682749672", "2015", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-ck3r_fi2s-a6qy", "00000000-0000-0000-643B-82BC95CE7E13", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Rape (revised definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "8.904379682749672", "2015", "Rape (revised definition)", "Alameda, CA" ]
+, [ "row-unmm.mhmx-aprg", "00000000-0000-0000-6F4F-61FCBE598E50", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "2020", "2016", "Property crime", "Alameda, CA" ]
+, [ "row-iypq_ddxm.tgis", "00000000-0000-0000-0B48-70EE7246FAE7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "148", "2015", "Violent crime", "Alameda, CA" ]
+, [ "row-cy9f~5zpk.6evr", "00000000-0000-0000-AD1E-E9C4DA21182D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2015--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "148", "2015", "Violent crime", "Alameda, CA" ]
+, [ "row-hbmk~qpyq.y9qf", "00000000-0000-0000-617A-A99A8E5C21B9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0600562--2016--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "226", "2016", "Burglary", "Alameda, CA" ]
+, [ "row-sgav-4shw_4y29", "00000000-0000-0000-DA4F-961E37217936", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2015--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2.544108480785621", "2015", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-gxfj.xrys~55xx", "00000000-0000-0000-EE8B-F6F8B99A6177", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2015--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2.544108480785621", "2015", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-9tdv-i24k-hvz5", "00000000-0000-0000-EA94-7DB4AA093FB6", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2008--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2.857224492128346", "2008", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-73jk-4gvd~c27i", "00000000-0000-0000-73A0-FCB195677160", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2016--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1.256328756108899", "2016", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-s4v6~rnkq_5nvs", "00000000-0000-0000-6FDD-E58A461D5973", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2012--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1.325082486384777", "2012", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-kjsw~9q6x~84d7", "00000000-0000-0000-6EAF-F44264C587B7", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2014--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1.2978922230298", "2014", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-i77w.k98w-wgba", "00000000-0000-0000-2470-F9E5BBFA2FEE", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0600562--2010--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1.408133378393601", "2010", "Murder and nonnegligent manslaughter", "Alameda, CA" ]
+, [ "row-qera_6mkx_q3fd", "00000000-0000-0000-32FE-EA3A5F3C1ACF", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "31.343639121876603", "2017", "Arson", null ]
+, [ "row-dhd6.at3j_avgh", "00000000-0000-0000-9D48-79223E489343", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "25", "2017", "Arson", null ]
+, [ "row-qhtq-24zg~3syk", "00000000-0000-0000-E7B1-B0B8A3CCD988", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "0", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-yhch-2vd6~k28n", "00000000-0000-0000-1EBA-170F4483D36E", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "106550.82057647221", "2017", "All Crimes", null ]
+, [ "row-8ykz-8kpd.kijz", "00000000-0000-0000-2DC5-E28FA44F77C6", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "317.1976279133913", "2017", "Violent crime", null ]
+, [ "row-ktyi~wtar_6bnd", "00000000-0000-0000-8429-89577648711E", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2942.540840761776", "2017", "Property crime", null ]
+, [ "row-uxr7-4ury.5rx9", "00000000-0000-0000-C425-543AF6BFB403", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "130.3895387470067", "2017", "Aggravated assault", null ]
+, [ "row-49cr.ai38_kx6e", "00000000-0000-0000-AFD9-3C014863AD8F", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "274.5702787076391", "2017", "Burglary", null ]
+, [ "row-biuy~5n3c_qcen", "00000000-0000-0000-153E-EF92E4693E1E", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Rape (revised definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "20.059929038001027", "2017", "Rape (revised definition)", null ]
+, [ "row-pttb~z26g.sqb9", "00000000-0000-0000-A9DD-E1C78F0A4F69", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "219", "2017", "Burglary", null ]
+, [ "row-w4cr~au7m_5cvq", "00000000-0000-0000-B22D-4C5BFB4EB37D", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2162.711099409486", "2017", "Larceny", null ]
+, [ "row-9y6p~3fbm~pyva", "00000000-0000-0000-034E-14B8FE286E38", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "403", "2017", "Motor vehicle theft", null ]
+, [ "row-wfbk~mzhj-k5fh", "00000000-0000-0000-920D-15F7CD5A98E6", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "104", "2017", "Aggravated assault", null ]
+, [ "row-j3ih.kabm-haph", "00000000-0000-0000-5630-0C511001FB6D", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "253", "2017", "Violent crime", null ]
+, [ "row-qfrs.n8mb_bawt", "00000000-0000-0000-5429-DB1B824A71F2", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "84986", "2017", "All Crimes", null ]
+, [ "row-qrti-nhcg_2jkq", "00000000-0000-0000-9A81-CE3AB040EBD1", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "0", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-ys6q.mdct_reqg", "00000000-0000-0000-6E16-8BE270794524", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "133", "2017", "Robbery", null ]
+, [ "row-gsj6~wmf7~pvsw", "00000000-0000-0000-8987-84DEF7206B39", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Rape (revised definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "16", "2017", "Rape (revised definition)", null ]
+, [ "row-qm6i_fksi~c8pq", "00000000-0000-0000-2D9D-A7C051C101BD", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "166.74816012838355", "2017", "Robbery", null ]
+, [ "row-pivs~nqiu~3icz", "00000000-0000-0000-F504-10B87974ABDB", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1725", "2017", "Larceny", null ]
+, [ "row-w4up_q28u~fddp", "00000000-0000-0000-E8AE-16E168972371", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "2347", "2017", "Property crime", null ]
+, [ "row-ixw8-nhgu-ebkg", "00000000-0000-0000-9137-E088DA228DC8", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0600562--2017--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "505.2594626446509", "2017", "Motor vehicle theft", null ]
+, [ "row-hs4b~k8rt-wtgp", "00000000-0000-0000-7BFF-E2D034D825F9", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Violent crime--count", "1600000US0600562", "Alameda, California", "place", "count", "184", "2018", "Violent crime", null ]
+, [ "row-mufi~vj5g~yme2", "00000000-0000-0000-27B7-F2242B9763CA", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Violent crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "230.14096133882003", "2018", "Violent crime", null ]
+, [ "row-e7c3_zhxi-w2g5", "00000000-0000-0000-DB5B-8269D10005F5", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Murder and nonnegligent manslaughter--count", "1600000US0600562", "Alameda, California", "place", "count", "1", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-wc78-7xj2~9v6s", "00000000-0000-0000-9F5C-F174760D55A7", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Murder and nonnegligent manslaughter--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1.2507660942327175", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-fape~n9jx_b5hx", "00000000-0000-0000-696C-EB833CBAB3B3", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Motor vehicle theft--count", "1600000US0600562", "Alameda, California", "place", "count", "351", "2018", "Motor vehicle theft", null ]
+, [ "row-z94f-jv5u_cbvi", "00000000-0000-0000-5888-D1D3CD2899B9", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Motor vehicle theft--rate", "1600000US0600562", "Alameda, California", "place", "rate", "439.0188990756838", "2018", "Motor vehicle theft", null ]
+, [ "row-dumr~ippf.m8ep", "00000000-0000-0000-50D5-DFFAD7248516", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Rape (revised definition)--count", "1600000US0600562", "Alameda, California", "place", "count", "13", "2018", "Rape (revised definition)", null ]
+, [ "row-fzwy.44uh.ismk", "00000000-0000-0000-11E2-D5D7204F0225", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Rape (revised definition)--rate", "1600000US0600562", "Alameda, California", "place", "rate", "16.259959225025327", "2018", "Rape (revised definition)", null ]
+, [ "row-yjcn_n7gq.eh4q", "00000000-0000-0000-B5A4-C1E58E74DFA5", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Robbery--count", "1600000US0600562", "Alameda, California", "place", "count", "75", "2018", "Robbery", null ]
+, [ "row-ngtw_t5ey_a9ma", "00000000-0000-0000-0D63-F5834692BBD2", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Robbery--rate", "1600000US0600562", "Alameda, California", "place", "rate", "93.80745706745381", "2018", "Robbery", null ]
+, [ "row-9y7s-rymy-ftwy", "00000000-0000-0000-6184-47EC6F4C3486", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Larceny--count", "1600000US0600562", "Alameda, California", "place", "count", "1576", "2018", "Larceny", null ]
+, [ "row-yeiu_hrn4-uzwc", "00000000-0000-0000-1BD5-840A9F414D57", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Larceny--rate", "1600000US0600562", "Alameda, California", "place", "rate", "1971.2073645107628", "2018", "Larceny", null ]
+, [ "row-uw8c_jeqe~9286", "00000000-0000-0000-024E-8B6A486FEF3C", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Arson--count", "1600000US0600562", "Alameda, California", "place", "count", "18", "2018", "Arson", null ]
+, [ "row-p7ky_8x3u-96ed", "00000000-0000-0000-7B4A-32C4610443B6", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Arson--rate", "1600000US0600562", "Alameda, California", "place", "rate", "22.513789696188915", "2018", "Arson", null ]
+, [ "row-49en_az5m~fw9u", "00000000-0000-0000-81C4-92134C4A25B9", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Burglary--count", "1600000US0600562", "Alameda, California", "place", "count", "196", "2018", "Burglary", null ]
+, [ "row-fnah~cgxj-6ngv", "00000000-0000-0000-9BB9-780524A5FF29", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Burglary--rate", "1600000US0600562", "Alameda, California", "place", "rate", "245.15015446961263", "2018", "Burglary", null ]
+, [ "row-dzxy.v4g8_hut9", "00000000-0000-0000-2067-1CE2E01972E7", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Property crime--count", "1600000US0600562", "Alameda, California", "place", "count", "2123", "2018", "Property crime", null ]
+, [ "row-erwd.j6h6.rvb9", "00000000-0000-0000-F503-BB7EC23E7084", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Property crime--rate", "1600000US0600562", "Alameda, California", "place", "rate", "2655.3764180560593", "2018", "Property crime", null ]
+, [ "row-3wga.gab6_9uvn", "00000000-0000-0000-32ED-31CA866FC699", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Aggravated assault--count", "1600000US0600562", "Alameda, California", "place", "count", "95", "2018", "Aggravated assault", null ]
+, [ "row-9cv8_hgdx~76i4", "00000000-0000-0000-F2B3-BB4C7CD01C5B", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--Aggravated assault--rate", "1600000US0600562", "Alameda, California", "place", "rate", "118.82277895210815", "2018", "Aggravated assault", null ]
+, [ "row-abv3-6fuw~9akh", "00000000-0000-0000-9103-FEFE66856E63", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--All Crimes--rate", "1600000US0600562", "Alameda, California", "place", "rate", "105793.54854848595", "2018", "All Crimes", null ]
+, [ "row-6gn3_476z.6dwq", "00000000-0000-0000-93D6-D0D8511F0DD7", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0600562--2018--All Crimes--count", "1600000US0600562", "Alameda, California", "place", "count", "84583", "2018", "All Crimes", null ]
+ ]
+}
