@@ -1,0 +1,549 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "zzzz-zzzz",
+      "name" : "FBI UCR V3",
+      "assetType" : "filter",
+      "averageRating" : 0,
+      "createdAt" : 1474327305,
+      "displayType" : "table",
+      "downloadCount" : 0,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1516323527,
+      "newBackend" : true,
+      "numberOfComments" : 0,
+      "oid" : 0,
+      "provenance" : "community",
+      "publicationAppendEnabled" : true,
+      "publicationGroup" : 13172847,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1579039741,
+      "rowsUpdatedBy" : "rndq-s2m8",
+      "searchString" : "Fremont, California",
+      "tableId" : 14727467,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewType" : "tabular",
+      "approvals" : [ {
+        "state" : "submittable",
+        "submissionObject" : "public_audience_request",
+        "submissionOutcome" : "change_audience",
+        "workflowId" : 921,
+        "submissionDetails" : {
+          "permissionType" : "READ"
+        }
+      } ],
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 335870077,
+        "name" : "key",
+        "dataTypeName" : "text",
+        "fieldName" : "key",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436444,
+        "width" : 136,
+        "format" : { }
+      }, {
+        "id" : 335870078,
+        "name" : "id",
+        "dataTypeName" : "text",
+        "fieldName" : "id",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436445,
+        "width" : 124,
+        "format" : { }
+      }, {
+        "id" : 335870079,
+        "name" : "name",
+        "dataTypeName" : "text",
+        "fieldName" : "name",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436446,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870080,
+        "name" : "type",
+        "dataTypeName" : "text",
+        "fieldName" : "type",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436447,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870081,
+        "name" : "variable",
+        "dataTypeName" : "text",
+        "fieldName" : "variable",
+        "position" : 5,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436448,
+        "width" : 196,
+        "format" : { }
+      }, {
+        "id" : 335870082,
+        "name" : "value",
+        "dataTypeName" : "number",
+        "fieldName" : "value",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436449,
+        "width" : 160,
+        "format" : { }
+      }, {
+        "id" : 335870083,
+        "name" : "year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 38436450,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 335870084,
+        "name" : "crime_type",
+        "dataTypeName" : "text",
+        "fieldName" : "crime_type",
+        "position" : 8,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436451,
+        "width" : 220,
+        "format" : { }
+      }, {
+        "id" : 335870085,
+        "name" : "place_name",
+        "dataTypeName" : "text",
+        "fieldName" : "place_name",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 38436452,
+        "width" : 220,
+        "format" : { }
+      } ],
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "rowLabel" : "Row",
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        },
+        "inDatasetSearch" : true
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : false,
+          "expression" : {
+            "columnId" : 335870083,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "i7d8-sc4w",
+        "displayName" : "Chris Metcalf",
+        "profileImageUrlLarge" : "/api/users/i7d8-sc4w/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/i7d8-sc4w/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/i7d8-sc4w/profile_images/TINY",
+        "screenName" : "Chris Metcalf",
+        "type" : "interactive",
+        "userSegment" : "community_user"
+      },
+      "flags" : [ "restorable", "restorePossibleForType", "unsaved" ]
+    }
+  },
+  "data" : [ [ "row-jfr7-ccsx_hcat", "00000000-0000-0000-A24A-406C27604E15", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "773", "2007", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-f25a_5wfb.6y6e", "00000000-0000-0000-F18E-286A2DB56AB4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "151.27087438546206", "2008", "Aggravated assault", "Fremont, CA" ]
+, [ "row-jx58-mj3p-cpnj", "00000000-0000-0000-6A71-615D1CAD547E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2009", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-td8a-xkxy-ebee", "00000000-0000-0000-5140-1670BCA7D2F6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "261.0128529056355", "2014", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-cpjt-pu9t_gjvv", "00000000-0000-0000-FDC1-54402E0E71B1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "16.158370497585476", "2011", "Forcible rape", "Fremont, CA" ]
+, [ "row-rw7h-6w54-i548", "00000000-0000-0000-F799-4626C93FCD63", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "19", "2011", "Arson", "Fremont, CA" ]
+, [ "row-prae.74tz-hp7w", "00000000-0000-0000-6E1C-09464C0774C3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2012", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-bjg8_2ugd.j6sh", "00000000-0000-0000-8491-DDA9D3D78E4D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "132", "2012", "Robbery", "Fremont, CA" ]
+, [ "row-zdqx.wbbv~w998", "00000000-0000-0000-F0C1-32595F838C0D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "13.34829660903828", "2006", "Arson", "Fremont, CA" ]
+, [ "row-q3g8~vwi5-g4fp", "00000000-0000-0000-1EFB-00F3A58B32EC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "304", "2008", "Aggravated assault", "Fremont, CA" ]
+, [ "row-r97i~9bmk~ehdu", "00000000-0000-0000-E39F-9E9C5295888D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "606", "2007", "Violent crime", "Fremont, CA" ]
+, [ "row-z7dh~6cen-bidh", "00000000-0000-0000-9BBA-F0ED4B149888", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "16", "2012", "Arson", "Fremont, CA" ]
+, [ "row-iwdn-esjz_cpgt", "00000000-0000-0000-06E6-379A7084C152", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "5814.419126625897", "2006", "All Crimes", "Fremont, CA" ]
+, [ "row-7crr~yytz-ve3r", "00000000-0000-0000-E2A2-633CEF590DF6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "8691", "2011", "All Crimes", "Fremont, CA" ]
+, [ "row-ac8m-ikzm-gaz9", "00000000-0000-0000-9C86-2C80EB85DD7F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "537.1653564886926", "2012", "Burglary", "Fremont, CA" ]
+, [ "row-7jrp-rr2i.gqsh", "00000000-0000-0000-BFB0-B6A2DC87DF30", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "3108", "2007", "Larceny", "Fremont, CA" ]
+, [ "row-ymvy.i3ae~49ys", "00000000-0000-0000-9E7F-3E361B1019A6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "4012.354228414725", "2011", "All Crimes", "Fremont, CA" ]
+, [ "row-wujj~6e37.rb7x", "00000000-0000-0000-544F-9B0A57D3E630", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "9.355162044771133", "2013", "Arson", "Fremont, CA" ]
+, [ "row-ddjn.mhcy_rhgp", "00000000-0000-0000-467C-2046806E72B9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "545.8689118449075", "2008", "Burglary", "Fremont, CA" ]
+, [ "row-2hvh.e65j-f72v", "00000000-0000-0000-7583-E86BE71A6103", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "124.5881534186308", "2010", "Aggravated assault", "Fremont, CA" ]
+, [ "row-6zs9~szss~afmf", "00000000-0000-0000-FE9B-A2AB385BE243", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "144", "2014", "Aggravated assault", "Fremont, CA" ]
+, [ "row-jkzh_jcxw-gzuv", "00000000-0000-0000-EE49-8DB612F31C2B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "177.2804077449378", "2011", "Violent crime", "Fremont, CA" ]
+, [ "row-ex2g_pkuh.znqj", "00000000-0000-0000-546B-82E7E47CDF27", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "137.43801693750524", "2006", "Aggravated assault", "Fremont, CA" ]
+, [ "row-duzr~m3h4.cr3r", "00000000-0000-0000-0F2C-E3F00AC020F1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "107.04736722673323", "2009", "Robbery", "Fremont, CA" ]
+, [ "row-s9k3_7vmv.4d34", "00000000-0000-0000-8EE8-D15E0FB6CEB5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "11761", "2006", "All Crimes", "Fremont, CA" ]
+, [ "row-fm78~augr_85hv", "00000000-0000-0000-5EF0-8C5F8826E1DB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1539.0091608865246", "2006", "Larceny", "Fremont, CA" ]
+, [ "row-tvpu_iekk.sjs9", "00000000-0000-0000-5807-8B932D290605", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "72.02016564638099", "2011", "Robbery", "Fremont, CA" ]
+, [ "row-bv8h.xwcc-7j2h", "00000000-0000-0000-38EC-2976F5EC3A7C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "19.466898971661063", "2010", "Forcible rape", "Fremont, CA" ]
+, [ "row-46fc.y53r.gmyc", "00000000-0000-0000-BEA0-275B7C3B6547", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "119", "2014", "Robbery", "Fremont, CA" ]
+, [ "row-gf9g.jsqh-tubk", "00000000-0000-0000-72CD-EC1A73656AAD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "14", "2012", "Forcible rape", "Fremont, CA" ]
+, [ "row-shhy.dbj9_cacb", "00000000-0000-0000-B53B-CAD8F9674A19", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "3910", "2014", "Property crime", "Fremont, CA" ]
+, [ "row-eg2k-t5iw_pfms", "00000000-0000-0000-7C10-FBE1CE1A5F3D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "5454.708305965248", "2008", "All Crimes", "Fremont, CA" ]
+, [ "row-dkd4_6gza-r3tw", "00000000-0000-0000-B6B2-093892ACA09C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "72.17017544661006", "2012", "Aggravated assault", "Fremont, CA" ]
+, [ "row-4skv~hq49~n3qw", "00000000-0000-0000-B28E-642EBF198CB9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4978", "2009", "Property crime", "Fremont, CA" ]
+, [ "row-cppu-c6k3_uig6", "00000000-0000-0000-624C-6AF04A2AFDFF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "490", "2010", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-mym2-xwsb_b62b", "00000000-0000-0000-964B-31E44A4AB894", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Rape (revised definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0", "2013", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-59gv~iv9s.9w8a", "00000000-0000-0000-B7F4-66703107EC7C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "697", "2008", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-kk9v.3uh8~ktx7", "00000000-0000-0000-E118-A0116930C471", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "383.969640071926", "2007", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-ub39~fcvd_qpej", "00000000-0000-0000-1239-7A54AFA04A8A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2484", "2013", "Larceny", "Fremont, CA" ]
+, [ "row-x2zr~teyi_w3jf", "00000000-0000-0000-83AD-F64B9A8B3862", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "420.53680810780713", "2013", "Burglary", "Fremont, CA" ]
+, [ "row-5cgz.mfiu_bmxa", "00000000-0000-0000-7F31-52F096708454", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "237.49616745426496", "2010", "Violent crime", "Fremont, CA" ]
+, [ "row-ma6p.vhxp-ymqa", "00000000-0000-0000-16AF-98FA10464240", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "1", "2013", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-rave~s7xi.wat4", "00000000-0000-0000-43E6-0B52367EA3E4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1190", "2009", "Burglary", "Fremont, CA" ]
+, [ "row-zyhv~8jat_723n", "00000000-0000-0000-FE6B-B62D0DDD25B4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "256", "2010", "Aggravated assault", "Fremont, CA" ]
+, [ "row-w9qq-3pj2.ekvd", "00000000-0000-0000-8A6B-B9AD594B85B7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "29", "2006", "Forcible rape", "Fremont, CA" ]
+, [ "row-6445.cgtt_i76k", "00000000-0000-0000-529F-D007E6B0E878", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "26", "2008", "Arson", "Fremont, CA" ]
+, [ "row-erbs~2pvk-cvra", "00000000-0000-0000-217A-D669E93A31E5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "49.44871366521884", "2013", "Aggravated assault", "Fremont, CA" ]
+, [ "row-tfvb~ixs4-dp5n", "00000000-0000-0000-1E89-894A3DA3FE8E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "237", "2009", "Aggravated assault", "Fremont, CA" ]
+, [ "row-s57s_q9dc_nzn9", "00000000-0000-0000-61B9-B3D912EDF616", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "6.394825672484435", "2012", "Forcible rape", "Fremont, CA" ]
+, [ "row-rjc3.tvp3-y7cf", "00000000-0000-0000-66E7-1649044BF061", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Rape (legacy definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "11.137097672346586", "2013", "Rape (legacy definition)", "Fremont, CA" ]
+, [ "row-vsdq~26u5-zjnc", "00000000-0000-0000-0B03-CCACD882B20C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1142.8467023254327", "2012", "Larceny", "Fremont, CA" ]
+, [ "row-cpzi-y39e_tv2w", "00000000-0000-0000-399C-4CDF8E50109D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "8.941078294042262", "2007", "Arson", "Fremont, CA" ]
+, [ "row-tvdq-5hy4-gzur", "00000000-0000-0000-5904-8F82AFF185BF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2417", "2014", "Larceny", "Fremont, CA" ]
+, [ "row-7myu~v4ed.vzue", "00000000-0000-0000-5D5B-7F5F4AAFF5BD", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "384", "2011", "Violent crime", "Fremont, CA" ]
+, [ "row-gdb7-auex.vyfd", "00000000-0000-0000-5798-5B0641A6814B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "121.61710658202473", "2013", "Violent crime", "Fremont, CA" ]
+, [ "row-xfsx-87iq-8n55", "00000000-0000-0000-D1F9-801E760EFB00", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "9146", "2012", "All Crimes", "Fremont, CA" ]
+, [ "row-q6ih-8wqf-bvm4", "00000000-0000-0000-F61D-DC15ECB1EBA5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4893", "2008", "Property crime", "Fremont, CA" ]
+, [ "row-eu39_z6sf~ec8k", "00000000-0000-0000-B9EA-DDD3BE97EFD4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "238.469512402848", "2010", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-penk.d4we~c6ac", "00000000-0000-0000-6BB8-990442259FAA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1176", "2012", "Burglary", "Fremont, CA" ]
+, [ "row-6i75-4beu_rfsp", "00000000-0000-0000-2EDC-068F2F098F8E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "4782.04373238854", "2010", "All Crimes", "Fremont, CA" ]
+, [ "row-mizt-gj4w~t74j", "00000000-0000-0000-1C70-F1E655F1604E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "8.771686841546403", "2011", "Arson", "Fremont, CA" ]
+, [ "row-uupk.96db~hvab", "00000000-0000-0000-A0A2-0F397D28DA5C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2148.1723015227985", "2010", "Property crime", "Fremont, CA" ]
+, [ "row-fxpx.b7eg.grs4", "00000000-0000-0000-C7F7-A9D38CB4D608", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "256", "2006", "Robbery", "Fremont, CA" ]
+, [ "row-97tq_xjrf_vx65", "00000000-0000-0000-D5B8-C0A59DE178EF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2502", "2012", "Larceny", "Fremont, CA" ]
+, [ "row-3ji2_rnbw-qfnq", "00000000-0000-0000-C378-77EDD6E840B3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1167", "2010", "Burglary", "Fremont, CA" ]
+, [ "row-qmdm-rv3w_8tp8", "00000000-0000-0000-9AA0-D38412A14586", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "60.585811337565424", "2013", "Robbery", "Fremont, CA" ]
+, [ "row-bmu2_zez8~fei8", "00000000-0000-0000-E7A6-7EBBF062C6F7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "10.706794434413585", "2010", "Arson", "Fremont, CA" ]
+, [ "row-dzg5~n7u2-uy4x", "00000000-0000-0000-56D4-0F73A0B1793D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "860", "2006", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-udy2~3smn-cswj", "00000000-0000-0000-2440-963F6BC6F292", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "8402", "2014", "All Crimes", "Fremont, CA" ]
+, [ "row-pqxa.634m-365j", "00000000-0000-0000-EF1F-CD453ECE92A3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Rape (legacy definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "20", "2014", "Rape (legacy definition)", "Fremont, CA" ]
+, [ "row-snw7-74yx~ak84", "00000000-0000-0000-9704-823299FB00F0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "594", "2014", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-gb4b~67u8-9h3r", "00000000-0000-0000-1976-89A84434D523", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "3", "2010", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-893m_264c.2ia7", "00000000-0000-0000-EF1A-C94198DB1DDE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "232", "2008", "Robbery", "Fremont, CA" ]
+, [ "row-525v.yqmi~a4mz", "00000000-0000-0000-4CB5-3E28E5369D9F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "306", "2012", "Violent crime", "Fremont, CA" ]
+, [ "row-3qwn_3jni.6pnh", "00000000-0000-0000-287F-D7F343F2FF74", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "944", "2013", "Burglary", "Fremont, CA" ]
+, [ "row-h5ab_gwzh.nwmf", "00000000-0000-0000-EF54-5AA2570BCC90", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Rape (legacy definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "8.788311545644293", "2014", "Rape (legacy definition)", "Fremont, CA" ]
+, [ "row-y4gz-y7ks.eyyi", "00000000-0000-0000-2336-2667A1E83061", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "425.16796606566373", "2006", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-ut8q-d6tv~8naj", "00000000-0000-0000-F69E-641E46ABC731", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "63.275843128638904", "2014", "Aggravated assault", "Fremont, CA" ]
+, [ "row-ksbp_8xpu.b6m7", "00000000-0000-0000-1D45-FE055A0DBC8D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1543.8261854379639", "2007", "Larceny", "Fremont, CA" ]
+, [ "row-fi7e_biud-pkrs", "00000000-0000-0000-729B-12AC9CC27FAE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "9826", "2010", "All Crimes", "Fremont, CA" ]
+, [ "row-ipkk_97yn.8unz", "00000000-0000-0000-5F4E-1882CDFDDD72", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "395.034603976711", "2014", "Burglary", "Fremont, CA" ]
+, [ "row-2nk3.d6hn_3rsv", "00000000-0000-0000-2740-45256F59BD5F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "34", "2009", "Forcible rape", "Fremont, CA" ]
+, [ "row-xj3t-yfsz_38ej", "00000000-0000-0000-B30A-7381D9E3DABA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "265.38526540810403", "2012", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-vsd3-gq6e_cv5y", "00000000-0000-0000-B2A8-B15A6DA7843B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2303", "2011", "Larceny", "Fremont, CA" ]
+, [ "row-5fxg-miyi~pxpb", "00000000-0000-0000-6646-D2542B464F35", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "136", "2013", "Robbery", "Fremont, CA" ]
+, [ "row-rhih_7pjp.4nr9", "00000000-0000-0000-4251-896AD89088E9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "286.12089727513387", "2008", "Violent crime", "Fremont, CA" ]
+, [ "row-jt74.tp6m~yd7z", "00000000-0000-0000-65C0-5254E1855AD4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "641.7707308834779", "2007", "Burglary", "Fremont, CA" ]
+, [ "row-iv4p.6kgb-hw54", "00000000-0000-0000-1208-ED0A7B44C003", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "126.56162710791851", "2006", "Robbery", "Fremont, CA" ]
+, [ "row-8pd8_97c5_r2tf", "00000000-0000-0000-12B9-8B6E77F2CC15", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "14.337059320818893", "2006", "Forcible rape", "Fremont, CA" ]
+, [ "row-iwqq~s7dy~qa73", "00000000-0000-0000-5FF7-7F4AA5E6960E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "158", "2012", "Aggravated assault", "Fremont, CA" ]
+, [ "row-a5z2~vmva~zuev", "00000000-0000-0000-1715-EE0326879F84", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4259", "2012", "Property crime", "Fremont, CA" ]
+, [ "row-zywv.bp6j~xq3q", "00000000-0000-0000-9121-4CCD5670EBA7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1097", "2008", "Burglary", "Fremont, CA" ]
+, [ "row-2atg-qup5_ujva", "00000000-0000-0000-F00C-6AA9873503DB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "10955", "2009", "All Crimes", "Fremont, CA" ]
+, [ "row-54wm.3dbf~u9nk", "00000000-0000-0000-D67C-AFF672B0EE9D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Rape (legacy definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "25", "2013", "Rape (legacy definition)", "Fremont, CA" ]
+, [ "row-bztj-6hq7_jzk3", "00000000-0000-0000-B7E3-F848AF9FFBB9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "284", "2014", "Violent crime", "Fremont, CA" ]
+, [ "row-xkqe.iwj2.nva7", "00000000-0000-0000-4B0B-DA375A1BE0B4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "156", "2011", "Robbery", "Fremont, CA" ]
+, [ "row-bncz.grcx~hr7j", "00000000-0000-0000-7C28-9620ECDC12D9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "298.0287337119946", "2013", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-ygge_q8wv~xw7u", "00000000-0000-0000-C4D7-EDECB2D4853D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "12.937640572440836", "2008", "Arson", "Fremont, CA" ]
+, [ "row-3wkk~85rm.xbdh", "00000000-0000-0000-5C1E-46D2B6715CB6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1106.5820247243569", "2013", "Larceny", "Fremont, CA" ]
+, [ "row-mmdm-xicx_n7qd", "00000000-0000-0000-4305-8DF96C73F859", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2455.6764702980554", "2009", "Property crime", "Fremont, CA" ]
+, [ "row-n5zi-7z9j_i2ij", "00000000-0000-0000-92E3-213D58D9F253", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "115.44356203101053", "2008", "Robbery", "Fremont, CA" ]
+, [ "row-ga52_835a-d5ds", "00000000-0000-0000-E507-E57CE87CE42F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "334", "2007", "Aggravated assault", "Fremont, CA" ]
+, [ "row-fxep.52q3-eux2", "00000000-0000-0000-402B-7DB4785039BE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "37", "2008", "Forcible rape", "Fremont, CA" ]
+, [ "row-jqnc-495p.c2ty", "00000000-0000-0000-9B77-35554A9AA282", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1206", "2011", "Burglary", "Fremont, CA" ]
+, [ "row-5545.7v4j_negs", "00000000-0000-0000-9B2C-4E5BA16FB70E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "1", "2014", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-xk76.eh52-scw2", "00000000-0000-0000-DE63-62CB7DA4F90D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "556.7712805739453", "2011", "Burglary", "Fremont, CA" ]
+, [ "row-kcci.iaqi~j9ci", "00000000-0000-0000-4740-CCD481731557", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2757", "2010", "Larceny", "Fremont, CA" ]
+, [ "row-yiz4.3g79_dnqa", "00000000-0000-0000-567F-D42EA4130CD7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "581", "2012", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-uy2u_6r9u_7wrz", "00000000-0000-0000-13E2-419D0882D8A9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "19", "2009", "Arson", "Fremont, CA" ]
+, [ "row-3xsw~ritv.6vft", "00000000-0000-0000-5432-DA760EE2A1D1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "111", "2013", "Aggravated assault", "Fremont, CA" ]
+, [ "row-eixu~6jzv.cj8a", "00000000-0000-0000-8022-B0072177F354", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "443", "2011", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-gs95.hy7y_hr99", "00000000-0000-0000-0BB5-525567E80E52", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "5", "2007", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-b8aa_5wwc-rk9r", "00000000-0000-0000-3D63-FF150CC04025", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1542.0672359228518", "2008", "Larceny", "Fremont, CA" ]
+, [ "row-fv4j_nx7v-yia6", "00000000-0000-0000-66F9-613C9F4B87CF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "3099", "2008", "Larceny", "Fremont, CA" ]
+, [ "row-hakm.dgg6.h8u2", "00000000-0000-0000-F47F-9B4C3595B704", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2.96628813534184", "2006", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-w6b2-n2rx~cg36", "00000000-0000-0000-D958-2207246D8F1F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "115.24056467876692", "2007", "Robbery", "Fremont, CA" ]
+, [ "row-mjsk_zt4d.ekpf", "00000000-0000-0000-2B09-BE30D2260C95", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1596.831003285417", "2009", "Larceny", "Fremont, CA" ]
+, [ "row-345e-wyys~yuqs", "00000000-0000-0000-E8F5-87565CE03F83", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "490", "2009", "Violent crime", "Fremont, CA" ]
+, [ "row-5guw_dpxg_68h2", "00000000-0000-0000-358D-B79825FA4E03", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "191", "2011", "Aggravated assault", "Fremont, CA" ]
+, [ "row-5sjy-frej-z6yz", "00000000-0000-0000-5365-A05BA6A11700", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "217", "2009", "Robbery", "Fremont, CA" ]
+, [ "row-i7jr~5pjr~bmpc", "00000000-0000-0000-F052-075DD4559E87", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "27", "2006", "Arson", "Fremont, CA" ]
+, [ "row-sgpi_3asv.r39f", "00000000-0000-0000-2BBC-70ED58AE7557", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "18.411257737704265", "2008", "Forcible rape", "Fremont, CA" ]
+, [ "row-gtg7-z6zn~hphw", "00000000-0000-0000-15D0-683F15FA18A9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "165.90667501167306", "2007", "Aggravated assault", "Fremont, CA" ]
+, [ "row-9unq-w45d-gkg6", "00000000-0000-0000-E80F-FF42FC989A44", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1063.2207787411246", "2011", "Larceny", "Fremont, CA" ]
+, [ "row-4tm5.jd7b-hrrq", "00000000-0000-0000-E0D1-8BA88D7F3D44", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "3237", "2009", "Larceny", "Fremont, CA" ]
+, [ "row-e28b-5pfa.a92m", "00000000-0000-0000-4F6F-9EDF9C276441", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "6", "2006", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-ehza_fr4q-qgi8", "00000000-0000-0000-4423-326A47F4D76D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "189", "2010", "Robbery", "Fremont, CA" ]
+, [ "row-59is~4ag4-4xqz", "00000000-0000-0000-3B2E-B05F9CF552BF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "3113", "2006", "Larceny", "Fremont, CA" ]
+, [ "row-sa9c.rhq9-ip9h", "00000000-0000-0000-21CE-9F0EB51F8CFA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "40", "2010", "Forcible rape", "Fremont, CA" ]
+, [ "row-yq52.8etm~5zt7", "00000000-0000-0000-8E44-1C610F3198AB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "17.385430016193286", "2007", "Forcible rape", "Fremont, CA" ]
+, [ "row-ext6.5ehh.3z2a", "00000000-0000-0000-9C39-61F1734369EF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2619.2324235068445", "2006", "Property crime", "Fremont, CA" ]
+, [ "row-rwkp~5yqj~f347", "00000000-0000-0000-7610-7187C802FC2D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "22", "2010", "Arson", "Fremont, CA" ]
+, [ "row-6rme_rftn_q3j7", "00000000-0000-0000-D5D3-4EA4F9A4B4E7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1292", "2007", "Burglary", "Fremont, CA" ]
+, [ "row-bffr.jcan.4a4n", "00000000-0000-0000-84D2-3C021B19E94F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "575", "2008", "Violent crime", "Fremont, CA" ]
+, [ "row-3pq9~b7rv~8r6s", "00000000-0000-0000-2329-1C06E4D0FF99", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "278", "2006", "Aggravated assault", "Fremont, CA" ]
+, [ "row-522g_p98f_u9kj", "00000000-0000-0000-F77A-00CF28EB9C91", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1062.0674502911127", "2014", "Larceny", "Fremont, CA" ]
+, [ "row-ravw.57x7~jaju", "00000000-0000-0000-02DA-9981B5878886", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "899", "2014", "Burglary", "Fremont, CA" ]
+, [ "row-vqc7-szj5-4knj", "00000000-0000-0000-0089-AAE569DA3073", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "232", "2007", "Robbery", "Fremont, CA" ]
+, [ "row-c8yz_2u2t-neng", "00000000-0000-0000-2D53-43C4BBD5A710", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2011", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-6jxc-kww8-jxb6", "00000000-0000-0000-E4D2-2CDAF02EDDEA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "551", "2009", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-fqp3-ajdj_tth8", "00000000-0000-0000-3FCB-9F625B4D3DB8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "139.77261827001695", "2012", "Violent crime", "Fremont, CA" ]
+, [ "row-pdn5~eipu.6t9s", "00000000-0000-0000-D522-6A865D1AFA45", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "5404.165474510887", "2009", "All Crimes", "Fremont, CA" ]
+, [ "row-szvf~6637-axkb", "00000000-0000-0000-36B3-0C99EBCEFBEA", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "488", "2010", "Violent crime", "Fremont, CA" ]
+, [ "row-hp3f-692h.fdfn", "00000000-0000-0000-3E82-FD9B0F876BAC", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "52.29045369658354", "2014", "Robbery", "Fremont, CA" ]
+, [ "row-47gf-mhsb_3gah", "00000000-0000-0000-5FDF-94DCCF3F4054", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "18", "2007", "Arson", "Fremont, CA" ]
+, [ "row-nnvz_x9tq_ykbc", "00000000-0000-0000-AFCA-4A75DA2F511A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "5750.106796212956", "2007", "All Crimes", "Fremont, CA" ]
+, [ "row-ihwk~h5a3~4cpf", "00000000-0000-0000-D745-07616528713D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "5298", "2006", "Property crime", "Fremont, CA" ]
+, [ "row-xp5v_2kje~fcje", "00000000-0000-0000-3414-261A707F2229", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "1325", "2006", "Burglary", "Fremont, CA" ]
+, [ "row-sk8w~xrfc.w2sf", "00000000-0000-0000-A2B0-30ABC0FCA10F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "10962", "2008", "All Crimes", "Fremont, CA" ]
+, [ "row-z6a9.2rfi~8w4h", "00000000-0000-0000-DC70-46DE70AACC01", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "346.8282876535101", "2008", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-6bq2.2yjb-8tnz", "00000000-0000-0000-C808-16C4648ACCD3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "5173", "2007", "Property crime", "Fremont, CA" ]
+, [ "row-87uk_23wm.vbak", "00000000-0000-0000-D485-519CA09834C9", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "241.7198614797202", "2009", "Violent crime", "Fremont, CA" ]
+, [ "row-di82.83j9-pxxx", "00000000-0000-0000-9F44-0456C97FCB97", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1824.5108630416516", "2011", "Property crime", "Fremont, CA" ]
+, [ "row-t67j_j83d.zjzt", "00000000-0000-0000-297A-F5536FDBA4D8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "116.91348402182386", "2009", "Aggravated assault", "Fremont, CA" ]
+, [ "row-ygb8-9nce_n9ea", "00000000-0000-0000-D838-4CE22E0EB2DB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4414", "2010", "Property crime", "Fremont, CA" ]
+, [ "row-y3f6_w27n~ygt8", "00000000-0000-0000-5456-9658B691F05B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1825.1475665441587", "2013", "Property crime", "Fremont, CA" ]
+, [ "row-6qcw~5wjz_8zvh", "00000000-0000-0000-DC11-CAA4B62FC5F5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "4177.648257181618", "2012", "All Crimes", "Fremont, CA" ]
+, [ "row-df46-ri4u~gc6h", "00000000-0000-0000-BB41-4A6D187681B1", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "569", "2006", "Violent crime", "Fremont, CA" ]
+, [ "row-5gtj~bsnv-vhav", "00000000-0000-0000-2D7E-1DD084E3C36A", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "11576", "2007", "All Crimes", "Fremont, CA" ]
+, [ "row-enrc-d8pm-g5z6", "00000000-0000-0000-08E1-D1710C7489E8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1718.1149071734594", "2014", "Property crime", "Fremont, CA" ]
+, [ "row-hr5k-b2yn~uana", "00000000-0000-0000-B263-0B98B0630CC8", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "35", "2011", "Forcible rape", "Fremont, CA" ]
+, [ "row-53qi_x7xu~qiv8", "00000000-0000-0000-A254-F0957D937F2C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "60.29407062628182", "2012", "Robbery", "Fremont, CA" ]
+, [ "row-6qdk~tfap.q7py", "00000000-0000-0000-C5F9-AC428003782E", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "124.79402394814896", "2014", "Violent crime", "Fremont, CA" ]
+, [ "row-wxe2-j4xz.u6qf", "00000000-0000-0000-BCCE-CCD511130802", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "655.0552965546564", "2006", "Burglary", "Fremont, CA" ]
+, [ "row-qgpa~3i8p-vahi", "00000000-0000-0000-F43F-5550CB1F8E2B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Rape (revised definition)--count", "1600000US0626000", "Fremont, California", "place", "count", null, "2013", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-7bwq.uhba-vhfz", "00000000-0000-0000-49CB-EE0AB017F7B7", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "8761", "2013", "All Crimes", "Fremont, CA" ]
+, [ "row-dtb5-8f2c-2nti", "00000000-0000-0000-6130-E9598E1987C4", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2012--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1945.3973242222294", "2012", "Property crime", "Fremont, CA" ]
+, [ "row-48rr.3r4s~ivfg", "00000000-0000-0000-84EC-907E5B606C4C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "669", "2013", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-qker.bb42-nq9m", "00000000-0000-0000-7D54-748FA01FACE6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "273", "2013", "Violent crime", "Fremont, CA" ]
+, [ "row-d73d_4grv~g6rq", "00000000-0000-0000-7B14-BBFF6BF8F334", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "567.9467774982114", "2010", "Burglary", "Fremont, CA" ]
+, [ "row-nz9t_5rsj~45a6", "00000000-0000-0000-4674-CE4D26067F85", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "301.01630256608945", "2007", "Violent crime", "Fremont, CA" ]
+, [ "row-hdjx_6545-3a8u", "00000000-0000-0000-FEA0-EF948B1C8C3F", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "9.37281095533609", "2009", "Arson", "Fremont, CA" ]
+, [ "row-74xt~e72d_xdv9", "00000000-0000-0000-37D3-96B484127EF5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4097", "2013", "Property crime", "Fremont, CA" ]
+, [ "row-h8vy-dg26~p89u", "00000000-0000-0000-8A27-9E6F278D8EDE", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2434.7644354212694", "2008", "Property crime", "Fremont, CA" ]
+, [ "row-6mui_b466_bzw6", "00000000-0000-0000-F220-FF5A8140C5FF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "204.51880372658192", "2011", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-3x9t.gywg.5xcv", "00000000-0000-0000-ED2D-200FAAA71135", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2008--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2008", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-hd38~wxti-d4vt", "00000000-0000-0000-FB45-F4F7DD5CE9F6", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Forcible rape--rate", "1600000US0626000", "Fremont, California", "place", "rate", "16.772398551654053", "2009", "Forcible rape", "Fremont, CA" ]
+, [ "row-qvzi_dhec.9xz9", "00000000-0000-0000-40A0-017C4A3444E5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "3691.9696803251677", "2014", "All Crimes", "Fremont, CA" ]
+, [ "row-fxnv-pc8q-fmnn", "00000000-0000-0000-C45E-27B9A99E85EB", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "3952", "2011", "Property crime", "Fremont, CA" ]
+, [ "row-sh8f_uqf4-vewy", "00000000-0000-0000-E258-47F62970775B", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2014--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "14", "2014", "Arson", "Fremont, CA" ]
+, [ "row-r5q2_k3tq_6hvy", "00000000-0000-0000-75E7-957FD67BAEEF", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1341.7560116217387", "2010", "Larceny", "Fremont, CA" ]
+, [ "row-4jem.nvtx.gy2f", "00000000-0000-0000-2610-6E323970CB95", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "3902.884508297138", "2013", "All Crimes", "Fremont, CA" ]
+, [ "row-cugz.itnx_2kd3", "00000000-0000-0000-3537-FC90FF986F8D", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2569.5665563933676", "2007", "Property crime", "Fremont, CA" ]
+, [ "row-h475.c2ay.i6cf", "00000000-0000-0000-8804-943D138C3E3C", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2007--Forcible rape--count", "1600000US0626000", "Fremont, California", "place", "count", "35", "2007", "Forcible rape", "Fremont, CA" ]
+, [ "row-jbfq_xb3v.b5yy", "00000000-0000-0000-194A-3F590F7A3CA3", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2013--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "21", "2013", "Arson", "Fremont, CA" ]
+, [ "row-fywe_f68t.vy22", "00000000-0000-0000-B614-C95691E09EF5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2011--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "88.17853614396645", "2011", "Aggravated assault", "Fremont, CA" ]
+, [ "row-ymq6_d58s-ps9k", "00000000-0000-0000-A8E7-700B77DD4A47", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "587.0339493078919", "2009", "Burglary", "Fremont, CA" ]
+, [ "row-y3pi_xw6d.9cb2", "00000000-0000-0000-95C2-359BC0B872B0", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2009--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "271.81151770474656", "2009", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-aige_935c.g2b5", "00000000-0000-0000-B191-152E16E8BA29", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2010--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "91.98109764109851", "2010", "Robbery", "Fremont, CA" ]
+, [ "row-3n8y-ggga~i9s9", "00000000-0000-0000-A91F-FC47F84800D5", 0, 1474331835, null, 1474331835, null, "{ }", "1600000US0626000--2006--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "281.30299150158453", "2006", "Violent crime", "Fremont, CA" ]
+, [ "row-tm7j_jsdz~pxba", "00000000-0000-0000-1D54-7D91C5FB8918", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Rape (revised definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "21.081888076686443", "2015", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-edme.ihru~wgcu", "00000000-0000-0000-82C9-A730AB5A6057", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Rape (revised definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "21.081888076686443", "2015", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-jnu9.6g5x.y54w", "00000000-0000-0000-DD08-3A2976827E61", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "913", "2015", "Burglary", "Fremont, CA" ]
+, [ "row-7968_7dmy~asjs", "00000000-0000-0000-16B4-9B540E17FD9B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "913", "2015", "Burglary", "Fremont, CA" ]
+, [ "row-d673-jjsq.tcmi", "00000000-0000-0000-C15D-08B4F7A3119D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "420", "2016", "Violent crime", "Fremont, CA" ]
+, [ "row-x99v~zxvj_th3g", "00000000-0000-0000-FFAB-B78EFB506479", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Rape (revised definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "49", "2015", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-x3z2_27u4.mjpm", "00000000-0000-0000-EC67-52233BFB13C0", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Rape (revised definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "49", "2015", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-8pvg_ttrr_xkkj", "00000000-0000-0000-ECA8-437B5A1D9F4D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "64.96663468529904", "2015", "Robbery", "Fremont, CA" ]
+, [ "row-wxet-fj4t-atxq", "00000000-0000-0000-C824-2475DEA5FDF6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "64.96663468529904", "2015", "Robbery", "Fremont, CA" ]
+, [ "row-v5nu.i3m6_p37c", "00000000-0000-0000-74F8-0F6788C1FCF6", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "78.0054349438912", "2016", "Robbery", "Fremont, CA" ]
+, [ "row-p7y9-zgzm-n9bv", "00000000-0000-0000-42F9-DC2B0C117C60", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "6.023396593338984", "2015", "Arson", "Fremont, CA" ]
+, [ "row-fnmm.ywb7-cffx", "00000000-0000-0000-F393-1E3AD94F717C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "6.023396593338984", "2015", "Arson", "Fremont, CA" ]
+, [ "row-pvkn-6tcc_q59g", "00000000-0000-0000-E4D2-B57E50156C5D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "8.9027942055528", "2016", "Arson", "Fremont, CA" ]
+, [ "row-4g6m-fwhv~pvq7", "00000000-0000-0000-534E-C94A53085C95", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Rape (revised definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "25.0126122917912", "2016", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-wphv~kv56-ms7q", "00000000-0000-0000-EE1D-7428FAC4368C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "392.81150640846374", "2015", "Burglary", "Fremont, CA" ]
+, [ "row-c8bg~x2am_zwip", "00000000-0000-0000-6570-6743624E8E70", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "392.81150640846374", "2015", "Burglary", "Fremont, CA" ]
+, [ "row-qgh4~ap7c~89wv", "00000000-0000-0000-0564-A81D309FB2B3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "0", "2016", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-efsg-tiki_5b9t", "00000000-0000-0000-0EF2-3E9398486C31", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1185.3184010463501", "2015", "Larceny", "Fremont, CA" ]
+, [ "row-uqnr-533u-e2ub", "00000000-0000-0000-3455-5077F848AA6E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1185.3184010463501", "2015", "Larceny", "Fremont, CA" ]
+, [ "row-8ahg-bs2v~zwd9", "00000000-0000-0000-BA36-457D5EA7E4A9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4371", "2015", "Property crime", "Fremont, CA" ]
+, [ "row-qf9a~kg3w.cmqx", "00000000-0000-0000-9758-D1E24936DCDF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4371", "2015", "Property crime", "Fremont, CA" ]
+, [ "row-4gf4~j73a-84yg", "00000000-0000-0000-276E-5BF31344CDDE", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "14", "2015", "Arson", "Fremont, CA" ]
+, [ "row-4jnk~nd3x-w3dt", "00000000-0000-0000-936B-2FE2D553831B", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "14", "2015", "Arson", "Fremont, CA" ]
+, [ "row-itxu.s54r~3mn8", "00000000-0000-0000-B6F2-A16BDAA1F346", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "337.034352067356", "2016", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-2n32_2the.4mdc", "00000000-0000-0000-BE1C-C0837758DE5D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0", "2016", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-7bz9_mh97.wz74", "00000000-0000-0000-896D-AFE7322C4C15", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "302.460557508379", "2015", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-f32v-9jej-ha2p", "00000000-0000-0000-A781-E65197566B51", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "302.460557508379", "2015", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-y5vk-qrs7.jbms", "00000000-0000-0000-98F0-EAFD965881BE", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "795", "2016", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-7g9r~it73-gxy3", "00000000-0000-0000-551C-C34DA2AEC756", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "4362.793103302089", "2016", "All Crimes", "Fremont, CA" ]
+, [ "row-n2xy_4b7r_uhrt", "00000000-0000-0000-A163-69BA8513E019", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "184", "2016", "Robbery", "Fremont, CA" ]
+, [ "row-e8h8~sh83_fc22", "00000000-0000-0000-375C-5569CFD56ED1", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "135", "2015", "Aggravated assault", "Fremont, CA" ]
+, [ "row-5ifb.6uve.3rqz", "00000000-0000-0000-BD41-33A4D2F2FACD", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "135", "2015", "Aggravated assault", "Fremont, CA" ]
+, [ "row-m86a.yd8t_ytau", "00000000-0000-0000-FAC6-91241BB234CB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "58.08275286434019", "2015", "Aggravated assault", "Fremont, CA" ]
+, [ "row-ac33_agdg_zf9c", "00000000-0000-0000-F268-9D298883A793", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "58.08275286434019", "2015", "Aggravated assault", "Fremont, CA" ]
+, [ "row-nftb~8hwu_innt", "00000000-0000-0000-C36F-D80171AED289", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "21", "2016", "Arson", "Fremont, CA" ]
+, [ "row-vs74_tq8m_u8vt", "00000000-0000-0000-1191-520CFCC9AD0F", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1880.5904649631927", "2015", "Property crime", "Fremont, CA" ]
+, [ "row-tfk6-cesr.26t5", "00000000-0000-0000-3652-4CC9C8B59D15", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1880.5904649631927", "2015", "Property crime", "Fremont, CA" ]
+, [ "row-fu9w_tqhv_wifa", "00000000-0000-0000-695E-B1645D878973", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "391.2990024631064", "2016", "Burglary", "Fremont, CA" ]
+, [ "row-bs2s-2vcq-xgbs", "00000000-0000-0000-6719-469907F32670", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "151", "2015", "Robbery", "Fremont, CA" ]
+, [ "row-6vfd~j95w-3sv4", "00000000-0000-0000-F21F-341D47C16993", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "151", "2015", "Robbery", "Fremont, CA" ]
+, [ "row-rars_33bh.mhaj", "00000000-0000-0000-93D9-5D8C4E32FC1A", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "144.99176085394555", "2015", "Violent crime", "Fremont, CA" ]
+, [ "row-s3up~395i~mtxk", "00000000-0000-0000-151F-D2F549865D75", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "144.99176085394555", "2015", "Violent crime", "Fremont, CA" ]
+, [ "row-8wc2-s8gb.i7yt", "00000000-0000-0000-08D6-0B1DB8C9A11C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "75.0378368753736", "2016", "Aggravated assault", "Fremont, CA" ]
+, [ "row-vfjc~gg9t.umcw", "00000000-0000-0000-A4E8-701287F1A1FE", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1998.8892704372122", "2016", "Property crime", "Fremont, CA" ]
+, [ "row-8hcm~5aav.s7ew", "00000000-0000-0000-ADEB-114883E5EEB9", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "923", "2016", "Burglary", "Fremont, CA" ]
+, [ "row-hjrf.uvnn_py8e", "00000000-0000-0000-A3A2-96684F0E1DAC", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "703", "2015", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-nbvf.chn7.k7by", "00000000-0000-0000-519C-C685D2D9BB58", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "703", "2015", "Motor vehicle theft", "Fremont, CA" ]
+, [ "row-bqdb~8trt-937r", "00000000-0000-0000-AD13-7C6DDC7CDDDF", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "10291", "2016", "All Crimes", "Fremont, CA" ]
+, [ "row-7n8i~cz5v-z2g4", "00000000-0000-0000-BB36-D5F78FA868AD", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2997", "2016", "Larceny", "Fremont, CA" ]
+, [ "row-cnsw~rbbg_xd5c", "00000000-0000-0000-C31F-F56E21970B0E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2755", "2015", "Larceny", "Fremont, CA" ]
+, [ "row-2tkh_379v.srmz", "00000000-0000-0000-ED12-855E65E774FB", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "2755", "2015", "Larceny", "Fremont, CA" ]
+, [ "row-m4rv.sj5f-fmtw", "00000000-0000-0000-B9B3-A546D04DB7C7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-ivf5~phpn_gz4r", "00000000-0000-0000-8DCC-273E1785596D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2015", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-jvpr.bwxu.22hk", "00000000-0000-0000-CC50-869D0FCDB728", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4715", "2016", "Property crime", "Fremont, CA" ]
+, [ "row-kfrg-7dz4-vaqj", "00000000-0000-0000-8218-A0941BFC1CA3", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1270.5559159067495", "2016", "Larceny", "Fremont, CA" ]
+, [ "row-utbc_r4si.h5m3", "00000000-0000-0000-B11F-3EEFA410E11D", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "178.055884111056", "2016", "Violent crime", "Fremont, CA" ]
+, [ "row-fpnj~d9jn_5475", "00000000-0000-0000-5CBF-40F8D5CC3EC5", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Rape (revised definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "59", "2016", "Rape (revised definition)", "Fremont, CA" ]
+, [ "row-8jqf_f2gs_jnvk", "00000000-0000-0000-4038-4345930F3E6C", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2016--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "177", "2016", "Aggravated assault", "Fremont, CA" ]
+, [ "row-34x3~9ers_ja6w", "00000000-0000-0000-9B19-73C04EAE1F22", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "9430", "2015", "All Crimes", "Fremont, CA" ]
+, [ "row-6uxx_5wmc_rwje", "00000000-0000-0000-BC0C-F22C8FE430CA", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "9430", "2015", "All Crimes", "Fremont, CA" ]
+, [ "row-59k3~bzkm.nfjm", "00000000-0000-0000-B314-1F9552064DF4", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "337", "2015", "Violent crime", "Fremont, CA" ]
+, [ "row-6r6v.i2vt_spef", "00000000-0000-0000-DD1F-42DA825069A7", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "337", "2015", "Violent crime", "Fremont, CA" ]
+, [ "row-ahpp_rcts~dxif", "00000000-0000-0000-4D02-1220245AB069", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "4057.1878482276156", "2015", "All Crimes", "Fremont, CA" ]
+, [ "row-gqd6~mrv9-7c5j", "00000000-0000-0000-AAE1-BD44A100839E", 0, 1513717812, null, 1513717812, null, "{ }", "1600000US0626000--2015--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "4057.1878482276156", "2015", "All Crimes", "Fremont, CA" ]
+, [ "row-q7p5_qwtv.c28f", "00000000-0000-0000-691C-2979F7C059A9", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2014--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.439415577282215", "2014", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-gdfi~j4e7_wpvm", "00000000-0000-0000-7258-470CD0DDA01D", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2012--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.913546524640634", "2012", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-6cjm~e9mb.mp8h", "00000000-0000-0000-258F-380F754C095B", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2013--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.445483906893863", "2013", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-9tqd-ph7g.dy2d", "00000000-0000-0000-F579-508C9F999395", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2015--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.860485227619855", "2015", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-b3gg_6xu9.fjjn", "00000000-0000-0000-4A11-2206963F226B", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2015--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.860485227619855", "2015", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-ihvs_zbbe.53c6", "00000000-0000-0000-DF61-99E67BD5F713", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2012--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "7.30837219712507", "2012", "Arson", "Fremont, CA" ]
+, [ "row-u8x8.sykg_2h7f", "00000000-0000-0000-2CF4-B13349E7D75E", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2014--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "6.151818081951006", "2014", "Arson", "Fremont, CA" ]
+, [ "row-f4sg~yc4m~cs6q", "00000000-0000-0000-8D04-93ABD22C85D9", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2007--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2.483632859456184", "2007", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-mscc~uwca~f9dd", "00000000-0000-0000-673C-781D6F068237", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2011--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.923335457004884", "2011", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-pi2j.gekr_xvdc", "00000000-0000-0000-C271-4BD958713269", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2009--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.986611679509062", "2009", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-8dtb.hbi8_n6z2", "00000000-0000-0000-CA67-5127E5C81457", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2010--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1.46001742287458", "2010", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-v623.cj45~9fch", "00000000-0000-0000-8769-0742D7D3D59A", 0, 1516323546, null, 1516323546, null, "{ }", "1600000US0626000--2008--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.995203120956987", "2008", "Murder and nonnegligent manslaughter", "Fremont, CA" ]
+, [ "row-xxpf~5ydx~asxx", "00000000-0000-0000-8C1E-33F2517B4C9B", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "187", "2017", "Robbery", null ]
+, [ "row-itwq.kg65.t95z", "00000000-0000-0000-6886-7771EDB4907F", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "26", "2017", "Arson", null ]
+, [ "row-i43g-fxn9.zusi", "00000000-0000-0000-D185-ACA086B538A9", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "284.7255127597644", "2017", "Burglary", null ]
+, [ "row-cd5r.a82k.55vc", "00000000-0000-0000-B713-23F2F9D49F39", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "673", "2017", "Burglary", null ]
+, [ "row-rggx.xxwd.5z84", "00000000-0000-0000-7701-2BFDB874F302", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "182.3427875177689", "2017", "Violent crime", null ]
+, [ "row-pfv5.uppb-a27p", "00000000-0000-0000-9939-159F2E277E4A", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Rape (revised definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "68", "2017", "Rape (revised definition)", null ]
+, [ "row-vmiq_ipud-ruh7", "00000000-0000-0000-561D-5E218E035EAA", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Rape (revised definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "28.768699654775602", "2017", "Rape (revised definition)", null ]
+, [ "row-88pt_snr5-j7xa", "00000000-0000-0000-3A2B-EBA8732D80D1", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "79.1139240506329", "2017", "Robbery", null ]
+, [ "row-auan_8van~phw4", "00000000-0000-0000-8A8C-35114C6FFBB2", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "2150.460299194476", "2017", "Property crime", null ]
+, [ "row-feuz_tbs7~7bs9", "00000000-0000-0000-BD92-FE5C66742E14", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "5083", "2017", "Property crime", null ]
+, [ "row-pnhs-ehzs~m2wb", "00000000-0000-0000-21F4-4A147DE644E6", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "431", "2017", "Violent crime", null ]
+, [ "row-3gvz.e3cx.2ms5", "00000000-0000-0000-DC32-143B5B3B41EA", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "104676.60597035132", "2017", "All Crimes", null ]
+, [ "row-4tnv~peey-t6zq", "00000000-0000-0000-4276-73040A2C97C4", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "10.999796926825965", "2017", "Arson", null ]
+, [ "row-2795~wahi_27ih", "00000000-0000-0000-1E30-AAA0FEC34F59", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "365.9547823732485", "2017", "Motor vehicle theft", null ]
+, [ "row-9tng.ut9c~mn5y", "00000000-0000-0000-09D3-7DB471B2D9D0", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "0.8461382251404589", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-qkxk~te2h-xqr4", "00000000-0000-0000-93BD-1C42E1DB197B", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "174", "2017", "Aggravated assault", null ]
+, [ "row-cxmc_egtc-3zcb", "00000000-0000-0000-FFAA-EE7A76652792", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "865", "2017", "Motor vehicle theft", null ]
+, [ "row-tass~iyvr-fneb", "00000000-0000-0000-2628-A1C38E59993D", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1499.7800040614636", "2017", "Larceny", null ]
+, [ "row-x5wb.ezzm~edtf", "00000000-0000-0000-F3C3-1D7539EC5469", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "3545", "2017", "Larceny", null ]
+, [ "row-s9ub.wdcj-ztwc", "00000000-0000-0000-0955-1D1B009AFF15", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "2", "2017", "Murder and nonnegligent manslaughter", null ]
+, [ "row-2gru-epcc.hy6s", "00000000-0000-0000-D5D1-8C006A7730EB", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "73.61402558721993", "2017", "Aggravated assault", null ]
+, [ "row-82dz-cn2m_ygmc", "00000000-0000-0000-E946-2CB2ED20B650", 0, 1550608682, null, 1550608682, null, "{ }", "1600000US0626000--2017--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "247422", "2017", "All Crimes", null ]
+, [ "row-b2eb.dxz8~u6zn", "00000000-0000-0000-08AD-98F9AD024612", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Violent crime--count", "1600000US0626000", "Fremont, California", "place", "count", "502", "2018", "Violent crime", null ]
+, [ "row-edef_8vqf.s9jv", "00000000-0000-0000-017E-D9678581A249", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Violent crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "210.90310220818068", "2018", "Violent crime", null ]
+, [ "row-fwcv-kuaz-263t", "00000000-0000-0000-507A-85C09FB9A11D", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Murder and nonnegligent manslaughter--count", "1600000US0626000", "Fremont, California", "place", "count", "3", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-vv7v~qcrb-y2gq", "00000000-0000-0000-A8B3-46781F3EF995", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Murder and nonnegligent manslaughter--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1.2603771048297652", "2018", "Murder and nonnegligent manslaughter", null ]
+, [ "row-fw7c~pwww.3bwt", "00000000-0000-0000-F779-626CA7208D32", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Motor vehicle theft--count", "1600000US0626000", "Fremont, California", "place", "count", "683", "2018", "Motor vehicle theft", null ]
+, [ "row-32ff-jeer-pwdc", "00000000-0000-0000-55F7-0A8D1D933677", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Motor vehicle theft--rate", "1600000US0626000", "Fremont, California", "place", "rate", "286.9458541995765", "2018", "Motor vehicle theft", null ]
+, [ "row-wzfm-w5um~mh3g", "00000000-0000-0000-D31E-F2B0B5FFE2DC", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Rape (revised definition)--count", "1600000US0626000", "Fremont, California", "place", "count", "55", "2018", "Rape (revised definition)", null ]
+, [ "row-4wvf_a2qq~7axk", "00000000-0000-0000-9C35-C451EF07A1C7", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Rape (revised definition)--rate", "1600000US0626000", "Fremont, California", "place", "rate", "23.10691358854569", "2018", "Rape (revised definition)", null ]
+, [ "row-m6m6~aw6h~gg76", "00000000-0000-0000-0344-87DE7DD7EB98", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Robbery--count", "1600000US0626000", "Fremont, California", "place", "count", "216", "2018", "Robbery", null ]
+, [ "row-c2yz.8vj4_zi5p", "00000000-0000-0000-CFAE-61B43D21656A", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Robbery--rate", "1600000US0626000", "Fremont, California", "place", "rate", "90.74715154774309", "2018", "Robbery", null ]
+, [ "row-398d~yx52_jdvz", "00000000-0000-0000-F2E0-E6DFAE624D11", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Larceny--count", "1600000US0626000", "Fremont, California", "place", "count", "3284", "2018", "Larceny", null ]
+, [ "row-afni~9jb4_erjt", "00000000-0000-0000-230C-9BD1B9BD6A2C", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Larceny--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1379.6928040869827", "2018", "Larceny", null ]
+, [ "row-i4ti~xkiy_hnn7", "00000000-0000-0000-19ED-D254A2FFA9C0", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Arson--count", "1600000US0626000", "Fremont, California", "place", "count", "22", "2018", "Arson", null ]
+, [ "row-cdt7.d2tu-pr6h", "00000000-0000-0000-0E90-BE261B934366", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Arson--rate", "1600000US0626000", "Fremont, California", "place", "rate", "9.242765435418276", "2018", "Arson", null ]
+, [ "row-d8sq~p2q3~i4v7", "00000000-0000-0000-782F-4DDA3EC9631E", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Burglary--count", "1600000US0626000", "Fremont, California", "place", "count", "720", "2018", "Burglary", null ]
+, [ "row-t54v-vxzh.wayi", "00000000-0000-0000-7643-6E45FBA222EA", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Burglary--rate", "1600000US0626000", "Fremont, California", "place", "rate", "302.4905051591436", "2018", "Burglary", null ]
+, [ "row-w4wa_q6we~jzds", "00000000-0000-0000-4589-47732654F33D", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Property crime--count", "1600000US0626000", "Fremont, California", "place", "count", "4687", "2018", "Property crime", null ]
+, [ "row-4kkh-r5h7~2z57", "00000000-0000-0000-06DB-76C8C6CEB9F3", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Property crime--rate", "1600000US0626000", "Fremont, California", "place", "rate", "1969.1291634457027", "2018", "Property crime", null ]
+, [ "row-fcmz.tgtr_qjif", "00000000-0000-0000-A8C2-3E33EDE142DB", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Aggravated assault--count", "1600000US0626000", "Fremont, California", "place", "count", "228", "2018", "Aggravated assault", null ]
+, [ "row-4izv.bc2m~frfi", "00000000-0000-0000-0500-16548B0CB858", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--Aggravated assault--rate", "1600000US0626000", "Fremont, California", "place", "rate", "95.78865996706215", "2018", "Aggravated assault", null ]
+, [ "row-hw3y_n3st_n2w3", "00000000-0000-0000-4F00-BD3A49F1E8B6", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--All Crimes--rate", "1600000US0626000", "Fremont, California", "place", "rate", "104369.30729674318", "2018", "All Crimes", null ]
+, [ "row-xfik-98n7-zjd8", "00000000-0000-0000-6A52-EFE522399997", 0, 1579039732, null, 1579039732, null, "{ }", "1600000US0626000--2018--All Crimes--count", "1600000US0626000", "Fremont, California", "place", "count", "248424", "2018", "All Crimes", null ]
+ ]
+}
