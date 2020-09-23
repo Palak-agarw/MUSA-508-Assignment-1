@@ -1,3 +1,13 @@
+---
+  title: "MUSA 508 Assignment 1"
+author: "Palak Agarwal & Shivani Rai"
+date: "September 18th, 2020"
+output:
+  html_document:
+  toc: true
+toc_float: true
+---
+
 #importing the library
 
 library(rjson)
@@ -32,7 +42,7 @@ mapTheme <- function(base_size = 12) {
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
     panel.grid.minor = element_blank(),
-    panel.border = element_rect(colour = "black", fill=NA, size=2),
+    panel.border = element_rect(colour = "black", fill=NA, size=1.5),
     strip.text.x = element_text(size = 14))
 }
 
@@ -46,7 +56,7 @@ plotTheme <- function(base_size = 12) {
     panel.background = element_blank(),
     panel.grid.major = element_line("grey80", size = 0.1),
     panel.grid.minor = element_blank(),
-    panel.border = element_rect(colour = "black", fill=NA, size=2),
+    panel.border = element_rect(colour = "black", fill=NA, size=1.5),
     strip.background = element_rect(fill = "grey80", color = "white"),
     strip.text = element_text(size=12),
     axis.title = element_text(size=12),
@@ -75,7 +85,7 @@ q5 <- function(variable) {as.factor(ntile(variable, 5))}
 
 # Load hexadecimal color palette
 
-palette5 <- c("#f0f9e8","#bae4bc","#7bccc4","#43a2ca","#0868ac")
+palette5 <- c("#f6d908","#d6c054","#878dac","#3574e2","#005fc4","#004b9a","#b2a681")
 
 #-------- CENSUS DATA-------
 
@@ -163,14 +173,17 @@ tracts209 <-
                 -WorkingClassF1819,-WorkingClassF20,-WorkingClassF21,-WorkingClassF2224,-WorkingClassF2529,-WorkingClassF3034,
                 -WorkingClassF3539,-WorkingClassF4044,-WorkingClassF4549,-WorkingClassF5054)
 
+#----- Finding max values of popluation and rent to normalise the data 
+# as the tract is not truly representative of the data near the station------
+
 maxtotpop_2009 <- max(tracts209$TotalPop)
 maxrent_2009 <- max(tracts209$MedRent , na.rm = T)
-
 tracts2009 <- 
   tracts209 %>%
   mutate( normpop = TotalPop/maxtotpop_2009,
           normrent = MedRent/maxrent_2009)
 
+# ---- Year 2017 tracts -----
 
 tracts217 <-  
   get_acs(geography = "tract", variables = c("B25026_001E","B02001_002E","B19013_001E",
@@ -242,9 +255,11 @@ tracts217 <-
                 -WorkingClassF1819,-WorkingClassF20,-WorkingClassF21,-WorkingClassF2224,-WorkingClassF2529,-WorkingClassF3034,
                 -WorkingClassF3539,-WorkingClassF4044,-WorkingClassF4549,-WorkingClassF5054)
 
+#----- Finding max values of popluation and rent to normalise the data 
+# as the tract is not truly representative of the data near the station------
+
 maxtotpop_2017 <- max(tracts217$TotalPop)
 maxrent_2017 <- max(tracts217$MedRent , na.rm = T)
-
 tracts2017 <- 
   tracts217 %>%
   mutate( normpop = TotalPop/maxtotpop_2017,
@@ -255,6 +270,9 @@ tracts2017 <-
 finalTract <- rbind(tracts2009,tracts2017)
 
 #-------Converting the bart data into spatial data---------------------------
+
+# The BART data we had was in a csv with no coordinate column
+# Hence we first separated that string value to get the X and Y
 
 x <- vector(mode='list', length = 105)
 y <- vector(mode='list', length = 105)
@@ -276,19 +294,19 @@ crs_tract09 <- st_crs(tracts2009)
 sfo_spatial <- st_as_sf(sfo_new, coords = c("X","Y"), crs = 4326, agr = "constant")
 sfo_spatial <- sfo_spatial %>% st_transform(st_crs(tracts2009))
 
-# plotting the lines on the bay area tracts
+# Plotting the lines on the bay area tracts
 
 ggplot() + 
-  geom_sf(data=st_union(tracts2009)) +
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
   geom_sf(data=sfo_spatial, 
           aes(colour = Line_colour), 
-          show.legend = "point", size= 2) +
+          show.legend = "point", size= 1.2) +
   labs(title="Bart Stops", 
        subtitle="Bay Area, CA", 
        caption="Figure 1.0") +
   mapTheme()
 
-# Create buffers (in feet - note the CRS) around Bart stops -
+# Create buffers around Bart stops -
 # Both a buffer for each stop, and a union of the buffers...
 # and bind these objects together
 
@@ -320,9 +338,12 @@ clip <-
   st_intersection(buffer, tracts2009) %>%
   dplyr::select(TotalPop) %>%
   mutate(Selection_Type = "Clip")
-A <- 
-  ggplot() +
+
+ggplot() +
   geom_sf(data = clip) +
+  labs(title="Clipped Tracts", 
+         subtitle="Bay Area, CA", 
+         caption="Figure 2.0") +
   theme(plot.title = element_text(size=22))
 
 # Do a spatial selection to see which tracts touch the buffer
@@ -331,9 +352,12 @@ selection <-
   dplyr::select(TotalPop) %>%
   mutate(Selection_Type = "Spatial Selection")
 
-B <- 
-  ggplot() +
+ggplot() +
   geom_sf(data = selection) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  labs(title="Selected Tracts", 
+         subtitle="Bay Area, CA", 
+         caption="Figure 2.1") +
   theme(plot.title = element_text(size=22))
 
 # Do a centroid-in-polygon join to see which tracts have their centroid in the buffer
@@ -346,18 +370,20 @@ selectCentroids <-
   dplyr::select(TotalPop) %>%
   mutate(Selection_Type = "Select by Centroids")
 
-C <- 
-  ggplot() +
+ggplot() +
   geom_sf(data = selectCentroids) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  labs(title="Selected Tracts with centroids in the buffer zone", 
+       subtitle="Bay Area, CA", 
+       caption="Figure 2.2") +
   theme(plot.title = element_text(size=22))
 
 
-# ---- Indicator Maps ----
+myData  <- rbind(selectCentroids, clip) %>%
+  rbind(., selection)
 
 # We do our centroid joins as above, and then do a "disjoin" to get the ones that *don't*
-# join, and add them all together.
-# Do this operation and then examine it.
-# What represents the joins/doesn't join dichotomy?
+# join, and add them all together and add a new column TOD.
 # Note that this contains a correct 2009-2017 inflation calculation
 
 finalTract.group <- 
@@ -374,56 +400,36 @@ finalTract.group <-
       mutate(TOD = "Non-TOD")) %>%
   mutate(MedRent.inf = ifelse(year == "2009", MedRent * 1.14, MedRent))
 
-#table 
-finalTract.Summary <- 
-  st_drop_geometry(finalTract.group) %>%
-  group_by(year, TOD) %>%
-  summarize(Rent = mean(MedRent, na.rm = T),
-            Population = mean(TotalPop, na.rm = T),
-            Percent_White = mean(pctWhite, na.rm = T),
-            Percent_Working = mean(pctWorking, na.rm = T),
-            Percent_Married = mean(pctMarried, na.rm = T),
-            Percent_MedIn = mean(MedHHInc, na.rm = T))
+#----- Now that we have our data lets visualize it --------
+#---- First lets visualize it as maps
 
-kable(finalTract.Summary) %>%
-  kable_styling() %>%
-  footnote(general_title = "\n",
-           general = "Table 2.2")
-
-#plot
-finalTract.Summary %>%
-  gather(Variable, Value, -year, -TOD) %>%
-  ggplot(aes(year, Value, fill = TOD)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  facet_wrap(~Variable, scales = "free", nrow=2) +
-  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
-  labs(title = "Indicator differences across time and space") +
-  plotTheme() + theme(legend.position="bottom")
-
-#----- Now that we have our data lets maps them --------
-
-myData  <- rbind(selectCentroids, clip) %>%
-  rbind(., selection)
+#----- Plot which are the TOD tracts
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
   geom_sf(aes(fill = TOD)) +
-  labs(title = "Time/Space Groups") +
+  labs(title = "TOD vs. Non-TOD Groups",
+       subtitle="Bay Area, CA", 
+       caption="Figure 3.0") +
   facet_wrap(~year)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
 
+#----- Plot rent as a function of year and TOD
+
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
   geom_sf(aes(fill = q5(MedRent.inf))) +
-  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  geom_sf(data = buffer, fill = "transparent", color = "red", size = 1)+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "MedRent.inf"),
                     name = "Rent\n(Quintile Breaks)") +
-  labs(title = "Median Rent 2009-2017", subtitle = "Real Dollars") +
+  labs(title = "Median Rent 2009-2017", subtitle = "Dollars\nBay Area, CA", caption="Figure 3.1") +
   facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
+
+#-----Plotted number of married people in the tract as function of year and TOD
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
@@ -431,11 +437,13 @@ ggplot(finalTract.group)+
   geom_sf(data = buffer, fill = "transparent", color = "red")+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "pctMarried"),
-                    name = "Married \n(Quintile Breaks)") +
-  labs(title = "Married 2009-2017", subtitle = "Bay area") +
+                    name = "Married as percentage \n(Quintile Breaks)") +
+  labs(title = "Married 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.2") +
   facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
+
+#-----Plotted number racial composition in the tract as function of year and TOD
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
@@ -444,10 +452,12 @@ ggplot(finalTract.group)+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "pctWhite"),
                     name = "Racial Composition \n(Quintile Breaks)") +
-  labs(title = "Race 2009-2017", subtitle = "Bay area") +
+  labs(title = "Racial Composition 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.3") +
   facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
+
+#-----Plotted number the number of people in the working industry in the tract as function of year and TOD
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
@@ -456,16 +466,51 @@ ggplot(finalTract.group)+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "pctWorking"),
                     name = "Working class \n(Quintile Breaks)") +
-  labs(title = "Working 2009-2017", subtitle = "Bay area") +
+  labs(title = "Working Class 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.4") +
   facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary <- 
+  st_drop_geometry(finalTract.group) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Population = mean(TotalPop, na.rm = T),
+            Percent_Racial Composition= mean(pctWhite, na.rm = T),
+            Percent_Working Class= mean(pctWorking, na.rm = T),
+            Percent_Married = mean(pctMarried, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T))
+
+kable(finalTract.Summary) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 1.0")
+
+#Bar plot
+finalTract.Summary %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space", subtitle = "Bay area, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
+
+
 
 #------- Graduated symbol map------
 
 # Create an sf object with ONLY the buffers
 buffers <- filter(bartBuffers, Legend=="Buffer")
 buffer_spatial <- buffers %>% st_transform(st_crs(tracts2009))
+
+# For this part of the assignment, we chose to take each
+# buffer and find the tracts it intersects with. After that
+# we summed the normalized population and rent values to find the 
+# population and rent charatcer.
 
 x <- vector(mode='list', length = 105)
 y <- vector(mode='list', length = 105)
@@ -494,27 +539,28 @@ for( val in c(1:105))
   y <- append(y, sum_sc)
 }
 
-
 pograd <- sfo_spatial %>%
   mutate(Sum_Popnor = as.numeric(x[106:210]),
          Sum_Rentnor = as.numeric(y[106:210]))
-
 popgrad <- pograd %>%
   mutate(Sum_Popnorm = Sum_Popnor * 100,
          Sum_Rentnorm = Sum_Rentnor * 100)
 
+#----- Now lets plot the population and rent 
+# as graduated symbol map
 
+#Population
 ggplot()+
   geom_sf(data = st_union(tracts2009))+
   geom_sf(data=popgrad, 
           aes(size = Sum_Popnorm), 
           color = "red")+
-  scale_size_area(name="", max_size = 3.5) + 
-  guides(size=guide_legend("Total Venues")) +
+  scale_size_area(name="", max_size = 4.5) + 
+  guides(size=guide_legend("Population")) +
   labs(
-    title = "2B. Creative Footprint Venues, New York City, 2017",
-    subtitle = "Total Venues Per Neighborhood Tabulation Area - n= 495",
-    caption = "Data: CFP, US Census Bureau, City of New York"
+    title = "Population as a fucntion of distance from stops",
+    subtitle = "Bay Area, CA",
+    caption = "Figure 5.0"
   )+
   mapTheme()
 
@@ -523,18 +569,18 @@ ggplot()+
   geom_sf(data=popgrad, 
           aes(size = Sum_Rentnorm), 
           color = "red")+
-  scale_size_area(name="", max_size = 3.5) + 
+  scale_size_area(name="", max_size = 4.5) + 
   guides(size=guide_legend("Total Venues")) +
   labs(
-    title = "2B. Creative Footprint Venues, New York City, 2017",
-    subtitle = "Total Venues Per Neighborhood Tabulation Area - n= 495",
-    caption = "Data: CFP, US Census Bureau, City of New York"
+    title = "Rent as a fucntion of distance from stops",
+    subtitle = "Bay Area, CA",
+    caption = "Figure 5.1"
   )+
   mapTheme()
 
 #------- GEOM LINE---------
 
-
+#Function MultipleRingBuffer
 multipleRingBuffer <- function(inputPolygon, maxDistance, interval) 
 {
   #create a list of distances that we'll iterate through to create each ring
@@ -617,7 +663,7 @@ multipleRingBuffer <- function(inputPolygon, maxDistance, interval)
   allRings <- st_as_sf(allRings)
 }
 
-
+#Creating the buffer around the transit stops
 finalTracts.rings <-
   st_join(st_centroid(dplyr::select(finalTract, GEOID, year)), 
           multipleRingBuffer(st_union(sfo_spatial), 47520, 2640)) %>%
@@ -625,12 +671,20 @@ finalTracts.rings <-
   left_join(dplyr::select(finalTract, GEOID, MedRent, year), 
             by=c("GEOID"="GEOID", "year"="year")) %>%
   st_sf() %>%
-  mutate(distance = distance / 5280) #convert to miles
+  mutate(Distance = distance / 5280) #convert to miles
 
-ggplot(data=finalTracts.rings,
-       aes(x = distance, y = MedRent, colour = year)) +
+#Finding the mean of rent within the same distance
+finalTracts.rings_summary <-
+  finalTracts.rings %>%
+  st_drop_geometry() %>%
+  group_by(Distance, year) %>%
+  summarize(Rent = mean(MedRent, na.rm=T)) 
+
+#Plotting the data
+ggplot(data=finalTracts.rings_summary,
+       aes(x = Distance, y = Rent, colour = year)) +
+  geom_line()+
   geom_point()
-
 
 
 #-------------Crime data-----------
