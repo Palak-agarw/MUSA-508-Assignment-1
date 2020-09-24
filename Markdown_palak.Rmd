@@ -12,7 +12,7 @@ toc_float: true
 
 This assignment looked at the **Bay Area Rapid Transit** and its analyzed all the 5 counties that it runs through to check if it has an effect on them. The main reason for choosing the BART system over the SF MTA system was to check if that cross county connection is more effective. SF being a big job center, attracts a lot of people from the surrounding counties in every day and the lack of vacancy and high housing values in the city forces people to stay in areas close to SF and commute everyday. The BART also connects other job centers in the bay area like San Jose, Oakland and the two airports.
 
-```{r setup, include=FALSE}
+```{r setup, message = FALSE, warning=FALSE}
 #importing the library
 
 library(rjson)
@@ -430,7 +430,7 @@ ggplot() +
 
 ## Classifying tract as TOD and Non-TOD
 
-Now that we have found the tracts whose centroids that fall within the buffer zone, lets classify those tracts as **TOD** - transit oriented developemnt and **Non-TOD**.
+Now that we have found the tracts whose centroids that fall within the buffer zone, lets classify those tracts as **TOD** - transit oriented development and **Non-TOD**.
 
 ```{r Mutate TOD, message = FALSE, warning=FALSE}
 # We do our centroid joins as above, and then do a "disjoin" to get the ones that *don't*
@@ -480,14 +480,14 @@ Lets discuss each indicator and its affect on TOD.
 ### Rent 
 
 The main purpose of transit oriented development is to attract and increase density in certain parts of the city. By having amenities and housing around transit, the system becomes more efficient due to increased foot fall. It also allows for land value capitalization, which is essential to both developers and governments. Renters and home buyers are usually more happy paying to locate near transit amenities which should be reflected in higher land values and property tax returns near stations.    
-Now lets visualise rent as a function of time and space.
+Now lets visualize rent as a function of time and space.
 
 ```{r Rent_TOD, message = FALSE, warning=FALSE}
 #----- Plot rent as a function of year and TOD
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = q5(MedRent.inf))) +
+  geom_sf(aes(fill = q5(MedRent.inf)), color = "transparent") +
   geom_sf(data = buffer, fill = "transparent", color = "red", size = 0.5)+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "MedRent.inf"),
@@ -498,18 +498,18 @@ ggplot(finalTract.group)+
   theme(plot.title = element_text(size=22))
 ```
 
-As it is evident in the map, most tracts in San Mateo, San Francisco, Contra Costa and Santa Clara saw an increase in rent from year 2009 to 2017 while Alameda remained stagnant. Other interesting observation is that tracts close to the transit line saw a large increase in rent values. The transit stops are connected through bus and biking networks as extra infrastructure, we could have affected the other tracts to develop as well.
+As it is evident in the map, most tracts in San Mateo, San Francisco, Contra Costa and Santa Clara saw an increase in rent from year 2009 to 2017 while Alameda remained stagnant. Other interesting observation is that tracts close to the transit line but not in the buffer zone saw a large increase in rent values. The transit stops are connected through bus and biking networks as extra infrastructure, we could have affected the other tracts to develop as well.
 
 ### Percentage of Married people
 
-Our hypothesis is that a lot of families move out of the city to the suburbs to have more space and raise families. But still prefer to be able have easy access to the city as it forms a major job hub and center. So they would prefer to stay around the transit to avoid evryday driving and parking hassle. 
+Our hypothesis is that a lot of families move out of the city to the suburbs to have more space and to raise families.Cities can get congested and finding home big enough to raise a family can get more expensive if one chooses to live in the downtown areas. Most familes have only two options- to move to neighborhoods outside the main district or to move out of the city and commute everyday. What ever the choice might be they would still prefer to be able have easy access to the city as it forms a major job hub. So it is fair to assume that they would prefer to stay around the transit to avoid everyday driving and parking hassle. 
 
 ```{r Married_TOD, message = FALSE, warning=FALSE}
 #-----Plotted number of married people in the tract as function of year and TOD
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = q5(pctMarried))) +
+  geom_sf(aes(fill = q5(pctMarried)), color = "transparent") +
   geom_sf(data = buffer, fill = "transparent", color = "red")+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "pctMarried"),
@@ -520,7 +520,7 @@ ggplot(finalTract.group)+
   theme(plot.title = element_text(size=22))
 ```
 
-From the plots, we can see that Contra Costa has seen in an increase in the percentage of married couples while other TOD tracts have remained stagnant or seen a decrease. If you notice the tracts outside the 0.5 mile radius, we see that the percentage of married couples have increased and might or might not use BART to travel for work or even leisurely. 
+From the plots, we can see that Contra Costa has seen in an increase in the percentage of married couples while other TOD tracts have remained stagnant or seen a decrease. If you notice the tracts outside the 0.5 mile radius, we see that the percentage of married couples has increased slightly and this could mean that they might or might not use BART to travel for work or even leisurely. It can also be that the families have moved away from the buffer zone as a result of increased density around them which was the initial reason to move out of the city. 
 
 ### Racial Composition
 
@@ -531,29 +531,29 @@ The Bay area has a large proportion of immigration populations. Being the Silico
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = q5(pctWhite))) +
+  geom_sf(aes(fill = q5(pctWhite)), color = "transparent") +
   geom_sf(data = buffer, fill = "transparent", color = "red")+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "pctWhite"),
                     name = "Percentage of white \n(Quintile Breaks)") +
-  labs(title = "Percentage of White 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.3") +
+  labs(title = "Racial Composition 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.3") +
   facet_wrap(~year + TOD)+
   mapTheme() + 
   theme(plot.title = element_text(size=22))
 ```
 
-From the plots, we can see that the percentage of white people near the transit have reduced which would mean that it is filled by other racial groups. That is the over all trend even outside the buffer zone. Many factors can have caused this change in racial composition, but one important one is job creation and the groups those jobs attract. 
+From the plots, we can see that the percentage of white people near the transit have reduced which would mean that it is filled by other racial groups. That is the over all trend even outside the buffer zone. Many factors can have caused this change in racial composition, but one important one is job creation and the groups those jobs attract. Close to 40% of the population in the Bay area is made out of immigrant groups that include large portions of Asians and Hispanics. 
 
 ### Percentage of working class
 
-As mentioned already, BARt connects major job centers. So its only fair to hypothesize that working class would prefer to find housing in and around transit for easy commuting. For this map, we considered age group from 16-54 as the population most likely to form the working class. 
+As mentioned already, BART connects major job centers like San Franscisco, Oakland, San Jose and the two airports. So its only fair to hypothesize that working class would prefer to find housing in and around transit for easy commuting. For this map, we considered a percentage of population who are in the age groups of 16-54 as the population most likely to form the working class and to commute everyday for work. 
 
 ```{r Working_TOD, message = FALSE, warning=FALSE}
 #-----Plotted number the number of people in the working industry in the tract as function of year and TOD
 
 ggplot(finalTract.group)+
   geom_sf(data = st_union(tracts2009))+
-  geom_sf(aes(fill = q5(pctWorking))) +
+  geom_sf(aes(fill = q5(pctWorking)), color = "transparent") +
   geom_sf(data = buffer, fill = "transparent", color = "red")+
   scale_fill_manual(values = palette5,
                     labels = qBr(finalTract.group, "pctWorking"),
@@ -564,7 +564,7 @@ ggplot(finalTract.group)+
   theme(plot.title = element_text(size=22))
 ```
 
-There are very few  tracts which have seen a change from 2009 and 2017 to make any solid conclusions. There is no visible trend even in the Non-TOD tracts hence we cannot infer much from this map.
+There are very few  tracts which have seen a change from 2009 and 2017 to make any solid conclusions. There is no visible trend even in the Non-TOD tracts hence we cannot infer much from this map. Transit seems like a main amenities that people will look out in case they had to travel for work everyday and hence would prefer to stay around transit stops. The tracts seeing no change could mean two things - one that it has been stagnant or the other could be that it has had a floating population which is replaced every so often that no new trend is seen.
 
 ## Bar Plot 
 
@@ -594,6 +594,11 @@ finalTract.Summary %>%
   plotTheme() + theme(legend.position="bottom")
 ```
 
+Between 2009 and 2017, the Bay area remained stagnant in terms of its population and married couples while rents and median household increased dramatically. In 2009, the tracts were more diverse and had larger working class populations than 2017. After the recession of 2008, the bay area had created close to one million new jobs in all forms of industry, increasing the competition among people. It is important to point out that the population being stagnant can also be caused by equal migrations in and out of the area which seems like the most likely scenario here.    
+     
+According to plot, the income and rents have increased drastically which could have pushed out weaker sections of the society further out. Also, the rent and income increase in Non-TOD tracts are almost double of that in TOD tracts. People are still willing to pay more in these areas without really having easy access to amenities. It is important to point out that the TOD zone was defined as 0.5 miles away from the station and that could be less given that everything in California is very spread out in terms of development. The same inferences can be made by seeing the mean values of these variables in the table below.    
+
+
 ## Table 
 
 ```{r Table, message = FALSE, warning=FALSE}
@@ -608,7 +613,7 @@ kable(finalTract.Summary) %>%
 ## Graduated symbol maps
 
 Next we created two graduated symbol maps of population and rent within 0.5 mile of each transit station which represents the quantities for each transit station proportionally.    
-To do this first we found each station and the tracts it intersects with. After that we summed the normalized population and rent values to find the population and rent quantities. We felt that using the normalised data is a better representation because as mentioned before we dont know the population or rent distribution in each tract to know if it lies in or out of the 0.5 mile buffer.
+To do this first we found each station and the tracts it intersects with. After that we summed the normalized population and rent values to find the population and rent quantities. We felt that using the normalized data is a better representation because as mentioned before we don't know the population or rent distribution in each tract to know if it lies in or out of the 0.5 mile buffer.
 
 ```{r Buffer_By_Tract, message = FALSE, warning=FALSE}
 # Create an sf object with ONLY the buffers
@@ -660,7 +665,7 @@ ggplot()+
   geom_sf(data=popgrad, 
           aes(size = Sum_Popnorm), 
           color = "red")+
-  scale_size_area(name="", max_size = 3.0) + 
+  scale_size_area(name="", max_size = 2.0) + 
   guides(size=guide_legend("Population")) +
   labs(
     title = "Population as a fucntion of distance from stops",
@@ -675,7 +680,7 @@ ggplot()+
   geom_sf(data=popgrad, 
           aes(size = Sum_Rentnorm), 
           color = "red")+
-  scale_size_area(name="", max_size = 3.0 + 
+  scale_size_area(name="", max_size = 2.0) + 
   guides(size=guide_legend("Total Venues")) +
   labs(
     title = "Rent as a fucntion of distance from stops",
@@ -684,6 +689,8 @@ ggplot()+
   )+
   mapTheme()
 ```
+
+As expected, rents and population is high in the downtown regions of SF. It is the most sought after real estate in the US and that accounts for this high occupancy and land value. After that, downtown of Oakland has the next highest rents and population. The rest of the counties have very similar rent and population relationship. It is interesting to see that the job hubs still have that high of an occupancy even though cheaper and vacant counties are connected to it through a rapid public transit system. This could mean that that the BART isn't as efficient and accessible as it was planned or that a large portion of people still prefer to stay very close to their place of work. 
 
 ## Rent as a function of distance to transit stops
 
@@ -797,6 +804,8 @@ ggplot(data=finalTracts.rings_summary,
   geom_line()+
   geom_point()
 ```
+
+## Crime Data
 
 
 
