@@ -21,7 +21,7 @@ options(tigris_class = "sf")
 
 #data import - bart lines and crime data 
 
-sfo <- read.csv('C:/Users/agarw/Documents/MUSA508/MUSA-508-Assignment-1/Data/final_sfo_lines.csv')
+sfo <- read.csv('Data/final_sfo_lines.csv')
 crime1 <- fromJSON(file = 'Data/ala_crime.json')
 crime2 <- fromJSON(file = 'Data/cc_crime.json')
 crime3 <- fromJSON(file = 'Data/sc_crime.json')
@@ -687,4 +687,214 @@ ggplot(data=finalTracts.rings_summary,
   geom_point()
 
 
-#-------------Crime data-----------
+#-------------Crime data VEHICULAR/AUTO-----------
+#Import SF Crime data - filters : Vehicular and Auto, years 2009 and 2017
+crime_sf_full <- read.csv('C:/Users/Shivani Rai/Desktop/Materials/UPenn/UPenn Sem 3/MUSA 508/Project 1/MUSA-508-Assignment-1/Crime/Police_Department_Incident_Reports__Historical_2003_to_May_2018_SFO.csv')
+crime_sf <- crime_sf_full[str_detect(crime_sf_full[,5], "(VEHIC)|(AUTO)"),]
+crime_sf <- crime_sf[str_detect(crime_sf[,7], "(/2009)|(/2017)"),]
+
+sfo_crime_spatial_sf <- st_as_sf(crime_sf, coords = c("X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_sf <- sfo_crime_spatial_sf %>% st_transform(st_crs(tracts2009))
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_sf, 
+         aes(colour = 'gold'), 
+        show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="Vehicular/Auto Theft in SF 2009 and 2017, CA", 
+       caption="Figure 1.0") +
+  mapTheme()
+
+theft_inter_sf <- 
+  st_intersection(sfo_crime_spatial_sf, finalTract) %>%
+  dplyr::select(year, GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_sf <- theft_inter_sf %>% group_by(GEOID,year) %>% tally()
+
+#tabular join
+finalTract.group_sf <- st_join(finalTract.group, theft_inter_grouped_sf, left = FALSE, by = 'GEOID')
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_sf <- 
+  st_drop_geometry(finalTract.group_sf) %>%
+  group_by(year.y, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_sf) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 1.0")
+
+#Bar plot
+finalTract.Summary_sf %>%
+  gather(Variable, Value, -year.y, -TOD) %>%
+  ggplot(aes(year.y, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space (Auto Theft)", subtitle = "SF, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
+
+#-------------------ALL CRIMES IN SF -----------------
+#filter data for 2009 and 2017
+crime_sf_all <- crime_sf_full[str_detect(crime_sf_full[,7], "(/2009)|(/2017)"),]
+
+sfo_crime_spatial_sf_all <- st_as_sf(crime_sf_all, coords = c("X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_sf_all <- sfo_crime_spatial_sf_all %>% st_transform(st_crs(tracts2009))
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_sf_all, 
+          aes(colour = 'gold'), 
+          show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="All Crimes in SF 2009 and 2017, CA", 
+       caption="Figure 1.0") +
+  mapTheme()
+
+theft_inter_all <- 
+  st_intersection(sfo_crime_spatial_sf_all, finalTract) %>%
+  dplyr::select(year, GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_all <- theft_inter_all %>% group_by(GEOID,year) %>% tally()
+
+#tabular join
+finalTract.group_all <- st_join(finalTract.group, theft_inter_grouped_all, left = FALSE, by = 'GEOID')
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_all <- 
+  st_drop_geometry(finalTract.group_all) %>%
+  group_by(year.y, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_all) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 2.0")
+
+#Bar plot
+finalTract.Summary_all %>%
+  gather(Variable, Value, -year.y, -TOD) %>%
+  ggplot(aes(year.y, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space (all crimes)", subtitle = "SF, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
+
+#--------Alameda 2017--------------
+crime_full <- read.csv('C:/Users/Shivani Rai/Desktop/Materials/UPenn/UPenn Sem 3/MUSA 508/Project 1/MUSA-508-Assignment-1/Crime/Crime_Reports_Alameda.csv')
+crime <- crime_full[str_detect(crime_full[,13], "(VEHIC)|(AUTO)"),]
+crime <- crime[str_detect(crime[,16], "(2017/)"),]
+
+sfo_crime_spatial_ala <- st_as_sf(crime, coords = c("ï..X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_ala <- sfo_crime_spatial_ala %>% st_transform(st_crs(tracts2009))
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_ala, 
+          aes(colour = 'gold'), 
+          show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="Alameda (Vehicular/Auto Theft), CA", 
+       caption="Figure 3.0") +
+  mapTheme()
+
+theft_inter_ala <- 
+  st_intersection(sfo_crime_spatial_ala, finalTract) %>%
+  dplyr::select(GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_ala <- theft_inter_ala %>% group_by(GEOID) %>% tally()
+
+
+#tabular join
+finalTract.group_ala <- st_join(finalTract.group, theft_inter_grouped_ala, left = FALSE, by = 'GEOID')
+finalTract.group_ala <- finalTract.group_ala[!(finalTract.group_ala$year==2009),]
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_ala <- 
+  st_drop_geometry(finalTract.group_ala) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_ala) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 1.0")
+
+#Bar plot
+finalTract.Summary_ala %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space (year 2017)", subtitle = "Alameda, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
+
+#--------SF 2017--------------
+theft_inter_sf_2017 <- 
+  st_intersection(sfo_crime_spatial_sf, finalTract) %>%
+  dplyr::select(GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_sf_2017 <- theft_inter_sf_2017 %>% group_by(GEOID) %>% tally()
+
+
+#tabular join
+finalTract.group_sf_2017 <- st_join(finalTract.group, theft_inter_grouped_sf_2017, left = FALSE, by = 'GEOID')
+finalTract.group_sf_2017 <- finalTract.group_sf_2017[!(finalTract.group_sf_2017$year==2009),]
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_sf_2017 <- 
+  st_drop_geometry(finalTract.group_sf_2017) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_sf_2017) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 1.0")
+
+#Bar plot
+finalTract.Summary_sf_2017 %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space for 2017", subtitle = "SF, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
