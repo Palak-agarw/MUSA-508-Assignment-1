@@ -428,3 +428,377 @@ ggplot() +
   theme(plot.title = element_text(size=22))
 ```
 
+## Classifying tract as TOD and Non-TOD
+
+Now that we have found the tracts whose centroids that fall within the buffer zone, lets classify those tracts as **TOD** - transit oriented developemnt and **Non-TOD**.
+
+```{r Mutate TOD, message = FALSE, warning=FALSE}
+# We do our centroid joins as above, and then do a "disjoin" to get the ones that *don't*
+# join, and add them all together and add a new column TOD.
+# Note that this contains a correct 2009-2017 inflation calculation
+
+finalTract.group <- 
+  rbind(
+    st_centroid(finalTract)[buffer,] %>%
+      st_drop_geometry() %>%
+      left_join(finalTract) %>%
+      st_sf() %>%
+      mutate(TOD = "TOD"),
+    st_centroid(finalTract)[buffer, op = st_disjoint] %>%
+      st_drop_geometry() %>%
+      left_join(finalTract) %>%
+      st_sf() %>%
+      mutate(TOD = "Non-TOD")) %>%
+  mutate(MedRent.inf = ifelse(year == "2009", MedRent * 1.14, MedRent))
+```
+
+## TOD Indicators 
+
+According to BART's ridership reports, its ridership increased by **16.2%** from 2009 to 2017. Also the increase is noticed in the far off counties like Alameda and Santa Clara. So the BART system seems to be fulfilling its purpose of connecting different counties. This would mean that the planning and construction of BART would have attracted development in the different counties and towns it goes through. To check this hypothesis, we analyses the following criterias which we think could have affected the ridership and development in the TOD zones. The four indicators we think important are :    
+* Rent  
+* Percentage of married people       
+* Racial Composition       
+* Percentage of Working class 
+
+```{r TOD_groups, message = FALSE, warning=FALSE}
+
+#----- Plot which are the TOD tracts
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = TOD)) +
+  labs(title = "TOD vs. Non-TOD Groups",
+       subtitle="Bay Area, CA", 
+       caption="Figure 3.0") +
+  facet_wrap(~year)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+     
+Lets discuss each indicator and its affect on TOD.       
+    
+### Rent 
+
+The main purpose of transit oriented development is to attract and increase density in certain parts of the city. By having amenities and housing around transit, the system becomes more efficient due to increased foot fall. It also allows for land value capitalization, which is essential to both developers and governments. Renters and home buyers are usually more happy paying to locate near transit amenities which should be reflected in higher land values and property tax returns near stations.    
+Now lets visualise rent as a function of time and space.
+
+```{r Rent_TOD, message = FALSE, warning=FALSE}
+#----- Plot rent as a function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(MedRent.inf))) +
+  geom_sf(data = buffer, fill = "transparent", color = "red", size = 0.5)+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "MedRent.inf"),
+                    name = "Rent\n(Quintile Breaks)") +
+  labs(title = "Median Rent 2009-2017", subtitle = "Dollars\nBay Area, CA", caption="Figure 3.1") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+As it is evident in the map, most tracts in San Mateo, San Francisco, Contra Costa and Santa Clara saw an increase in rent from year 2009 to 2017 while Alameda remained stagnant. Other interesting observation is that tracts close to the transit line saw a large increase in rent values. The transit stops are connected through bus and biking networks as extra infrastructure, we could have affected the other tracts to develop as well.
+
+### Percentage of Married people
+
+Our hypothesis is that a lot of families move out of the city to the suburbs to have more space and raise families. But still prefer to be able have easy access to the city as it forms a major job hub and center. So they would prefer to stay around the transit to avoid evryday driving and parking hassle. 
+
+```{r Married_TOD, message = FALSE, warning=FALSE}
+#-----Plotted number of married people in the tract as function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctMarried))) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctMarried"),
+                    name = "Married as percentage \n(Quintile Breaks)") +
+  labs(title = "Married 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.2") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+From the plots, we can see that Contra Costa has seen in an increase in the percentage of married couples while other TOD tracts have remained stagnant or seen a decrease. If you notice the tracts outside the 0.5 mile radius, we see that the percentage of married couples have increased and might or might not use BART to travel for work or even leisurely. 
+
+### Racial Composition
+
+The Bay area has a large proportion of immigration populations. Being the Silicon Valley, a lot of immigrants move in the area because of the jobs created by the IT industry. We want to check if transit is an amenity that is seeked by certain groups while searching for housing. 
+
+```{r Race_TOD, message = FALSE, warning=FALSE}
+#-----Plotted number racial composition in the tract as function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctWhite))) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctWhite"),
+                    name = "Percentage of white \n(Quintile Breaks)") +
+  labs(title = "Percentage of White 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.3") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+From the plots, we can see that the percentage of white people near the transit have reduced which would mean that it is filled by other racial groups. That is the over all trend even outside the buffer zone. Many factors can have caused this change in racial composition, but one important one is job creation and the groups those jobs attract. 
+
+### Percentage of working class
+
+As mentioned already, BARt connects major job centers. So its only fair to hypothesize that working class would prefer to find housing in and around transit for easy commuting. For this map, we considered age group from 16-54 as the population most likely to form the working class. 
+
+```{r Working_TOD, message = FALSE, warning=FALSE}
+#-----Plotted number the number of people in the working industry in the tract as function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctWorking))) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctWorking"),
+                    name = "Working class \n(Quintile Breaks)") +
+  labs(title = "Working Class 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.4") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+There are very few  tracts which have seen a change from 2009 and 2017 to make any solid conclusions. There is no visible trend even in the Non-TOD tracts hence we cannot infer much from this map.
+
+## Bar Plot 
+
+Now that we have seen these individual plots above, lets plot all the variables in a grouped bar plot to see all the data at once.
+
+```{r Grouped_Bar, message = FALSE, warning=FALSE}
+#---- Finding the mean of the variables
+
+finalTract.Summary <- 
+  st_drop_geometry(finalTract.group) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Population = mean(TotalPop, na.rm = T),
+            Percent_RacialComposition= mean(pctWhite, na.rm = T),
+            Percent_WorkingClass= mean(pctWorking, na.rm = T),
+            Percent_Married = mean(pctMarried, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T))
+
+#Bar plot
+finalTract.Summary %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space", subtitle = "Bay area, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
+```
+
+## Table 
+
+```{r Table, message = FALSE, warning=FALSE}
+
+#table
+kable(finalTract.Summary) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 1.0")
+```
+
+## Graduated symbol maps
+
+Next we created two graduated symbol maps of population and rent within 0.5 mile of each transit station which represents the quantities for each transit station proportionally.    
+To do this first we found each station and the tracts it intersects with. After that we summed the normalized population and rent values to find the population and rent quantities. We felt that using the normalised data is a better representation because as mentioned before we dont know the population or rent distribution in each tract to know if it lies in or out of the 0.5 mile buffer.
+
+```{r Buffer_By_Tract, message = FALSE, warning=FALSE}
+# Create an sf object with ONLY the buffers
+buffers <- filter(bartBuffers, Legend=="Buffer")
+buffer_spatial <- buffers %>% st_transform(st_crs(tracts2009))
+
+x <- vector(mode='list', length = 105)
+y <- vector(mode='list', length = 105)
+
+for( val in c(1:105))
+{
+  #print(buffer_spatial[[val,2]])
+  clip1 <- 
+    st_intersection(buffer_spatial[val,1], tracts2009) %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Clip")
+  selection1 <- 
+    tracts2009[buffer_spatial[val,1],] %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Spatial Selection")
+  selectCentroids1 <-
+    st_centroid(tracts2009)[buffer_spatial[val,1],] %>%
+    st_drop_geometry() %>%
+    left_join(dplyr::select(tracts2009, GEOID)) %>%
+    st_sf() %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Select by Centroids")
+  sum_sb <- max(selectCentroids1$normpop)
+  sum_sc <- max(selectCentroids1$normrent)
+  x <- append(x, sum_sb)
+  y <- append(y, sum_sc)
+}
+
+pograd <- sfo_spatial %>%
+  mutate(Sum_Popnor = as.numeric(x[106:210]),
+         Sum_Rentnor = as.numeric(y[106:210]))
+popgrad <- pograd %>%
+  mutate(Sum_Popnorm = Sum_Popnor * 100,
+         Sum_Rentnorm = Sum_Rentnor * 100)
+```
+
+Now that we have sum of all the normalized data for both population and rent lets plot them.
+
+```{r Rent_POP_Plot, message = FALSE, warning=FALSE}
+
+#Population
+ggplot()+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(data=popgrad, 
+          aes(size = Sum_Popnorm), 
+          color = "red")+
+  scale_size_area(name="", max_size = 3.0) + 
+  guides(size=guide_legend("Population")) +
+  labs(
+    title = "Population as a fucntion of distance from stops",
+    subtitle = "Bay Area, CA",
+    caption = "Figure 5.0"
+  )+
+  mapTheme()
+
+#Rent
+ggplot()+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(data=popgrad, 
+          aes(size = Sum_Rentnorm), 
+          color = "red")+
+  scale_size_area(name="", max_size = 3.0 + 
+  guides(size=guide_legend("Total Venues")) +
+  labs(
+    title = "Rent as a fucntion of distance from stops",
+    subtitle = "Bay Area, CA",
+    caption = "Figure 5.1"
+  )+
+  mapTheme()
+```
+
+## Rent as a function of distance to transit stops
+
+Lets look at how rent changes as we move further away from the station. Notice the sudden drop in rent after 6 miles from the transit stop which is even large in the year 2017.
+
+```{r Rent_LinePlot, message = FALSE, warning=FALSE}
+
+#Function MultipleRingBuffer
+multipleRingBuffer <- function(inputPolygon, maxDistance, interval) 
+{
+  #create a list of distances that we'll iterate through to create each ring
+  distances <- seq(0, maxDistance, interval)
+  #we'll start with the second value in that list - the first is '0'
+  distancesCounter <- 2
+  #total number of rings we're going to create
+  numberOfRings <- floor(maxDistance / interval)
+  #a counter of number of rings
+  numberOfRingsCounter <- 1
+  #initialize an otuput data frame (that is not an sf)
+  allRings <- data.frame()
+  
+  #while number of rings  counteris less than the specified nubmer of rings
+  while (numberOfRingsCounter <= numberOfRings) 
+  {
+    #if we're interested in a negative buffer and this is the first buffer
+    #(ie. not distance = '0' in the distances list)
+    if(distances[distancesCounter] < 0 & distancesCounter == 2)
+    {
+      #buffer the input by the first distance
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #different that buffer from the input polygon to get the first ring
+      buffer1_ <- st_difference(inputPolygon, buffer1)
+      #cast this sf as a polygon geometry type
+      thisRing <- st_cast(buffer1_, "POLYGON")
+      #take the last column which is 'geometry'
+      thisRing <- as.data.frame(thisRing[,ncol(thisRing)])
+      #add a new field, 'distance' so we know how far the distance is for a give ring
+      thisRing$distance <- distances[distancesCounter]
+    }
+    
+    
+    #otherwise, if this is the second or more ring (and a negative buffer)
+    else if(distances[distancesCounter] < 0 & distancesCounter > 2) 
+    {
+      #buffer by a specific distance
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #create the next smallest buffer
+      buffer2 <- st_buffer(inputPolygon, distances[distancesCounter-1])
+      #This can then be used to difference out a buffer running from 660 to 1320
+      #This works because differencing 1320ft by 660ft = a buffer between 660 & 1320.
+      #bc the area after 660ft in buffer2 = NA.
+      thisRing <- st_difference(buffer2,buffer1)
+      #cast as apolygon
+      thisRing <- st_cast(thisRing, "POLYGON")
+      #get the last field
+      thisRing <- as.data.frame(thisRing$geometry)
+      #create the distance field
+      thisRing$distance <- distances[distancesCounter]
+    }
+    
+    #Otherwise, if its a positive buffer
+    else 
+    {
+      #Create a positive buffer
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #create a positive buffer that is one distance smaller. So if its the first buffer
+      #distance, buffer1_ will = 0. 
+      buffer1_ <- st_buffer(inputPolygon, distances[distancesCounter-1])
+      #difference the two buffers
+      thisRing <- st_difference(buffer1,buffer1_)
+      #cast as a polygon
+      thisRing <- st_cast(thisRing, "POLYGON")
+      #geometry column as a data frame
+      thisRing <- as.data.frame(thisRing[,ncol(thisRing)])
+      #add teh distance
+      thisRing$distance <- distances[distancesCounter]
+    }  
+    
+    #rbind this ring to the rest of the rings
+    allRings <- rbind(allRings, thisRing)
+    #iterate the distance counter
+    distancesCounter <- distancesCounter + 1
+    #iterate the number of rings counter
+    numberOfRingsCounter <- numberOfRingsCounter + 1
+  }
+  
+  #convert the allRings data frame to an sf data frame
+  allRings <- st_as_sf(allRings)
+}
+
+#Creating the buffer around the transit stops
+finalTracts.rings <-
+  st_join(st_centroid(dplyr::select(finalTract, GEOID, year)), 
+          multipleRingBuffer(st_union(sfo_spatial), 47520, 2640)) %>%
+  st_drop_geometry() %>%
+  left_join(dplyr::select(finalTract, GEOID, MedRent, year), 
+            by=c("GEOID"="GEOID", "year"="year")) %>%
+  st_sf() %>%
+  mutate(Distance = distance / 5280) #convert to miles
+
+#Finding the mean of rent within the same distance
+finalTracts.rings_summary <-
+  finalTracts.rings %>%
+  st_drop_geometry() %>%
+  group_by(Distance, year) %>%
+  summarize(Rent = mean(MedRent, na.rm=T)) 
+
+#Plotting the data
+ggplot(data=finalTracts.rings_summary,
+       aes(x = Distance, y = Rent, colour = year)) +
+  geom_line()+
+  geom_point()
+```
+
+
+
+
+
