@@ -1,12 +1,3 @@
----
-  title: "MUSA 508 Assignment 1"
-author: "Palak Agarwal & Shivani Rai"
-date: "September 18th, 2020"
-output:
-  html_document:
-  toc: true
-toc_float: true
----
 
 #importing the library
 
@@ -22,11 +13,8 @@ options(tigris_class = "sf")
 #data import - bart lines and crime data 
 
 sfo <- read.csv('Data/final_sfo_lines.csv')
-crime1 <- fromJSON(file = 'Data/ala_crime.json')
-crime2 <- fromJSON(file = 'Data/cc_crime.json')
-crime3 <- fromJSON(file = 'Data/sc_crime.json')
-crime4 <- fromJSON(file = 'Data/sfo_crime.json')
-crime5 <- fromJSON(file = 'Data/sm_crime.json')
+crime_sf_full <- read.csv('Data/Police_Department_Incident_Reports__Historical_2003_to_May_2018_SFO.csv')
+crime_full <- read.csv('Data/Crime_Reports_Alameda.csv')
 
 # ---- Load Styling options -----
 
@@ -689,7 +677,8 @@ ggplot(data=finalTracts.rings_summary,
 
 #-------------Crime data VEHICULAR/AUTO-----------
 #Import SF Crime data - filters : Vehicular and Auto, years 2009 and 2017
-crime_sf_full <- read.csv('C:/Users/Shivani Rai/Desktop/Materials/UPenn/UPenn Sem 3/MUSA 508/Project 1/MUSA-508-Assignment-1/Crime/Police_Department_Incident_Reports__Historical_2003_to_May_2018_SFO.csv')
+
+crime_sf_full <- read.csv('Data/Police_Department_Incident_Reports__Historical_2003_to_May_2018_SFO.csv')
 crime_sf <- crime_sf_full[str_detect(crime_sf_full[,5], "(VEHIC)|(AUTO)"),]
 crime_sf <- crime_sf[str_detect(crime_sf[,7], "(/2009)|(/2017)"),]
 
@@ -806,7 +795,7 @@ crime_full <- read.csv('C:/Users/Shivani Rai/Desktop/Materials/UPenn/UPenn Sem 3
 crime <- crime_full[str_detect(crime_full[,13], "(VEHIC)|(AUTO)"),]
 crime <- crime[str_detect(crime[,16], "(2017/)"),]
 
-sfo_crime_spatial_ala <- st_as_sf(crime, coords = c("ï..X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_ala <- st_as_sf(crime, coords = c("Ã¯..X","Y"), crs = 4326, agr = "constant")
 sfo_crime_spatial_ala <- sfo_crime_spatial_ala %>% st_transform(st_crs(tracts2009))
 
 ggplot() + 
@@ -873,7 +862,7 @@ theft_inter_grouped_sf_2017 <- theft_inter_sf_2017 %>% group_by(GEOID) %>% tally
 finalTract.group_sf_2017 <- st_join(finalTract.group, theft_inter_grouped_sf_2017, left = FALSE, by = 'GEOID')
 finalTract.group_sf_2017 <- finalTract.group_sf_2017[!(finalTract.group_sf_2017$year==2009),]
 
-#---- Noew lets visualize this data as a table and bar graph
+#---- Now lets visualize this data as a table and bar graph
 
 #Table 
 finalTract.Summary_sf_2017 <- 
