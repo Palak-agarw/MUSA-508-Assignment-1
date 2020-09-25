@@ -1,0 +1,1056 @@
+---
+title: "MUSA 508 Assignment 1"
+author: "Palak Agarwal & Shivani Rai"
+date: "September 25th, 2020"
+output:
+  html_document:
+    code_folding: hide
+  toc: true
+toc_float: true
+---
+
+# Introduction 
+
+This assignment looked at the **Bay Area Rapid Transit** and its analyzed all the 5 counties that it runs through to check if it has an effect on them. The main reason for choosing the BART system over the SF MTA system was to check if that cross county connection is more effective. SF being a big job center, attracts a lot of people from the surrounding counties in every day and the lack of vacancy and high housing values in the city forces people to stay in areas close to SF and commute everyday. The BART also connects other job centers in the bay area like San Jose, Oakland and the two airports.
+
+```{r setup, message = FALSE, warning=FALSE}
+#importing the library
+
+library(rjson)
+library(tidyverse)
+library(tidycensus)
+library(sf)
+library(kableExtra)
+library(rlist)
+options(scipen=999)
+options(tigris_class = "sf")
+
+```
+
+## Load Themes
+
+Create our mapping and plotting themes, color palettes and quantile break.
+
+```{r load_themes, message = FALSE}
+mapTheme <- function(base_size = 12) {
+  theme(
+    text = element_text( color = "black"),
+    plot.title = element_text(size = 24,colour = "black"),
+    plot.subtitle=element_text(face="italic"),
+    plot.caption=element_text(hjust=0),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(colour = "black", fill=NA, size=2)
+  )
+}
+
+plotTheme <- function(base_size = 12) {
+  theme(
+    text = element_text( color = "black"),
+    plot.title = element_text(size = 24,colour = "black"),
+    plot.subtitle = element_text(face="italic"),
+    plot.caption = element_text(hjust=0),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid.major = element_line("grey60", size = 0.1),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(colour = "black", fill=NA, size=2),
+    strip.background = element_rect(fill = "grey60", color = "white"),
+    strip.text = element_text(size=12),
+    axis.title = element_text(size=12),
+    axis.text = element_text(size=10),
+    plot.background = element_blank(),
+    legend.background = element_blank(),
+    legend.title = element_text(colour = "black", face = "italic"),
+    legend.text = element_text(colour = "black", face = "italic"),
+    strip.text.x = element_text(size = 14)
+  )
+}
+
+# Load Quantile break functions
+
+qBr <- function(df, variable, rnd) {
+  if (missing(rnd)) {
+    as.character(quantile(round(df[[variable]],0),
+                          c(.01,.2,.4,.6,.8), na.rm=T))
+  } else if (rnd == FALSE | rnd == F) {
+    as.character(formatC(quantile(df[[variable]]), digits = 3),
+                 c(.01,.2,.4,.6,.8), na.rm=T)
+  }
+}
+
+q5 <- function(variable) {as.factor(ntile(variable, 5))}
+
+# Load hexadecimal color palette
+
+palette5 <- c("#f6d908","#d6c054","#878dac","#3574e2","#005fc4","#004b9a","#b2a681")
+
+```
+
+## Next lets load the data we going to use
+
+```{r load_data, message = FALSE}
+
+#data import - bart lines and crime data 
+
+sfo <- read.csv('C:/Users/agarw/Documents/MUSA508/MUSA-508-Assignment-1/Data/final_sfo_lines.csv')
+crime_sf_full <- read.csv('Data/Police_Department_Incident_Reports__Historical_2003_to_May_2018_SFO.csv')
+crime_full <- read.csv('Data/Crime_Reports_Alameda.csv')
+
+```
+
+## Loading the census API key 
+
+```{r load_api_key, message = FALSE}
+census_api_key("aea3dee2d96acb5101e94f3dcfa1b575f73d093a", overwrite = TRUE)
+```
+
+## Data wrangling with census data
+### Year 2009 and 2017
+
+We use year 2009 and 2017 in this report for our analyzes. The **state code** for California is **6** and we pass the 5 counties we working with as a list in the county. The counties with their county codes are :     
+* Alameda        - 001   
+* Contra Costa   - 013   
+* San Franscisco - 075   
+* San Mateo      - 081    
+* Santa Clara    - 085    
+
+```{r load_data for year 2009 and 2017, message = FALSE, warning=FALSE, results=FALSE}
+# ---- Year 2009 tracts -----
+
+tracts09 <-  
+  get_acs(geography = "tract", variables = c("B25026_001E","B02001_002E","B19013_001E",
+                                             "B25058_001E","B01001_006E","B01001_007E",
+                                             "B01001_008E","B01001_009E","B01001_010E",
+                                             "B01001_011E","B01001_012E","B01001_013E",
+                                             "B01001_014E","B01001_015E","B01001_016E",
+                                             "B01001_030E","B01001_031E","B01001_032E",
+                                             "B01001_033E","B01001_034E","B01001_035E",
+                                             "B01001_036E","B01001_037E","B01001_038E",
+                                             "B01001_039E","B01001_040E","B12001_004E",
+                                             "B12001_013E","B02001_003E","B02001_004E",
+                                             "B02001_005E","B02001_006E","B03001_003E"), 
+          year=2009, state=06, county=c(001,075,081,013,085), geometry=T) %>% 
+  st_transform('ESRI:102241')
+
+tracts09 <- 
+  tracts09 %>%
+  dplyr::select( -NAME, -moe) %>%
+  spread(variable, estimate) %>%
+  dplyr::select(-geometry) %>%
+  rename(TotalPop = B25026_001, 
+         Whites = B02001_002,
+         Blacks = B02001_003,
+         AmInd = B02001_004,
+         Asian = B02001_005,
+         Hawaiian = B02001_006,
+         Hispanic = B03001_003,
+         MedHHInc = B19013_001, 
+         MedRent = B25058_001,
+         WorkingClassM1517 = B01001_006,
+         WorkingClassM1819 = B01001_007,
+         WorkingClassM20 = B01001_008,
+         WorkingClassM21 = B01001_009,
+         WorkingClassM2224 = B01001_010,
+         WorkingClassM2529 = B01001_011,
+         WorkingClassM3034 = B01001_012,
+         WorkingClassM3539 = B01001_013,
+         WorkingClassM4044 = B01001_014,
+         WorkingClassM4549 = B01001_015,
+         WorkingClassM5054 = B01001_016,
+         WorkingClassF1517 = B01001_030,
+         WorkingClassF1819 = B01001_031,
+         WorkingClassF20 = B01001_032,
+         WorkingClassF21 = B01001_033,
+         WorkingClassF2224 = B01001_034,
+         WorkingClassF2529 = B01001_035,
+         WorkingClassF3034 = B01001_036,
+         WorkingClassF3539 = B01001_037,
+         WorkingClassF4044 = B01001_038,
+         WorkingClassF4549 = B01001_039,
+         WorkingClassF5054 = B01001_040,
+         MaleMarried = B12001_004,
+         FemaleMarried = B12001_013
+         )
+
+tracts209 <- 
+  tracts09 %>%
+  mutate(pctWorking = ifelse(TotalPop > 0, ((WorkingClassM1517 + WorkingClassM1819 
+                                             + WorkingClassM20 + WorkingClassM21 
+                                             + WorkingClassM2224 + WorkingClassM2529 
+                                             + WorkingClassM3034 + WorkingClassM3539 
+                                             + WorkingClassM4044 + WorkingClassM4549 
+                                             + WorkingClassM5054 + WorkingClassF1517 
+                                             + WorkingClassF1819 + WorkingClassF20 
+                                             + WorkingClassF21   + WorkingClassF2224 
+                                             + WorkingClassF2529 + WorkingClassF3034 
+                                             + WorkingClassF3539 + WorkingClassF4044 
+                                             + WorkingClassF4549 + WorkingClassF5054)
+                                            /TotalPop * 100), 0),
+         pctMarried = ifelse(TotalPop > 0, ((FemaleMarried + MaleMarried) / TotalPop * 100), 0),
+         pctWhite = ifelse(TotalPop > 0, Whites / TotalPop * 100, 0),
+         pctOtherRace = ifelse(TotalPop > 0, ((Blacks + AmInd +Asian
+                                               + Hawaiian + Hispanic) / TotalPop * 100), 0),
+         
+         year = "2009") %>%
+  dplyr::select(-Whites,-FemaleMarried,-MaleMarried,-Blacks,-AmInd,-Asian,-Hawaiian,
+                -Hispanic, -WorkingClassM1517,-WorkingClassM1819,-WorkingClassM20,
+                -WorkingClassM21,-WorkingClassM2224,-WorkingClassM2529, 
+                -WorkingClassM3034,-WorkingClassM3539,-WorkingClassM4044,
+                -WorkingClassM4549,-WorkingClassM5054,-WorkingClassF1517, 
+                -WorkingClassF1819,-WorkingClassF20,-WorkingClassF21,
+                -WorkingClassF2224,-WorkingClassF2529,-WorkingClassF3034,
+                -WorkingClassF3539,-WorkingClassF4044,-WorkingClassF4549,
+                -WorkingClassF5054)
+
+#----- Finding max values of popluation and rent to normalise the data 
+# as the tract is not truly representative of the data near the station------
+
+maxtotpop_2009 <- max(tracts209$TotalPop)
+maxrent_2009 <- max(tracts209$MedRent , na.rm = T)
+tracts2009 <- 
+  tracts209 %>%
+  mutate( normpop = TotalPop/maxtotpop_2009,
+          normrent = MedRent/maxrent_2009)
+
+# ---- Year 2017 tracts -----
+
+tracts217 <-  
+  get_acs(geography = "tract", variables = c("B25026_001E","B02001_002E","B19013_001E",
+                                             "B25058_001E","B01001_006E","B01001_007E",
+                                             "B01001_008E","B01001_009E","B01001_010E",
+                                             "B01001_011E","B01001_012E","B01001_013E",
+                                             "B01001_014E","B01001_015E","B01001_016E",
+                                             "B01001_030E","B01001_031E","B01001_032E",
+                                             "B01001_033E","B01001_034E","B01001_035E",
+                                             "B01001_036E","B01001_037E","B01001_038E",
+                                             "B01001_039E","B01001_040E","B12001_004E",
+                                             "B12001_013E","B02001_003E","B02001_004E",
+                                             "B02001_005E","B02001_006E","B03001_003E"), 
+          year=2017, state=06, county=c(001,075,081,013,085), geometry=T) %>% 
+  st_transform('ESRI:102241') %>%
+  dplyr::select( -NAME, -moe) %>%
+  spread(variable, estimate) %>%
+  dplyr::select(-geometry) %>%
+  rename(TotalPop = B25026_001, 
+         Whites = B02001_002,
+         Blacks = B02001_003,
+         AmInd = B02001_004,
+         Asian = B02001_005,
+         Hawaiian = B02001_006,
+         Hispanic = B03001_003,
+         MedHHInc = B19013_001, 
+         MedRent = B25058_001,
+         WorkingClassM1517 = B01001_006,
+         WorkingClassM1819 = B01001_007,
+         WorkingClassM20 = B01001_008,
+         WorkingClassM21 = B01001_009,
+         WorkingClassM2224 = B01001_010,
+         WorkingClassM2529 = B01001_011,
+         WorkingClassM3034 = B01001_012,
+         WorkingClassM3539 = B01001_013,
+         WorkingClassM4044 = B01001_014,
+         WorkingClassM4549 = B01001_015,
+         WorkingClassM5054 = B01001_016,
+         WorkingClassF1517 = B01001_030,
+         WorkingClassF1819 = B01001_031,
+         WorkingClassF20 = B01001_032,
+         WorkingClassF21 = B01001_033,
+         WorkingClassF2224 = B01001_034,
+         WorkingClassF2529 = B01001_035,
+         WorkingClassF3034 = B01001_036,
+         WorkingClassF3539 = B01001_037,
+         WorkingClassF4044 = B01001_038,
+         WorkingClassF4549 = B01001_039,
+         WorkingClassF5054 = B01001_040,
+         MaleMarried = B12001_004,
+         FemaleMarried = B12001_013
+  ) %>%
+  mutate(pctWorking = ifelse(TotalPop > 0, ((WorkingClassM1517 + WorkingClassM1819 
+                                             + WorkingClassM20 + WorkingClassM21 
+                                             + WorkingClassM2224 + WorkingClassM2529 
+                                             + WorkingClassM3034 + WorkingClassM3539 
+                                             + WorkingClassM4044 + WorkingClassM4549 
+                                             + WorkingClassM5054 + WorkingClassF1517 
+                                             + WorkingClassF1819 + WorkingClassF20 
+                                             + WorkingClassF21   + WorkingClassF2224 
+                                             + WorkingClassF2529 + WorkingClassF3034 
+                                             + WorkingClassF3539 + WorkingClassF4044 
+                                             + WorkingClassF4549 + WorkingClassF5054)
+                                            /TotalPop * 100), 0),
+         pctMarried = ifelse(TotalPop > 0, ((FemaleMarried + MaleMarried) / TotalPop * 100), 0),
+         pctWhite = ifelse(TotalPop > 0, Whites / TotalPop *100, 0),
+         pctOtherRace = ifelse(TotalPop > 0, ((Blacks + AmInd +Asian
+                                               + Hawaiian + Hispanic) / TotalPop * 100), 0),
+         year = "2017") %>%
+  dplyr::select(-Whites,-FemaleMarried,-MaleMarried,-Blacks,-AmInd,-Asian,-Hawaiian,
+                -Hispanic,-WorkingClassM1517,-WorkingClassM1819,-WorkingClassM20,
+                -WorkingClassM21,-WorkingClassM2224,-WorkingClassM2529, 
+                -WorkingClassM3034,-WorkingClassM3539,-WorkingClassM4044,
+                -WorkingClassM4549,-WorkingClassM5054,-WorkingClassF1517, 
+                -WorkingClassF1819,-WorkingClassF20,-WorkingClassF21,-WorkingClassF2224,
+                -WorkingClassF2529,-WorkingClassF3034,
+                -WorkingClassF3539,-WorkingClassF4044,-WorkingClassF4549,-WorkingClassF5054)
+
+#----- Finding max values of popluation and rent to normalise the data 
+# as the tract is not truly representative of the data near the station------
+
+maxtotpop_2017 <- max(tracts217$TotalPop)
+maxrent_2017 <- max(tracts217$MedRent , na.rm = T)
+tracts2017 <- 
+  tracts217 %>%
+  mutate( normpop = TotalPop/maxtotpop_2017,
+          normrent = MedRent/maxrent_2017)
+```
+
+## Combing the year 2009 and 2017 tracts
+
+```{r combine_data for year 2009 and 2017, message = FALSE}
+finalTract <- rbind(tracts2009,tracts2017)
+```
+
+## Data wrangling with BART data
+
+The BART data we had was in a csv with no coordinate column hence we first separated that string value to get the X and Y for latitude and longitude on which the data could be plotted on the tract data.
+
+```{r Bart data, message = FALSE}
+x <- vector(mode='list', length = 105)
+y <- vector(mode='list', length = 105)
+spli <- strsplit(sfo$Location, ",")
+for (val in spli){
+  x <- append(x, val[[1]])
+  y <- append(y, val[[2]])
+  
+}
+sfo_new <- 
+  sfo %>%
+  mutate(X = x[106:210],
+         Y = y[106:210]) %>%
+  dplyr::select(-Abbreviation, -Location, -Description)
+crs_tract09 <- st_crs(tracts2009)
+sfo_spatial <- st_as_sf(sfo_new, coords = c("X","Y"), crs = 4326, agr = "constant")
+sfo_spatial <- sfo_spatial %>% st_transform(st_crs(tracts2009))
+
+# Plotting the lines on the bay area tracts
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 1.2) +
+  labs(title="Bart Stops", 
+       subtitle="Bay Area, CA", 
+       caption="Figure 1.0") +
+  mapTheme()
+```
+
+## Creating the buffer zone 
+
+Now that we have our BART and tract data lets get on which creating a buffer from each stop of **0.5 miles**. Note that in the code we use **2640** as the crs units is in feet and we have converted that distance.
+
+```{r Buffer Zone, message = FALSE, warning=FALSE}
+
+# Both a buffer for each stop, and a union of the buffers...
+# and bind these objects together
+
+bartBuffers <- 
+  rbind(
+    st_buffer(sfo_spatial, 2640) %>%
+      mutate(Legend = "Buffer") %>%
+      dplyr::select(Legend),
+    st_union(st_buffer(sfo_spatial, 2640)) %>%
+      st_sf() %>%
+      mutate(Legend = "Unioned Buffer"))
+
+# Let's examine both buffers by making a small multiple
+# "facet_wrap" plot showing each
+
+ggplot() +
+  geom_sf(data=bartBuffers) +
+  geom_sf(data=sfo_spatial, show.legend = "point") +
+  facet_wrap(~Legend) + 
+  labs(caption = "Figure 1.1") +
+  mapTheme()
+```
+
+## Finding tracts which lie within the buffer zone
+
+To do this, we clip the union buffer with the tracts, and find the tracts within this intersection. As we do not have the census distribution within the tracts, will we know not which attribute of the census belongs within 0.5 mile radius of each transit station. So to over come this challenge with data, we assume that if the centroid of the census tract lies within the buffer zone, its attributes will be significant.
+
+```{r Buffer Zone_clip, message = FALSE, warning=FALSE}
+# Create an sf object with ONLY the unioned buffer
+buffer <- filter(bartBuffers, Legend=="Unioned Buffer")
+
+# Clip the 2009 tracts ... by seeing which tracts intersect (st_intersection)
+# with the buffer and clipping out only those areas
+clip <- 
+  st_intersection(buffer, tracts2009) %>%
+  dplyr::select(TotalPop) %>%
+  mutate(Selection_Type = "Clip")
+
+ggplot() +
+  geom_sf(data = clip) +
+  labs(title="Clipped Tracts", 
+         subtitle="Bay Area, CA", 
+         caption="Figure 2.0") +
+  theme(plot.title = element_text(size=22))
+
+# Do a spatial selection to see which tracts touch the buffer
+selection <- 
+  tracts2009[buffer,] %>%
+  dplyr::select(TotalPop) %>%
+  mutate(Selection_Type = "Spatial Selection")
+
+ggplot() +
+  geom_sf(data = selection) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  labs(title="Selected Tracts", 
+         subtitle="Bay Area, CA", 
+         caption="Figure 2.1") +
+  theme(plot.title = element_text(size=22))
+
+# Do a centroid-in-polygon join to see which tracts have their centroid in the buffer
+# Note the st_centroid call creating centroids for each feature
+selectCentroids <-
+  st_centroid(tracts2009)[buffer,] %>%
+  st_drop_geometry() %>%
+  left_join(dplyr::select(tracts2009, GEOID)) %>%
+  st_sf() %>%
+  dplyr::select(TotalPop) %>%
+  mutate(Selection_Type = "Select by Centroids")
+
+ggplot() +
+  geom_sf(data = selectCentroids) +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  labs(title="Selected Tracts with centroids in the buffer zone", 
+       subtitle="Bay Area, CA", 
+       caption="Figure 2.2") +
+  theme(plot.title = element_text(size=22))
+```
+
+## Classifying tract as TOD and Non-TOD
+
+Now that we have found the tracts whose centroids that fall within the buffer zone, lets classify those tracts as **TOD** - transit oriented development and **Non-TOD**.
+
+```{r Mutate TOD, message = FALSE, warning=FALSE}
+# We do our centroid joins as above, and then do a "disjoin" to get the ones that *don't*
+# join, and add them all together and add a new column TOD.
+# Note that this contains a correct 2009-2017 inflation calculation
+
+finalTract.group <- 
+  rbind(
+    st_centroid(finalTract)[buffer,] %>%
+      st_drop_geometry() %>%
+      left_join(finalTract) %>%
+      st_sf() %>%
+      mutate(TOD = "TOD"),
+    st_centroid(finalTract)[buffer, op = st_disjoint] %>%
+      st_drop_geometry() %>%
+      left_join(finalTract) %>%
+      st_sf() %>%
+      mutate(TOD = "Non-TOD")) %>%
+  mutate(MedRent.inf = ifelse(year == "2009", MedRent * 1.14, MedRent))
+```
+
+## TOD Indicators 
+
+According to BART's ridership reports, its ridership increased by **16.2%** from 2009 to 2017. Also the increase is noticed in the far off counties like Alameda and Santa Clara. So the BART system seems to be fulfilling its purpose of connecting different counties. This would mean that the planning and construction of BART would have attracted development in the different counties and towns it goes through. To check this hypothesis, we analyses the following criterias which we think could have affected the ridership and development in the TOD zones. The four indicators we think important are :    
+* Rent  
+* Percentage of married people       
+* Racial Composition       
+* Percentage of Working class 
+
+```{r TOD_groups, message = FALSE, warning=FALSE}
+
+#----- Plot which are the TOD tracts
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = TOD)) +
+  labs(title = "TOD vs. Non-TOD Groups",
+       subtitle="Bay Area, CA", 
+       caption="Figure 3.0") +
+  facet_wrap(~year)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+     
+Lets discuss each indicator and its affect on TOD.       
+    
+### Rent 
+
+The main purpose of transit oriented development is to attract and increase density in certain parts of the city. By having amenities and housing around transit, the system becomes more efficient due to increased foot fall. It also allows for land value capitalization, which is essential to both developers and governments. Renters and home buyers are usually more happy paying to locate near transit amenities which should be reflected in higher land values and property tax returns near stations.    
+Now lets visualize rent as a function of time and space.
+
+```{r Rent_TOD, message = FALSE, warning=FALSE}
+#----- Plot rent as a function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(MedRent.inf)), color = "transparent") +
+  geom_sf(data = buffer, fill = "transparent", color = "red", size = 0.5)+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "MedRent.inf"),
+                    name = "Rent\n(Quintile Breaks)") +
+  labs(title = "Median Rent 2009-2017", subtitle = "Dollars\nBay Area, CA", caption="Figure 3.1") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+As it is evident in the map, most tracts in San Mateo, San Francisco, Contra Costa and Santa Clara saw an increase in rent from year 2009 to 2017 while Alameda remained stagnant. Other interesting observation is that tracts close to the transit line but not in the buffer zone saw a large increase in rent values. The transit stops are connected through bus and biking networks as extra infrastructure, we could have affected the other tracts to develop as well.
+
+### Percentage of Married people
+
+Our hypothesis is that a lot of families move out of the city to the suburbs to have more space and to raise families.Cities can get congested and finding home big enough to raise a family can get more expensive if one chooses to live in the downtown areas. Most familes have only two options- to move to neighborhoods outside the main district or to move out of the city and commute everyday. What ever the choice might be they would still prefer to be able have easy access to the city as it forms a major job hub. So it is fair to assume that they would prefer to stay around the transit to avoid everyday driving and parking hassle. 
+
+```{r Married_TOD, message = FALSE, warning=FALSE}
+#-----Plotted number of married people in the tract as function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctMarried)), color = "transparent") +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctMarried"),
+                    name = "Married as percentage \n(Quintile Breaks)") +
+  labs(title = "Married 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.2") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+From the plots, we can see that Contra Costa has seen in an increase in the percentage of married couples while other TOD tracts have remained stagnant or seen a decrease. If you notice the tracts outside the 0.5 mile radius, we see that the percentage of married couples has increased slightly and this could mean that they might or might not use BART to travel for work or even leisurely. It can also be that the families have moved away from the buffer zone as a result of increased density around them which was the initial reason to move out of the city. 
+
+### Racial Composition
+
+The Bay area has a large proportion of immigration populations. Being the Silicon Valley, a lot of immigrants move in the area because of the jobs created by the IT industry. We want to check if transit is an amenity that is seeked by certain groups while searching for housing. 
+
+```{r Race_TOD, message = FALSE, warning=FALSE}
+#-----Plotted number racial composition in the tract as function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctWhite)), color = "transparent") +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctWhite"),
+                    name = "Percentage of white \n(Quintile Breaks)") +
+  labs(title = "Racial Composition 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.3") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+From the plots, we can see that the percentage of white people near the transit have reduced which would mean that it is filled by other racial groups. That is the over all trend even outside the buffer zone. Many factors can have caused this change in racial composition, but one important one is job creation and the groups those jobs attract. Close to 40% of the population in the Bay area is made out of immigrant groups that include large portions of Asians and Hispanics. 
+
+### Percentage of working class
+
+As mentioned already, BART connects major job centers like San Franscisco, Oakland, San Jose and the two airports. So its only fair to hypothesize that working class would prefer to find housing in and around transit for easy commuting. For this map, we considered a percentage of population who are in the age groups of 16-54 as the population most likely to form the working class and to commute everyday for work. 
+
+```{r Working_TOD, message = FALSE, warning=FALSE}
+#-----Plotted number the number of people in the working industry in the tract as function of year and TOD
+
+ggplot(finalTract.group)+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(aes(fill = q5(pctWorking)), color = "transparent") +
+  geom_sf(data = buffer, fill = "transparent", color = "red")+
+  scale_fill_manual(values = palette5,
+                    labels = qBr(finalTract.group, "pctWorking"),
+                    name = "Working class \n(Quintile Breaks)") +
+  labs(title = "Working Class 2009-2017", subtitle = "Bay area, CA", caption="Figure 3.4") +
+  facet_wrap(~year + TOD)+
+  mapTheme() + 
+  theme(plot.title = element_text(size=22))
+```
+
+There are very few  tracts which have seen a change from 2009 and 2017 to make any solid conclusions. There is no visible trend even in the Non-TOD tracts hence we cannot infer much from this map. Transit seems like a main amenities that people will look out in case they had to travel for work everyday and hence would prefer to stay around transit stops. The tracts seeing no change could mean two things - one that it has been stagnant or the other could be that it has had a floating population which is replaced every so often that no new trend is seen.
+
+## Bar Plot 
+
+Now that we have seen these individual plots above, lets plot all the variables in a grouped bar plot to see all the data at once.
+
+```{r Grouped_Bar, message = FALSE, warning=FALSE}
+#---- Finding the mean of the variables
+
+finalTract.Summary <- 
+  st_drop_geometry(finalTract.group) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Population = mean(TotalPop, na.rm = T),
+            Percent_RacialComposition= mean(pctWhite, na.rm = T),
+            Percent_WorkingClass= mean(pctWorking, na.rm = T),
+            Percent_Married = mean(pctMarried, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T))
+
+#Bar plot
+finalTract.Summary %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space", subtitle = "Bay area, CA", caption="Figure 4.0") +
+  plotTheme() + theme(legend.position="bottom")
+```
+
+Between 2009 and 2017, the Bay area remained stagnant in terms of its population and married couples while rents and median household increased dramatically. In 2009, the tracts were more diverse and had larger working class populations than 2017. After the recession of 2008, the bay area had created close to one million new jobs in all forms of industry, increasing the competition among people. It is important to point out that the population being stagnant can also be caused by equal migrations in and out of the area which seems like the most likely scenario here.    
+     
+According to plot, the income and rents have increased drastically which could have pushed out weaker sections of the society further out. Also, the rent and income increase in Non-TOD tracts are almost double of that in TOD tracts. People are still willing to pay more in these areas without really having easy access to amenities. It is important to point out that the TOD zone was defined as 0.5 miles away from the station and that could be less given that everything in California is very spread out in terms of development. The same inferences can be made by seeing the mean values of these variables in the table below.    
+
+
+## Table 
+
+```{r Table, message = FALSE, warning=FALSE}
+
+#table
+kable(finalTract.Summary) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 1.0")
+```
+
+## Graduated symbol maps
+
+Next we created two graduated symbol maps of population and rent within 0.5 mile of each transit station which represents the quantities for each transit station proportionally.    
+To do this first we found each station and the tracts it intersects with. After that we summed the normalized population and rent values to find the population and rent quantities. We felt that using the normalized data is a better representation because as mentioned before we don't know the population or rent distribution in each tract to know if it lies in or out of the 0.5 mile buffer.
+
+```{r Buffer_By_Tract, message = FALSE, warning=FALSE}
+# Create an sf object with ONLY the buffers
+buffers <- filter(bartBuffers, Legend=="Buffer")
+buffer_spatial <- buffers %>% st_transform(st_crs(tracts2009))
+
+x <- vector(mode='list', length = 105)
+y <- vector(mode='list', length = 105)
+
+for( val in c(1:105))
+{
+  #print(buffer_spatial[[val,2]])
+  clip1 <- 
+    st_intersection(buffer_spatial[val,1], tracts2009) %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Clip")
+  selection1 <- 
+    tracts2009[buffer_spatial[val,1],] %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Spatial Selection")
+  selectCentroids1 <-
+    st_centroid(tracts2009)[buffer_spatial[val,1],] %>%
+    st_drop_geometry() %>%
+    left_join(dplyr::select(tracts2009, GEOID)) %>%
+    st_sf() %>%
+    dplyr::select(normpop,normrent) %>%
+    mutate(Selection_Type = "Select by Centroids")
+  sum_sb <- max(selectCentroids1$normpop)
+  sum_sc <- max(selectCentroids1$normrent)
+  x <- append(x, sum_sb)
+  y <- append(y, sum_sc)
+}
+
+pograd <- sfo_spatial %>%
+  mutate(Sum_Popnor = as.numeric(x[106:210]),
+         Sum_Rentnor = as.numeric(y[106:210]))
+popgrad <- pograd %>%
+  mutate(Sum_Popnorm = Sum_Popnor * 100,
+         Sum_Rentnorm = Sum_Rentnor * 100)
+```
+
+Now that we have sum of all the normalized data for both population and rent lets plot them.
+
+```{r Rent_POP_Plot, message = FALSE, warning=FALSE}
+
+#Population
+ggplot()+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(data=popgrad, 
+          aes(size = Sum_Popnorm), 
+          color = "red")+
+  scale_size_area(name="", max_size = 2.0) + 
+  guides(size=guide_legend("Population")) +
+  labs(
+    title = "Population as a fucntion of distance from stops",
+    subtitle = "Bay Area, CA",
+    caption = "Figure 5.0"
+  )+
+  mapTheme()
+
+#Rent
+ggplot()+
+  geom_sf(data = st_union(tracts2009))+
+  geom_sf(data=popgrad, 
+          aes(size = Sum_Rentnorm), 
+          color = "red")+
+  scale_size_area(name="", max_size = 2.0) + 
+  guides(size=guide_legend("Total Venues")) +
+  labs(
+    title = "Rent as a fucntion of distance from stops",
+    subtitle = "Bay Area, CA",
+    caption = "Figure 5.1"
+  )+
+  mapTheme()
+```
+
+As expected, rents and population is high in the downtown regions of SF. It is the most sought after real estate in the US and that accounts for this high occupancy and land value. After that, downtown of Oakland has the next highest rents and population. The rest of the counties have very similar rent and population relationship. It is interesting to see that the job hubs still have that high of an occupancy even though cheaper and vacant counties are connected to it through a rapid public transit system. This could mean that that the BART isn't as efficient and accessible as it was planned or that a large portion of people still prefer to stay very close to their place of work. 
+
+## Rent as a function of distance to transit stops
+
+Lets look at how rent changes as we move further away from the station. Notice the sudden drop in rent after 6 miles from the transit stop which is even large in the year 2017.
+
+```{r Rent_LinePlot, message = FALSE, warning=FALSE}
+
+#Function MultipleRingBuffer
+multipleRingBuffer <- function(inputPolygon, maxDistance, interval) 
+{
+  #create a list of distances that we'll iterate through to create each ring
+  distances <- seq(0, maxDistance, interval)
+  #we'll start with the second value in that list - the first is '0'
+  distancesCounter <- 2
+  #total number of rings we're going to create
+  numberOfRings <- floor(maxDistance / interval)
+  #a counter of number of rings
+  numberOfRingsCounter <- 1
+  #initialize an otuput data frame (that is not an sf)
+  allRings <- data.frame()
+  
+  #while number of rings  counteris less than the specified nubmer of rings
+  while (numberOfRingsCounter <= numberOfRings) 
+  {
+    #if we're interested in a negative buffer and this is the first buffer
+    #(ie. not distance = '0' in the distances list)
+    if(distances[distancesCounter] < 0 & distancesCounter == 2)
+    {
+      #buffer the input by the first distance
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #different that buffer from the input polygon to get the first ring
+      buffer1_ <- st_difference(inputPolygon, buffer1)
+      #cast this sf as a polygon geometry type
+      thisRing <- st_cast(buffer1_, "POLYGON")
+      #take the last column which is 'geometry'
+      thisRing <- as.data.frame(thisRing[,ncol(thisRing)])
+      #add a new field, 'distance' so we know how far the distance is for a give ring
+      thisRing$distance <- distances[distancesCounter]
+    }
+    
+    
+    #otherwise, if this is the second or more ring (and a negative buffer)
+    else if(distances[distancesCounter] < 0 & distancesCounter > 2) 
+    {
+      #buffer by a specific distance
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #create the next smallest buffer
+      buffer2 <- st_buffer(inputPolygon, distances[distancesCounter-1])
+      #This can then be used to difference out a buffer running from 660 to 1320
+      #This works because differencing 1320ft by 660ft = a buffer between 660 & 1320.
+      #bc the area after 660ft in buffer2 = NA.
+      thisRing <- st_difference(buffer2,buffer1)
+      #cast as apolygon
+      thisRing <- st_cast(thisRing, "POLYGON")
+      #get the last field
+      thisRing <- as.data.frame(thisRing$geometry)
+      #create the distance field
+      thisRing$distance <- distances[distancesCounter]
+    }
+    
+    #Otherwise, if its a positive buffer
+    else 
+    {
+      #Create a positive buffer
+      buffer1 <- st_buffer(inputPolygon, distances[distancesCounter])
+      #create a positive buffer that is one distance smaller. So if its the first buffer
+      #distance, buffer1_ will = 0. 
+      buffer1_ <- st_buffer(inputPolygon, distances[distancesCounter-1])
+      #difference the two buffers
+      thisRing <- st_difference(buffer1,buffer1_)
+      #cast as a polygon
+      thisRing <- st_cast(thisRing, "POLYGON")
+      #geometry column as a data frame
+      thisRing <- as.data.frame(thisRing[,ncol(thisRing)])
+      #add teh distance
+      thisRing$distance <- distances[distancesCounter]
+    }  
+    
+    #rbind this ring to the rest of the rings
+    allRings <- rbind(allRings, thisRing)
+    #iterate the distance counter
+    distancesCounter <- distancesCounter + 1
+    #iterate the number of rings counter
+    numberOfRingsCounter <- numberOfRingsCounter + 1
+  }
+  
+  #convert the allRings data frame to an sf data frame
+  allRings <- st_as_sf(allRings)
+}
+
+#Creating the buffer around the transit stops
+finalTracts.rings <-
+  st_join(st_centroid(dplyr::select(finalTract, GEOID, year)), 
+          multipleRingBuffer(st_union(sfo_spatial), 47520, 2640)) %>%
+  st_drop_geometry() %>%
+  left_join(dplyr::select(finalTract, GEOID, MedRent, year), 
+            by=c("GEOID"="GEOID", "year"="year")) %>%
+  st_sf() %>%
+  mutate(Distance = distance / 5280) #convert to miles
+
+#Finding the mean of rent within the same distance
+finalTracts.rings_summary <-
+  finalTracts.rings %>%
+  st_drop_geometry() %>%
+  group_by(Distance, year) %>%
+  summarize(Rent = mean(MedRent, na.rm=T)) 
+
+#Plotting the data
+ggplot(data=finalTracts.rings_summary,
+       aes(x = Distance, y = Rent, colour = year)) +
+  geom_line()+
+  geom_point()
+```
+
+## Crime Data
+
+For this part of the assignment, we have used point crime data from San Francisco to analyze and also made comparisons between the San Franscisco and Alameda counties. The crime type we have chosen to look at was vehicular and auto theft. According to BART’s 2017 survey, 78% of its riders walked and only 5% drove to the station. So if that was the case, the vehicular crime rate around the stations should have reduced. The area around the station would have been made dense in terms of development and might have limited street parking or designated parking lots, making theft or auto damage less likely. Also, if the crime rate in an area goes lower than it makes it more appealing to home renters and buyers, increasing the land and rent values.    
+      
+First lets start with crime trend in SF for the year 2009 and 2017.  
+
+```{r Crime_SF_All, message = FALSE, warning=FALSE}
+#filter data for 2009 and 2017
+crime_sf_all <- crime_sf_full[str_detect(crime_sf_full[,7], "(/2009)|(/2017)"),]
+
+sfo_crime_spatial_sf_all <- st_as_sf(crime_sf_all, coords = c("X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_sf_all <- sfo_crime_spatial_sf_all %>% st_transform(st_crs(tracts2009))
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_sf_all, 
+          aes(colour = 'gold'), 
+          show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="All Crimes in SF 2009 and 2017, CA", 
+       caption="Figure 6.0") +
+  mapTheme()
+
+theft_inter_all <- 
+  st_intersection(sfo_crime_spatial_sf_all, finalTract) %>%
+  dplyr::select(year, GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_all <- theft_inter_all %>% group_by(GEOID,year) %>% tally()
+
+#tabular join
+finalTract.group_all <- st_join(finalTract.group, theft_inter_grouped_all, left = FALSE, by = 'GEOID')
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_all <- 
+  st_drop_geometry(finalTract.group_all) %>%
+  group_by(year.y, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_all) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 2.1")
+
+#Bar plot
+finalTract.Summary_all %>%
+  gather(Variable, Value, -year.y, -TOD) %>%
+  ggplot(aes(year.y, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space (all crimes)", subtitle = "SF, CA", caption="Figure 6.1") +
+  plotTheme() + theme(legend.position="bottom")
+```
+As you can see from the plot and table, crime rates in the SF area have decreased over 2009 and 2017 in the TOD tracts but the rent has also decreased which seems to be the opposite affect of crime on rent. Along with rent, the median income of the households in the TOD have reduced which could have had an affect on the rent more than the change in crime rates. But rent is dependent on so many other factors, that making a concrete comparison between rent and crime rates is not advisable. But in theory, crime rate should see an increase in rents as the tracts are termed “safer”.   
+        
+Now that we have seen all crime data, lets filter the data to only vehicle and auto thefts in and around the station.    
+
+```{r Crime_SF_Auto, message = FALSE, warning=FALSE}
+
+#Import SF Crime data - filters : Vehicular and Auto, years 2009 and 2017
+
+crime_sf_full <- read.csv('Data/Police_Department_Incident_Reports__Historical_2003_to_May_2018_SFO.csv')
+crime_sf <- crime_sf_full[str_detect(crime_sf_full[,5], "(VEHIC)|(AUTO)"),]
+crime_sf <- crime_sf[str_detect(crime_sf[,7], "(/2009)|(/2017)"),]
+
+sfo_crime_spatial_sf <- st_as_sf(crime_sf, coords = c("X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_sf <- sfo_crime_spatial_sf %>% st_transform(st_crs(tracts2009))
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_sf, 
+         aes(colour = 'gold'), 
+        show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="Vehicular/Auto Theft in SF 2009 and 2017, CA", 
+       caption="Figure 6.2") +
+  mapTheme()
+
+theft_inter_sf <- 
+  st_intersection(sfo_crime_spatial_sf, finalTract) %>%
+  dplyr::select(year, GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_sf <- theft_inter_sf %>% group_by(GEOID,year) %>% tally()
+
+#tabular join
+finalTract.group_sf <- st_join(finalTract.group, theft_inter_grouped_sf, left = FALSE, by = 'GEOID')
+
+#---- Now lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_sf <- 
+  st_drop_geometry(finalTract.group_sf) %>%
+  group_by(year.y, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_sf) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 2.2")
+
+#Bar plot
+finalTract.Summary_sf %>%
+  gather(Variable, Value, -year.y, -TOD) %>%
+  ggplot(aes(year.y, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space (Auto Theft)", subtitle = "SF, CA", caption="Figure 6.3") +
+  plotTheme() + theme(legend.position="bottom")
+```
+Just as the all crime data plot and table, vehicular and auto theft crimes in the SF area have decreased over 2009 and 2017 in the TOD tracts but the rent has also decreased which seems to be the opposite affect. The vehicular and auto theft could have reduced as a result of lesser Again, rent is dependent on so many other factors, that making a concrete comparison between rent and crime rates is not advisable.     
+       
+Now that we have seen crime trends in SF, lets compare the Alameda and SF counties for the year 2017.
+
+```{r Crime_SF_Alameda, message = FALSE, warning=FALSE}
+
+crime <- crime_full[str_detect(crime_full[,13], "(VEHIC)|(AUTO)"),]
+crime <- crime[str_detect(crime[,16], "(2017/)"),]
+
+sfo_crime_spatial_ala <- st_as_sf(crime, coords = c("ï..X","Y"), crs = 4326, agr = "constant")
+sfo_crime_spatial_ala <- sfo_crime_spatial_ala %>% st_transform(st_crs(tracts2009))
+
+#--------SF 2017--------------
+theft_inter_sf_2017 <- 
+  st_intersection(sfo_crime_spatial_sf, finalTract) %>%
+  dplyr::select(GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_sf_2017 <- theft_inter_sf_2017 %>% group_by(GEOID) %>% tally()
+
+
+#tabular join
+finalTract.group_sf_2017 <- st_join(finalTract.group, theft_inter_grouped_sf_2017, left = FALSE, by = 'GEOID')
+finalTract.group_sf_2017 <- finalTract.group_sf_2017[!(finalTract.group_sf_2017$year==2009),]
+
+#---- Now lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_sf_2017 <- 
+  st_drop_geometry(finalTract.group_sf_2017) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_ala, 
+          aes(colour = 'gold'), 
+          show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="Vehicular/Auto Theft in Alameda 2017, CA", 
+       caption="Figure 6.4") +
+  mapTheme()
+
+ggplot() + 
+  geom_sf(data=st_union(tracts2009), colour = '#efefef') +
+  geom_sf(data=sfo_crime_spatial_sf, 
+         aes(colour = 'gold'), 
+        show.legend = "point", size= 0.5) +
+  geom_sf(data=sfo_spatial, 
+          aes(colour = Line_colour), 
+          show.legend = "point", size= 2) +
+  labs(title="Crime", 
+       subtitle="Vehicular/Auto Theft in SF 2017, CA", 
+       caption="Figure 6.5") +
+  mapTheme()
+
+theft_inter_ala <- 
+  st_intersection(sfo_crime_spatial_ala, finalTract) %>%
+  dplyr::select(GEOID) %>%
+  mutate(Selection_Type = "Clip")
+
+theft_inter_grouped_ala <- theft_inter_ala %>% group_by(GEOID) %>% tally()
+
+
+#tabular join
+finalTract.group_ala <- st_join(finalTract.group, theft_inter_grouped_ala, left = FALSE, by = 'GEOID')
+finalTract.group_ala <- finalTract.group_ala[!(finalTract.group_ala$year==2009),]
+
+#---- Noew lets visualize this data as a table and bar graph
+
+#Table 
+finalTract.Summary_ala <- 
+  st_drop_geometry(finalTract.group_ala) %>%
+  group_by(year, TOD) %>%
+  summarize(Rent = mean(MedRent, na.rm = T),
+            Percent_Racial_Composition= mean(pctWhite, na.rm = T),
+            Percent_MedIn = mean(MedHHInc, na.rm = T),
+            Crime = mean(n, na.rm = T))
+
+kable(finalTract.Summary_ala) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 2.3")
+
+kable(finalTract.Summary_sf_2017) %>%
+  kable_styling() %>%
+  footnote(general_title = "\n",
+           general = "Table 2.4")
+
+#Bar plot
+finalTract.Summary_ala %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space for 2017", subtitle = "Alameda, CA", caption="Figure 6.6") +
+  plotTheme() + theme(legend.position="bottom")
+
+
+#Bar plot
+finalTract.Summary_sf_2017 %>%
+  gather(Variable, Value, -year, -TOD) %>%
+  ggplot(aes(year, Value, fill = TOD)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Variable, scales = "free", nrow=1) +
+  scale_fill_manual(values = c("#bae4bc", "#0868ac")) +
+  labs(title = "Indicator differences across time and space for 2017", subtitle = "SF, CA", caption="Figure 6.7") +
+  plotTheme() + theme(legend.position="bottom")
+```
+
+There has been a decrease in crime in both counties over the years. The rent has also reduced but not at the same rate, and the average rent in SF is higher than that of Alameda hence the reduced value is still more than that of Alameda. Similar is the case with median income of the households. But notice the fact that SF crime is almost 5 times of that of Alameda. There are many reasons for that one being that SF is more dense and a bigger city while Alameda is more sub-urban in nature which is also why the rents and incomes are that different.
